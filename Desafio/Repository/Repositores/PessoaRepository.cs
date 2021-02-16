@@ -2,6 +2,7 @@
 using Repository.Interface;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -34,7 +35,11 @@ namespace Repository.Repositores
 
         public bool Apagar(int id)
         {
-            comando.CommandText = @"";
+            Pessoa pessoa = new Pessoa();
+            comando.CommandText = @"UPDATE pessoas SET registro_ativo = @REGISTRO_ATIVO WHERE id = @ID";
+            comando.Parameters.AddWithValue("@ID", id);
+            pessoa.RegistroAtivo = false;
+            comando.Parameters.AddWithValue("@REGISTRO_ATIVO", pessoa.RegistroAtivo);
 
             int quantidadeAfetada = Convert.ToInt32(comando.ExecuteNonQuery());
             comando.Connection.Close();
@@ -68,7 +73,29 @@ namespace Repository.Repositores
 
         public List<Pessoa> ObterTodos()
         {
-            throw new NotImplementedException();
+            comando.CommandText = @"SELECT * FROM pessoas WHERE registro_ativo = 1";
+            DataTable dt = new DataTable();
+            dt.Load(comando.ExecuteReader());
+
+            List<Pessoa> pessoas = new List<Pessoa>();
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                Pessoa pessoa = new Pessoa();
+                pessoa.Id = Convert.ToInt32(dr["id'"]);
+                pessoa.Nome = dr["nome"].ToString();
+                pessoa.Sobrenome = dr["sobrenome"].ToString();
+                pessoa.CPF = dr["cpf"].ToString();
+                pessoa.Endereco = dr["endereco"].ToString();
+                pessoa.Telefone = dr["telefone"].ToString();
+                pessoa.Email = dr["email"].ToString();
+                pessoa.DataNascimento = Convert.ToDateTime(dr["data_nascimento"]);
+                pessoa.NomeMae = dr["nome_mae"].ToString();
+                pessoa.Sexo = dr["sexo"].ToString();
+                pessoas.Add(pessoa);
+            }
+            comando.Connection.Close();
+            return pessoas;
         }
     }
 }
