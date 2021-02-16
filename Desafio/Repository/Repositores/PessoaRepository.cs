@@ -68,7 +68,31 @@ namespace Repository.Repositores
 
         public Pessoa ObterPeloId(int id)
         {
-            throw new NotImplementedException();
+            comando.CommandText = @"SELECT * FROM pessoas WHERE id = @ID";
+            comando.Parameters.AddWithValue("@ID", id);
+
+            DataTable dt = new DataTable();
+            dt.Load(comando.ExecuteReader());
+
+            comando.Connection.Close();
+
+            if (dt.Rows.Count == 0)
+                return null;
+
+            DataRow dr = dt.Rows[0];
+            Pessoa pessoa = new Pessoa();
+            pessoa.Id = Convert.ToInt32(dr["id'"]);
+            pessoa.Nome = dr["nome"].ToString();
+            pessoa.Sobrenome = dr["sobrenome"].ToString();
+            pessoa.CPF = dr["cpf"].ToString();
+            pessoa.Endereco = dr["endereco"].ToString();
+            pessoa.Telefone = dr["telefone"].ToString();
+            pessoa.Email = dr["email"].ToString();
+            pessoa.DataNascimento = Convert.ToDateTime(dr["data_nascimento"]);
+            pessoa.NomeMae = dr["nome_mae"].ToString();
+            pessoa.Sexo = dr["sexo"].ToString();
+            return pessoa
+
         }
 
         public List<Pessoa> ObterTodos()
