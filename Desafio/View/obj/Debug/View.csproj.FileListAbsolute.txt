@@ -1,0 +1,17 @@
+C:\Users\Eduardo\Documents\GitHub\Desafio\View\obj\Debug\View.csprojAssemblyReference.cache
+C:\Users\Eduardo\Documents\GitHub\Desafio\View\obj\Debug\View.frmPrincipal.resources
+C:\Users\Eduardo\Documents\GitHub\Desafio\View\obj\Debug\View.Properties.Resources.resources
+C:\Users\Eduardo\Documents\GitHub\Desafio\View\obj\Debug\View.csproj.GenerateResource.cache
+C:\Users\Eduardo\Documents\GitHub\Desafio\View\obj\Debug\View.csproj.CoreCompileInputs.cache
+C:\Users\Eduardo\Documents\GitHub\Desafio\View\bin\Debug\App_Data\Database.mdf
+C:\Users\Eduardo\Documents\GitHub\Desafio\View\bin\Debug\App_Data\Database_log.ldf
+C:\Users\Eduardo\Documents\GitHub\Desafio\View\bin\Debug\View.exe.config
+C:\Users\Eduardo\Documents\GitHub\Desafio\View\bin\Debug\View.exe
+C:\Users\Eduardo\Documents\GitHub\Desafio\View\bin\Debug\View.pdb
+C:\Users\Eduardo\Documents\GitHub\Desafio\View\bin\Debug\Model.dll
+C:\Users\Eduardo\Documents\GitHub\Desafio\View\bin\Debug\Repository.dll
+C:\Users\Eduardo\Documents\GitHub\Desafio\View\bin\Debug\Model.pdb
+C:\Users\Eduardo\Documents\GitHub\Desafio\View\bin\Debug\Repository.pdb
+C:\Users\Eduardo\Documents\GitHub\Desafio\View\obj\Debug\View.csproj.CopyComplete
+C:\Users\Eduardo\Documents\GitHub\Desafio\View\obj\Debug\View.exe
+C:\Users\Eduardo\Documents\GitHub\Desafio\View\obj\Debug\View.pdb
