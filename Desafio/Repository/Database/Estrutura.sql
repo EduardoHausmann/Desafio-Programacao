@@ -9,20 +9,20 @@ telefone VARCHAR(13),
 email VARCHAR(100),
 data_nascimento DATE,
 nome_mae VARCHAR(100),
-sexo CHAR,
-status BIT
+sexo VARCHAR(10),
+registro_ativo BIT
 );
 
 CREATE TABLE sala_eventos(
 id INT PRIMARY KEY IDENTITY(1,1),
 nome VARCHAR(75),
 lotação INT,
-status BIT
+registro_ativo BIT
 );
 
 CREATE TABLE espaco_cafes(
 id INT PRIMARY KEY IDENTITY(1,1),
 nome VARCHAR(75),
 lotacao INT,
-status BIT
+registro_ativo BIT
 );

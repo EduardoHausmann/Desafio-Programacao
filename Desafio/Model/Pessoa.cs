@@ -41,7 +41,7 @@ namespace Model
         [Column("sexo")]
         public string Sexo { get; set; }
 
-        [Column("status")]
-        public Boolean Status { get; set; }
+        [Column("registro_ativo")]
+        public Boolean RegistroAtivo { get; set; }
     }
 }
