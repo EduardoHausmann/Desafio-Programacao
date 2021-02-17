@@ -54,7 +54,22 @@ namespace Repository.Repositores
 
         public EspacoCafe ObterPeloId(int id)
         {
-            throw new NotImplementedException();
+            comando.CommandText = @"SELECT * FROM espaco_cafes WHERE id = @ID";
+            comando.Parameters.AddWithValue("@ID", id);
+
+            DataTable dt = new DataTable();
+            dt.Load(comando.ExecuteReader());
+
+            comando.Connection.Close();
+
+            if (dt.Rows.Count == 0)
+                return null;
+            DataRow dr = dt.Rows[0];
+            EspacoCafe espacoCafe = new EspacoCafe();
+            espacoCafe.Id = Convert.ToInt32(dr["id"]);
+            espacoCafe.Nome = dr["nome"].ToString();
+            espacoCafe.Lotacao = Convert.ToInt32(dr["lotacao"]);
+            return espacoCafe;
         }
 
         public List<EspacoCafe> ObterTodos(string busca)
