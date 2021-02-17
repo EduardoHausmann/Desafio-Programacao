@@ -13,7 +13,7 @@ namespace Repository.Interface
 
         bool Alterar(Pessoa pessoa);
 
-        List<Pessoa> ObterTodos();
+        List<Pessoa> ObterTodos(string busca);
 
         bool Apagar(int id);
 

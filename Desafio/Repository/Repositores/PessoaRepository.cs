@@ -91,13 +91,16 @@ namespace Repository.Repositores
             pessoa.DataNascimento = Convert.ToDateTime(dr["data_nascimento"]);
             pessoa.NomeMae = dr["nome_mae"].ToString();
             pessoa.Sexo = dr["sexo"].ToString();
-            return pessoa
+            return pessoa;
 
         }
 
-        public List<Pessoa> ObterTodos()
+        public List<Pessoa> ObterTodos(string busca)
         {
-            comando.CommandText = @"SELECT * FROM pessoas WHERE registro_ativo = 1";
+            comando.CommandText = @"SELECT * FROM pessoas WHERE nome LIKE @NOME AND registro_ativo = 1";
+            busca = "%" + busca + "%";
+            comando.Parameters.AddWithValue("@NOME", busca);
+
             DataTable dt = new DataTable();
             dt.Load(comando.ExecuteReader());
 

@@ -2,6 +2,7 @@
 using Repository.Interface;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -11,19 +12,44 @@ namespace Repository.Repositores
 {
     public class EspacoCafeRepository : IEspacoCafeRepository
     {
+        SqlCommand comando = Conexao.Conectar();
+
         public bool Alterar(EspacoCafe espacoCafe)
         {
-            SqlCommand comando = Conexao.Conectar();
+            comando.CommandText = @"UPDATE espaco_cafes SET nome = @NOME, lotação = @LOTACAO WHERE id = @ID";
+            comando.Parameters.AddWithValue("@ID", espacoCafe.Id);
+            comando.Parameters.AddWithValue("@NOME", espacoCafe.Nome);
+            comando.Parameters.AddWithValue("@LOTACAO", espacoCafe.Lotacao);
+
+            int quantidadeAfetada = Convert.ToInt32(comando.ExecuteNonQuery());
+            comando.Connection.Close();
+            return quantidadeAfetada == 1;
         }
 
         public bool Apagar(int id)
         {
-            throw new NotImplementedException();
+            EspacoCafe espacoCafe = new EspacoCafe();
+            comando.CommandText = @"UPDATE espaco_cafes SET registro_ativo = @REGISTRO_ATIVO WHERE id = @ID";
+            comando.Parameters.AddWithValue("@ID", id);
+            espacoCafe.RegistroAtivo = false;
+            comando.Parameters.AddWithValue("@REGISTRO_ATIVO", espacoCafe.RegistroAtivo);
+
+            int quantidadeAfetada = Convert.ToInt32(comando.ExecuteNonQuery());
+            comando.Connection.Close();
+            return quantidadeAfetada == 1;
         }
 
         public int Inserir(EspacoCafe espacoCafe)
         {
-            throw new NotImplementedException();
+            comando.CommandText = @"INSERT INTO espaco_cafes (nome, lotacao, registro_ativo) OUTPUT INSERTED.ID VALUES (@NOME, @LOTACAO, @REGISTRO_ATIVO)";
+            comando.Parameters.AddWithValue("@NOME", espacoCafe.Nome);
+            comando.Parameters.AddWithValue("@LOTACAO", espacoCafe.Lotacao);
+            espacoCafe.RegistroAtivo = true;
+            comando.Parameters.AddWithValue("@REGISTRO_ATIVO", espacoCafe.RegistroAtivo);
+
+            int id = Convert.ToInt32(comando.ExecuteScalar());
+            comando.Connection.Close();
+            return id;
         }
 
         public EspacoCafe ObterPeloId(int id)
@@ -31,9 +57,27 @@ namespace Repository.Repositores
             throw new NotImplementedException();
         }
 
-        public List<EspacoCafe> ObterTodos()
+        public List<EspacoCafe> ObterTodos(string busca)
         {
-            throw new NotImplementedException();
+            comando.CommandText = @"SELECT * FROM espaco_cafes WHERE nome LIKE @NOME AND registro_ativo = 1";
+            busca = "%" + busca + "%";
+            comando.Parameters.AddWithValue("@NOME", busca);
+
+            DataTable dt = new DataTable();
+            dt.Load(comando.ExecuteReader());
+
+            List<EspacoCafe> espacoCafes = new List<EspacoCafe>();
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                EspacoCafe espacoCafe = new EspacoCafe();
+                espacoCafe.Id = Convert.ToInt32(dr["id"]);
+                espacoCafe.Nome = dr["nome"].ToString();
+                espacoCafe.Lotacao = Convert.ToInt32(dr["lotacao"]);
+                espacoCafes.Add(espacoCafe);
+            }
+            comando.Connection.Close();
+            return espacoCafes;
         }
     }
 }

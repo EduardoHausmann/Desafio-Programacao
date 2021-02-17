@@ -13,7 +13,7 @@ namespace Repository.Interface
 
         bool Alterar(SalaEvento salaEvento);
 
-        List<SalaEvento> ObterTodos();
+        List<SalaEvento> ObterTodos(string busca);
 
         bool Apagar(int id);
 
