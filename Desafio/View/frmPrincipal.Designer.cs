@@ -30,10 +30,10 @@
         {
             this.msPrincipal = new System.Windows.Forms.MenuStrip();
             this.tsmCadastro = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmConsulta = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmPessoa = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmSalaEvento = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmEspacoCafe = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmConsulta = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmConsultaPessoa = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmConsultaSalaEvento = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmConsultaEspacoCafe = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,7 +50,6 @@
             this.msPrincipal.Name = "msPrincipal";
             this.msPrincipal.Size = new System.Drawing.Size(524, 27);
             this.msPrincipal.TabIndex = 0;
-            this.msPrincipal.Text = "menuStrip1";
             // 
             // tsmCadastro
             // 
@@ -61,6 +60,25 @@
             this.tsmCadastro.Name = "tsmCadastro";
             this.tsmCadastro.Size = new System.Drawing.Size(77, 23);
             this.tsmCadastro.Text = "Cadastro";
+            this.tsmCadastro.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
+            // 
+            // tsmPessoa
+            // 
+            this.tsmPessoa.Name = "tsmPessoa";
+            this.tsmPessoa.Size = new System.Drawing.Size(156, 24);
+            this.tsmPessoa.Text = "Pessoa";
+            // 
+            // tsmSalaEvento
+            // 
+            this.tsmSalaEvento.Name = "tsmSalaEvento";
+            this.tsmSalaEvento.Size = new System.Drawing.Size(156, 24);
+            this.tsmSalaEvento.Text = "Sala Evento";
+            // 
+            // tsmEspacoCafe
+            // 
+            this.tsmEspacoCafe.Name = "tsmEspacoCafe";
+            this.tsmEspacoCafe.Size = new System.Drawing.Size(156, 24);
+            this.tsmEspacoCafe.Text = "Espaço Café";
             // 
             // tsmConsulta
             // 
@@ -72,40 +90,22 @@
             this.tsmConsulta.Size = new System.Drawing.Size(74, 23);
             this.tsmConsulta.Text = "Consulta";
             // 
-            // tsmPessoa
-            // 
-            this.tsmPessoa.Name = "tsmPessoa";
-            this.tsmPessoa.Size = new System.Drawing.Size(180, 24);
-            this.tsmPessoa.Text = "Pessoa";
-            // 
-            // tsmSalaEvento
-            // 
-            this.tsmSalaEvento.Name = "tsmSalaEvento";
-            this.tsmSalaEvento.Size = new System.Drawing.Size(180, 24);
-            this.tsmSalaEvento.Text = "Sala Evento";
-            // 
-            // tsmEspacoCafe
-            // 
-            this.tsmEspacoCafe.Name = "tsmEspacoCafe";
-            this.tsmEspacoCafe.Size = new System.Drawing.Size(180, 24);
-            this.tsmEspacoCafe.Text = "Espaço Café";
-            // 
             // tsmConsultaPessoa
             // 
             this.tsmConsultaPessoa.Name = "tsmConsultaPessoa";
-            this.tsmConsultaPessoa.Size = new System.Drawing.Size(180, 24);
+            this.tsmConsultaPessoa.Size = new System.Drawing.Size(156, 24);
             this.tsmConsultaPessoa.Text = "Pessoa";
             // 
             // tsmConsultaSalaEvento
             // 
             this.tsmConsultaSalaEvento.Name = "tsmConsultaSalaEvento";
-            this.tsmConsultaSalaEvento.Size = new System.Drawing.Size(180, 24);
+            this.tsmConsultaSalaEvento.Size = new System.Drawing.Size(156, 24);
             this.tsmConsultaSalaEvento.Text = "Sala Evento";
             // 
             // tsmConsultaEspacoCafe
             // 
             this.tsmConsultaEspacoCafe.Name = "tsmConsultaEspacoCafe";
-            this.tsmConsultaEspacoCafe.Size = new System.Drawing.Size(180, 24);
+            this.tsmConsultaEspacoCafe.Size = new System.Drawing.Size(156, 24);
             this.tsmConsultaEspacoCafe.Text = "Espaço Café";
             // 
             // frmPrincipal
