@@ -28,22 +28,115 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.msPrincipal = new System.Windows.Forms.MenuStrip();
+            this.tsmCadastro = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmConsulta = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmPessoa = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmSalaEvento = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmEspacoCafe = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmConsultaPessoa = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmConsultaSalaEvento = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmConsultaEspacoCafe = new System.Windows.Forms.ToolStripMenuItem();
+            this.msPrincipal.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // msPrincipal
+            // 
+            this.msPrincipal.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.msPrincipal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmCadastro,
+            this.tsmConsulta});
+            this.msPrincipal.Location = new System.Drawing.Point(0, 0);
+            this.msPrincipal.Name = "msPrincipal";
+            this.msPrincipal.Size = new System.Drawing.Size(524, 27);
+            this.msPrincipal.TabIndex = 0;
+            this.msPrincipal.Text = "menuStrip1";
+            // 
+            // tsmCadastro
+            // 
+            this.tsmCadastro.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmPessoa,
+            this.tsmSalaEvento,
+            this.tsmEspacoCafe});
+            this.tsmCadastro.Name = "tsmCadastro";
+            this.tsmCadastro.Size = new System.Drawing.Size(77, 23);
+            this.tsmCadastro.Text = "Cadastro";
+            // 
+            // tsmConsulta
+            // 
+            this.tsmConsulta.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmConsultaPessoa,
+            this.tsmConsultaSalaEvento,
+            this.tsmConsultaEspacoCafe});
+            this.tsmConsulta.Name = "tsmConsulta";
+            this.tsmConsulta.Size = new System.Drawing.Size(74, 23);
+            this.tsmConsulta.Text = "Consulta";
+            // 
+            // tsmPessoa
+            // 
+            this.tsmPessoa.Name = "tsmPessoa";
+            this.tsmPessoa.Size = new System.Drawing.Size(180, 24);
+            this.tsmPessoa.Text = "Pessoa";
+            // 
+            // tsmSalaEvento
+            // 
+            this.tsmSalaEvento.Name = "tsmSalaEvento";
+            this.tsmSalaEvento.Size = new System.Drawing.Size(180, 24);
+            this.tsmSalaEvento.Text = "Sala Evento";
+            // 
+            // tsmEspacoCafe
+            // 
+            this.tsmEspacoCafe.Name = "tsmEspacoCafe";
+            this.tsmEspacoCafe.Size = new System.Drawing.Size(180, 24);
+            this.tsmEspacoCafe.Text = "Espaço Café";
+            // 
+            // tsmConsultaPessoa
+            // 
+            this.tsmConsultaPessoa.Name = "tsmConsultaPessoa";
+            this.tsmConsultaPessoa.Size = new System.Drawing.Size(180, 24);
+            this.tsmConsultaPessoa.Text = "Pessoa";
+            // 
+            // tsmConsultaSalaEvento
+            // 
+            this.tsmConsultaSalaEvento.Name = "tsmConsultaSalaEvento";
+            this.tsmConsultaSalaEvento.Size = new System.Drawing.Size(180, 24);
+            this.tsmConsultaSalaEvento.Text = "Sala Evento";
+            // 
+            // tsmConsultaEspacoCafe
+            // 
+            this.tsmConsultaEspacoCafe.Name = "tsmConsultaEspacoCafe";
+            this.tsmConsultaEspacoCafe.Size = new System.Drawing.Size(180, 24);
+            this.tsmConsultaEspacoCafe.Text = "Espaço Café";
             // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(524, 279);
+            this.Controls.Add(this.msPrincipal);
+            this.MainMenuStrip = this.msPrincipal;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmPrincipal";
             this.Text = "Tela Principal";
+            this.msPrincipal.ResumeLayout(false);
+            this.msPrincipal.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.MenuStrip msPrincipal;
+        private System.Windows.Forms.ToolStripMenuItem tsmCadastro;
+        private System.Windows.Forms.ToolStripMenuItem tsmConsulta;
+        private System.Windows.Forms.ToolStripMenuItem tsmPessoa;
+        private System.Windows.Forms.ToolStripMenuItem tsmSalaEvento;
+        private System.Windows.Forms.ToolStripMenuItem tsmEspacoCafe;
+        private System.Windows.Forms.ToolStripMenuItem tsmConsultaPessoa;
+        private System.Windows.Forms.ToolStripMenuItem tsmConsultaSalaEvento;
+        private System.Windows.Forms.ToolStripMenuItem tsmConsultaEspacoCafe;
     }
 }
 
