@@ -73,14 +73,16 @@
             // tsmSalaEvento
             // 
             this.tsmSalaEvento.Name = "tsmSalaEvento";
-            this.tsmSalaEvento.Size = new System.Drawing.Size(156, 24);
+            this.tsmSalaEvento.Size = new System.Drawing.Size(180, 24);
             this.tsmSalaEvento.Text = "Sala Evento";
+            this.tsmSalaEvento.Click += new System.EventHandler(this.tsmSalaEvento_Click);
             // 
             // tsmEspacoCafe
             // 
             this.tsmEspacoCafe.Name = "tsmEspacoCafe";
-            this.tsmEspacoCafe.Size = new System.Drawing.Size(156, 24);
+            this.tsmEspacoCafe.Size = new System.Drawing.Size(180, 24);
             this.tsmEspacoCafe.Text = "Espaço Café";
+            this.tsmEspacoCafe.Click += new System.EventHandler(this.tsmEspacoCafe_Click);
             // 
             // tsmConsulta
             // 
@@ -95,20 +97,23 @@
             // tsmConsultaPessoa
             // 
             this.tsmConsultaPessoa.Name = "tsmConsultaPessoa";
-            this.tsmConsultaPessoa.Size = new System.Drawing.Size(156, 24);
+            this.tsmConsultaPessoa.Size = new System.Drawing.Size(180, 24);
             this.tsmConsultaPessoa.Text = "Pessoa";
+            this.tsmConsultaPessoa.Click += new System.EventHandler(this.tsmConsultaPessoa_Click);
             // 
             // tsmConsultaSalaEvento
             // 
             this.tsmConsultaSalaEvento.Name = "tsmConsultaSalaEvento";
-            this.tsmConsultaSalaEvento.Size = new System.Drawing.Size(156, 24);
+            this.tsmConsultaSalaEvento.Size = new System.Drawing.Size(180, 24);
             this.tsmConsultaSalaEvento.Text = "Sala Evento";
+            this.tsmConsultaSalaEvento.Click += new System.EventHandler(this.tsmConsultaSalaEvento_Click);
             // 
             // tsmConsultaEspacoCafe
             // 
             this.tsmConsultaEspacoCafe.Name = "tsmConsultaEspacoCafe";
-            this.tsmConsultaEspacoCafe.Size = new System.Drawing.Size(156, 24);
+            this.tsmConsultaEspacoCafe.Size = new System.Drawing.Size(180, 24);
             this.tsmConsultaEspacoCafe.Text = "Espaço Café";
+            this.tsmConsultaEspacoCafe.Click += new System.EventHandler(this.tsmConsultaEspacoCafe_Click);
             // 
             // frmPrincipal
             // 

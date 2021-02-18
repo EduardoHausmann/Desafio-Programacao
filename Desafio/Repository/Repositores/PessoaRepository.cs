@@ -11,11 +11,10 @@ using System.Threading.Tasks;
 namespace Repository.Repositores
 {
     public class PessoaRepository : IPessoaRepository
-    {
-        SqlCommand comando = Conexao.Conectar();
-
+    {      
         public bool Alterar(Pessoa pessoa)
         {
+            SqlCommand comando = Conexao.Conectar();
             comando.CommandText = @"UPDATE pessoas SET nome = @NOME, sobrenome = @SOBRENOME, cpf = @CPF, endereco = @ENDERECO, telefone = @TELEFONE, email = @EMAIL, data_nascimento = @DATA_NASCIMENTO, nome_mae = @NOME_MAE, sexo = @SEXO WHERE id = @ID";
             comando.Parameters.AddWithValue("@ID", pessoa.Id);
             comando.Parameters.AddWithValue("@NOME", pessoa.Nome);
@@ -35,6 +34,7 @@ namespace Repository.Repositores
 
         public bool Apagar(int id)
         {
+            SqlCommand comando = Conexao.Conectar();
             Pessoa pessoa = new Pessoa();
             comando.CommandText = @"UPDATE pessoas SET registro_ativo = @REGISTRO_ATIVO WHERE id = @ID";
             comando.Parameters.AddWithValue("@ID", id);
@@ -48,6 +48,7 @@ namespace Repository.Repositores
 
         public int Inserir(Pessoa pessoa)
         {
+            SqlCommand comando = Conexao.Conectar();
             comando.CommandText = @"INSERT INTO pessoas (nome, sobrenome, cpf, endereco, telefone, email, data_nascimento, nome_mae, sexo, registro_ativo) OUTPUT INSERTED.ID VALUES (@NOME, @SOBRENOME, @CPF, @ENDERECO, @TELEFONE, @EMAIL, @DATA_NASCIMENTO, @NOME_MAE, @SEXO, @REGISTRO_ATIVO)";
             comando.Parameters.AddWithValue("@NOME", pessoa.Nome);
             comando.Parameters.AddWithValue("@SOBRENOME", pessoa.Sobrenome);
@@ -68,6 +69,7 @@ namespace Repository.Repositores
 
         public Pessoa ObterPeloId(int id)
         {
+            SqlCommand comando = Conexao.Conectar();
             comando.CommandText = @"SELECT * FROM pessoas WHERE id = @ID";
             comando.Parameters.AddWithValue("@ID", id);
 
@@ -81,7 +83,7 @@ namespace Repository.Repositores
 
             DataRow dr = dt.Rows[0];
             Pessoa pessoa = new Pessoa();
-            pessoa.Id = Convert.ToInt32(dr["id'"]);
+            pessoa.Id = Convert.ToInt32(dr["id"]);
             pessoa.Nome = dr["nome"].ToString();
             pessoa.Sobrenome = dr["sobrenome"].ToString();
             pessoa.CPF = dr["cpf"].ToString();
@@ -97,6 +99,7 @@ namespace Repository.Repositores
 
         public List<Pessoa> ObterTodos(string busca)
         {
+            SqlCommand comando = Conexao.Conectar();
             comando.CommandText = @"SELECT * FROM pessoas WHERE nome LIKE @NOME AND registro_ativo = 1";
             busca = "%" + busca + "%";
             comando.Parameters.AddWithValue("@NOME", busca);
@@ -109,7 +112,7 @@ namespace Repository.Repositores
             foreach (DataRow dr in dt.Rows)
             {
                 Pessoa pessoa = new Pessoa();
-                pessoa.Id = Convert.ToInt32(dr["id'"]);
+                pessoa.Id = Convert.ToInt32(dr["id"]);
                 pessoa.Nome = dr["nome"].ToString();
                 pessoa.Sobrenome = dr["sobrenome"].ToString();
                 pessoa.CPF = dr["cpf"].ToString();

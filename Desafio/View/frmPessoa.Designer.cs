@@ -53,14 +53,14 @@
             this.lblEmail = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblDataNascimento = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dpDataNascimento = new System.Windows.Forms.DateTimePicker();
             this.lblNomeMae = new System.Windows.Forms.Label();
             this.txtNomeMae = new System.Windows.Forms.TextBox();
             this.lblSexo = new System.Windows.Forms.Label();
             this.rbMasculino = new System.Windows.Forms.RadioButton();
             this.rbFeminino = new System.Windows.Forms.RadioButton();
+            this.btnSalvar = new System.Windows.Forms.Button();
             this.btnDesativar = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPessoa)).BeginInit();
             this.SuspendLayout();
             // 
@@ -96,8 +96,10 @@
             this.dgvPessoa.Name = "dgvPessoa";
             this.dgvPessoa.ReadOnly = true;
             this.dgvPessoa.RowHeadersVisible = false;
+            this.dgvPessoa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPessoa.Size = new System.Drawing.Size(953, 217);
             this.dgvPessoa.TabIndex = 1;
+            this.dgvPessoa.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPessoa_CellDoubleClick);
             // 
             // ColumnId
             // 
@@ -164,7 +166,7 @@
             // 
             this.lblNome.AutoSize = true;
             this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNome.Location = new System.Drawing.Point(49, 9);
+            this.lblNome.Location = new System.Drawing.Point(32, 9);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(51, 20);
             this.lblNome.TabIndex = 2;
@@ -173,7 +175,7 @@
             // txtNome
             // 
             this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(53, 32);
+            this.txtNome.Location = new System.Drawing.Point(36, 32);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(165, 26);
             this.txtNome.TabIndex = 3;
@@ -182,7 +184,7 @@
             // 
             this.lblSobrenome.AutoSize = true;
             this.lblSobrenome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSobrenome.Location = new System.Drawing.Point(231, 9);
+            this.lblSobrenome.Location = new System.Drawing.Point(214, 9);
             this.lblSobrenome.Name = "lblSobrenome";
             this.lblSobrenome.Size = new System.Drawing.Size(92, 20);
             this.lblSobrenome.TabIndex = 4;
@@ -191,7 +193,7 @@
             // txtSobrenome
             // 
             this.txtSobrenome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSobrenome.Location = new System.Drawing.Point(235, 32);
+            this.txtSobrenome.Location = new System.Drawing.Point(218, 32);
             this.txtSobrenome.Name = "txtSobrenome";
             this.txtSobrenome.Size = new System.Drawing.Size(165, 26);
             this.txtSobrenome.TabIndex = 5;
@@ -200,7 +202,7 @@
             // 
             this.lvlCpf.AutoSize = true;
             this.lvlCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lvlCpf.Location = new System.Drawing.Point(412, 9);
+            this.lvlCpf.Location = new System.Drawing.Point(395, 9);
             this.lvlCpf.Name = "lvlCpf";
             this.lvlCpf.Size = new System.Drawing.Size(40, 20);
             this.lvlCpf.TabIndex = 6;
@@ -209,7 +211,7 @@
             // mbCpf
             // 
             this.mbCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mbCpf.Location = new System.Drawing.Point(416, 32);
+            this.mbCpf.Location = new System.Drawing.Point(399, 32);
             this.mbCpf.Mask = "999,999,999-99";
             this.mbCpf.Name = "mbCpf";
             this.mbCpf.Size = new System.Drawing.Size(128, 26);
@@ -219,7 +221,7 @@
             // 
             this.lblEndereco.AutoSize = true;
             this.lblEndereco.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEndereco.Location = new System.Drawing.Point(562, 9);
+            this.lblEndereco.Location = new System.Drawing.Point(545, 9);
             this.lblEndereco.Name = "lblEndereco";
             this.lblEndereco.Size = new System.Drawing.Size(78, 20);
             this.lblEndereco.TabIndex = 8;
@@ -228,7 +230,7 @@
             // txtEndereco
             // 
             this.txtEndereco.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEndereco.Location = new System.Drawing.Point(566, 32);
+            this.txtEndereco.Location = new System.Drawing.Point(549, 32);
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(198, 26);
             this.txtEndereco.TabIndex = 9;
@@ -237,7 +239,7 @@
             // 
             this.lblTelefone.AutoSize = true;
             this.lblTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTelefone.Location = new System.Drawing.Point(778, 9);
+            this.lblTelefone.Location = new System.Drawing.Point(761, 9);
             this.lblTelefone.Name = "lblTelefone";
             this.lblTelefone.Size = new System.Drawing.Size(71, 20);
             this.lblTelefone.TabIndex = 10;
@@ -246,7 +248,7 @@
             // mbTelefone
             // 
             this.mbTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mbTelefone.Location = new System.Drawing.Point(782, 32);
+            this.mbTelefone.Location = new System.Drawing.Point(765, 32);
             this.mbTelefone.Mask = "(99)9999-9999";
             this.mbTelefone.Name = "mbTelefone";
             this.mbTelefone.Size = new System.Drawing.Size(124, 26);
@@ -256,7 +258,7 @@
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(49, 74);
+            this.lblEmail.Location = new System.Drawing.Point(32, 74);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(53, 20);
             this.lblEmail.TabIndex = 12;
@@ -265,7 +267,7 @@
             // txtEmail
             // 
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(53, 97);
+            this.txtEmail.Location = new System.Drawing.Point(36, 97);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(234, 26);
             this.txtEmail.TabIndex = 13;
@@ -274,26 +276,26 @@
             // 
             this.lblDataNascimento.AutoSize = true;
             this.lblDataNascimento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDataNascimento.Location = new System.Drawing.Point(308, 74);
+            this.lblDataNascimento.Location = new System.Drawing.Point(291, 74);
             this.lblDataNascimento.Name = "lblDataNascimento";
             this.lblDataNascimento.Size = new System.Drawing.Size(154, 20);
             this.lblDataNascimento.TabIndex = 14;
             this.lblDataNascimento.Text = "Data de Nascimento";
             // 
-            // dateTimePicker1
+            // dpDataNascimento
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(312, 95);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(164, 26);
-            this.dateTimePicker1.TabIndex = 15;
+            this.dpDataNascimento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dpDataNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dpDataNascimento.Location = new System.Drawing.Point(295, 95);
+            this.dpDataNascimento.Name = "dpDataNascimento";
+            this.dpDataNascimento.Size = new System.Drawing.Size(164, 26);
+            this.dpDataNascimento.TabIndex = 15;
             // 
             // lblNomeMae
             // 
             this.lblNomeMae.AutoSize = true;
             this.lblNomeMae.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNomeMae.Location = new System.Drawing.Point(504, 74);
+            this.lblNomeMae.Location = new System.Drawing.Point(487, 74);
             this.lblNomeMae.Name = "lblNomeMae";
             this.lblNomeMae.Size = new System.Drawing.Size(108, 20);
             this.lblNomeMae.TabIndex = 16;
@@ -302,7 +304,7 @@
             // txtNomeMae
             // 
             this.txtNomeMae.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNomeMae.Location = new System.Drawing.Point(508, 95);
+            this.txtNomeMae.Location = new System.Drawing.Point(491, 95);
             this.txtNomeMae.Name = "txtNomeMae";
             this.txtNomeMae.Size = new System.Drawing.Size(198, 26);
             this.txtNomeMae.TabIndex = 17;
@@ -311,7 +313,7 @@
             // 
             this.lblSexo.AutoSize = true;
             this.lblSexo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSexo.Location = new System.Drawing.Point(732, 74);
+            this.lblSexo.Location = new System.Drawing.Point(715, 74);
             this.lblSexo.Name = "lblSexo";
             this.lblSexo.Size = new System.Drawing.Size(45, 20);
             this.lblSexo.TabIndex = 18;
@@ -321,7 +323,7 @@
             // 
             this.rbMasculino.AutoSize = true;
             this.rbMasculino.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbMasculino.Location = new System.Drawing.Point(736, 97);
+            this.rbMasculino.Location = new System.Drawing.Point(719, 97);
             this.rbMasculino.Name = "rbMasculino";
             this.rbMasculino.Size = new System.Drawing.Size(98, 24);
             this.rbMasculino.TabIndex = 19;
@@ -333,7 +335,7 @@
             // 
             this.rbFeminino.AutoSize = true;
             this.rbFeminino.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbFeminino.Location = new System.Drawing.Point(850, 99);
+            this.rbFeminino.Location = new System.Drawing.Point(833, 99);
             this.rbFeminino.Name = "rbFeminino";
             this.rbFeminino.Size = new System.Drawing.Size(92, 24);
             this.rbFeminino.TabIndex = 20;
@@ -341,25 +343,27 @@
             this.rbFeminino.Text = "Feminino";
             this.rbFeminino.UseVisualStyleBackColor = true;
             // 
+            // btnSalvar
+            // 
+            this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalvar.Location = new System.Drawing.Point(752, 141);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(82, 35);
+            this.btnSalvar.TabIndex = 21;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            // 
             // btnDesativar
             // 
             this.btnDesativar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDesativar.Location = new System.Drawing.Point(752, 141);
+            this.btnDesativar.Location = new System.Drawing.Point(856, 141);
             this.btnDesativar.Name = "btnDesativar";
-            this.btnDesativar.Size = new System.Drawing.Size(82, 35);
-            this.btnDesativar.TabIndex = 21;
-            this.btnDesativar.Text = "Salvar";
+            this.btnDesativar.Size = new System.Drawing.Size(86, 35);
+            this.btnDesativar.TabIndex = 22;
+            this.btnDesativar.Text = "Desativar";
             this.btnDesativar.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(856, 141);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(86, 35);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "Desativar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnDesativar.Click += new System.EventHandler(this.btnDesativar_Click);
             // 
             // frmPessoa
             // 
@@ -367,14 +371,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(966, 406);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnDesativar);
+            this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.rbFeminino);
             this.Controls.Add(this.rbMasculino);
             this.Controls.Add(this.lblSexo);
             this.Controls.Add(this.txtNomeMae);
             this.Controls.Add(this.lblNomeMae);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dpDataNascimento);
             this.Controls.Add(this.lblDataNascimento);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.lblEmail);
@@ -394,6 +398,7 @@
             this.MinimizeBox = false;
             this.Name = "frmPessoa";
             this.Text = "Pessoa";
+            this.Load += new System.EventHandler(this.frmPessoa_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPessoa)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -427,13 +432,13 @@
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label lblDataNascimento;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dpDataNascimento;
         private System.Windows.Forms.Label lblNomeMae;
         private System.Windows.Forms.TextBox txtNomeMae;
         private System.Windows.Forms.Label lblSexo;
         private System.Windows.Forms.RadioButton rbMasculino;
         private System.Windows.Forms.RadioButton rbFeminino;
+        private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnDesativar;
-        private System.Windows.Forms.Button button1;
     }
 }
