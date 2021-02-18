@@ -42,6 +42,7 @@
             // 
             // msPrincipal
             // 
+            this.msPrincipal.BackColor = System.Drawing.SystemColors.Control;
             this.msPrincipal.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.msPrincipal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmCadastro,
@@ -65,8 +66,9 @@
             // tsmPessoa
             // 
             this.tsmPessoa.Name = "tsmPessoa";
-            this.tsmPessoa.Size = new System.Drawing.Size(156, 24);
+            this.tsmPessoa.Size = new System.Drawing.Size(180, 24);
             this.tsmPessoa.Text = "Pessoa";
+            this.tsmPessoa.Click += new System.EventHandler(this.tsmPessoa_Click);
             // 
             // tsmSalaEvento
             // 
@@ -112,6 +114,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(524, 279);
             this.Controls.Add(this.msPrincipal);
             this.MainMenuStrip = this.msPrincipal;

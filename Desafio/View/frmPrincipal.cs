@@ -16,5 +16,11 @@ namespace View
         {
             InitializeComponent();
         }
+
+        private void tsmPessoa_Click(object sender, EventArgs e)
+        {
+            frmPessoa pessoa = new frmPessoa();
+            pessoa.Show();
+        }
     }
 }
