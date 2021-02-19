@@ -9,6 +9,7 @@ namespace Repository
 {
     public class Conexao
     {
+        public string DataDirectory {get;}
         public static SqlCommand Conectar()
         {
                 SqlConnection conexao = new SqlConnection();

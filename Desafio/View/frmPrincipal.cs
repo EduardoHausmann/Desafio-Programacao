@@ -25,7 +25,8 @@ namespace View
 
         private void tsmSalaEvento_Click(object sender, EventArgs e)
         {
-
+            frmSalaEvento salaEvento = new frmSalaEvento();
+            salaEvento.Show();
         }
 
         private void tsmEspacoCafe_Click(object sender, EventArgs e)
