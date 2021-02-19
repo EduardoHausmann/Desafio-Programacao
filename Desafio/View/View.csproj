@@ -63,11 +63,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmConsultaEspacoCafe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultaEspacoCafe.Designer.cs">
+      <DependentUpon>frmConsultaEspacoCafe.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmConsultaPessoa.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmConsultaPessoa.Designer.cs">
       <DependentUpon>frmConsultaPessoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConsultaSalaEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultaSalaEvento.Designer.cs">
+      <DependentUpon>frmConsultaSalaEvento.cs</DependentUpon>
     </Compile>
     <Compile Include="frmEspacoCafe.cs">
       <SubType>Form</SubType>
@@ -95,8 +107,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmConsultaEspacoCafe.resx">
+      <DependentUpon>frmConsultaEspacoCafe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmConsultaPessoa.resx">
       <DependentUpon>frmConsultaPessoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConsultaSalaEvento.resx">
+      <DependentUpon>frmConsultaSalaEvento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEspacoCafe.resx">
       <DependentUpon>frmEspacoCafe.cs</DependentUpon>

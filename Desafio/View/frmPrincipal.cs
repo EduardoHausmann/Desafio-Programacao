@@ -43,12 +43,14 @@ namespace View
 
         private void tsmConsultaSalaEvento_Click(object sender, EventArgs e)
         {
-
+            frmConsultaSalaEvento consultaSalaEvento = new frmConsultaSalaEvento();
+            consultaSalaEvento.Show();
         }
 
         private void tsmConsultaEspacoCafe_Click(object sender, EventArgs e)
         {
-
+            frmConsultaEspacoCafe consultaEspacoCafe = new frmConsultaEspacoCafe();
+            consultaEspacoCafe.Show();
         }
 
         private void frmPrincipal_FormClosed(object sender, FormClosedEventArgs e)

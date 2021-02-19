@@ -22,7 +22,7 @@ namespace View
         public void AtualizarTabela()
         {
             PessoaRepository repository = new PessoaRepository();
-            string buscar = txtBuscar.Text;
+            string buscar = txtBuscar.Text.Trim();
             List<Pessoa> pessoas = repository.ObterTodos(buscar);
             dgvPessoa.RowCount = 0;
             for (int i = 0; i < pessoas.Count; i++)
@@ -30,7 +30,7 @@ namespace View
                 Pessoa pessoa = pessoas[i];
                 dgvPessoa.Rows.Add(new object[]
                 {
-                    pessoa.Nome, pessoa.Sobrenome, pessoa.CPF, pessoa.Endereco, pessoa.Telefone, pessoa.Email, pessoa.DataNascimento.ToString(), pessoa.NomeMae
+                    pessoa.Id.ToString(), pessoa.Nome, pessoa.Sobrenome, pessoa.CPF, pessoa.Endereco, pessoa.Telefone, pessoa.Email, pessoa.DataNascimento.ToString(), pessoa.NomeMae
                 });
             }
         }

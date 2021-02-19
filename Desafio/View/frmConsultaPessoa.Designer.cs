@@ -32,6 +32,7 @@ namespace View
             this.lblBuscar = new System.Windows.Forms.Label();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.dgvPessoa = new System.Windows.Forms.DataGridView();
+            this.ColumnId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnSobrenome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,6 +70,7 @@ namespace View
             this.dgvPessoa.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvPessoa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPessoa.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnId,
             this.ColumnNome,
             this.ColumnSobrenome,
             this.ColumnCpf,
@@ -82,8 +84,15 @@ namespace View
             this.dgvPessoa.ReadOnly = true;
             this.dgvPessoa.RowHeadersVisible = false;
             this.dgvPessoa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPessoa.Size = new System.Drawing.Size(779, 217);
+            this.dgvPessoa.Size = new System.Drawing.Size(831, 217);
             this.dgvPessoa.TabIndex = 2;
+            // 
+            // ColumnId
+            // 
+            this.ColumnId.HeaderText = "Código";
+            this.ColumnId.Name = "ColumnId";
+            this.ColumnId.ReadOnly = true;
+            this.ColumnId.Width = 50;
             // 
             // ColumnNome
             // 
@@ -139,14 +148,14 @@ namespace View
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(794, 285);
+            this.ClientSize = new System.Drawing.Size(842, 285);
             this.Controls.Add(this.dgvPessoa);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.lblBuscar);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmConsultaPessoa";
-            this.Text = "Consulta de Pessoa";
+            this.Text = "Consultar Pessoa";
             this.Load += new System.EventHandler(this.frmConsultaPessoa_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPessoa)).EndInit();
             this.ResumeLayout(false);
@@ -159,6 +168,7 @@ namespace View
         private System.Windows.Forms.Label lblBuscar;
         private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.DataGridView dgvPessoa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnId;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNome;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSobrenome;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCpf;
