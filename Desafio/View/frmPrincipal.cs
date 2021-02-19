@@ -48,5 +48,10 @@ namespace View
         {
 
         }
+
+        private void frmPrincipal_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

@@ -17,8 +17,8 @@ namespace Model
         [Column("nome")]
         public string Nome { get; set; }
 
-        [Column("lotacao")]
-        public int Lotacao { get; set; }
+        [Column("lotacao_maxima")]
+        public int LotacaoMaxima { get; set; }
 
         [Column("registro_ativo")]
         public Boolean RegistroAtivo { get; set; }

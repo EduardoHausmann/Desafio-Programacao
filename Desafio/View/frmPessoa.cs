@@ -45,7 +45,7 @@ namespace View
             if (rbFeminino.Checked)
                 pessoa.Sexo = "Feminino";
             else if (rbMasculino.Checked)
-                pessoa.Sexo = "Masculino"; ;
+                pessoa.Sexo = "Masculino";
 
             repository.Inserir(pessoa);
         }

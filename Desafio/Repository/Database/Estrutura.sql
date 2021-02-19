@@ -1,4 +1,4 @@
-﻿DROP TABLE IF EXISTS pessoas, sala_eventos, espaco_cafes;
+﻿DROP TABLE IF EXISTS  pessoas, sala_eventos, espaco_cafes;
 CREATE TABLE pessoas(
 id INT PRIMARY KEY IDENTITY(1,1),
 nome VARCHAR(50) NOT NULL,
@@ -16,13 +16,13 @@ registro_ativo BIT
 CREATE TABLE sala_eventos(
 id INT PRIMARY KEY IDENTITY(1,1),
 nome VARCHAR(75),
-lotação INT,
+lotacao_maxima INT,
 registro_ativo BIT
 );
 
 CREATE TABLE espaco_cafes(
 id INT PRIMARY KEY IDENTITY(1,1),
 nome VARCHAR(75),
-lotacao INT,
+lotacao_maxima INT,
 registro_ativo BIT
 );
