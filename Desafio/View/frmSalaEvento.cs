@@ -51,7 +51,7 @@ namespace View
         {
             lblId.Text = "0";
             txtNome.Clear();
-            nudLotacao.Value = 15;
+            nudLotacao.Value = 1;
         }
 
         public void AtualizarTabela()

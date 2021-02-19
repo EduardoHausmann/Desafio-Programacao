@@ -121,12 +121,12 @@ namespace View
             this.nudLotacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nudLotacao.Location = new System.Drawing.Point(165, 49);
             this.nudLotacao.Maximum = new decimal(new int[] {
-            75,
+            9999,
             0,
             0,
             0});
             this.nudLotacao.Minimum = new decimal(new int[] {
-            15,
+            1,
             0,
             0,
             0});
@@ -134,7 +134,7 @@ namespace View
             this.nudLotacao.Size = new System.Drawing.Size(121, 26);
             this.nudLotacao.TabIndex = 13;
             this.nudLotacao.Value = new decimal(new int[] {
-            15,
+            1,
             0,
             0,
             0});
