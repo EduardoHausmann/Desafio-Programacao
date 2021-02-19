@@ -63,6 +63,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmConsultaPessoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConsultaPessoa.Designer.cs">
+      <DependentUpon>frmConsultaPessoa.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmEspacoCafe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +95,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmConsultaPessoa.resx">
+      <DependentUpon>frmConsultaPessoa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmEspacoCafe.resx">
       <DependentUpon>frmEspacoCafe.cs</DependentUpon>
     </EmbeddedResource>

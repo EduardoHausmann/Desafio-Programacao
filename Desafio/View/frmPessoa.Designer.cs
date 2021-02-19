@@ -30,16 +30,6 @@
         {
             this.lblId = new System.Windows.Forms.Label();
             this.dgvPessoa = new System.Windows.Forms.DataGridView();
-            this.ColumnId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnSobrenome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnCpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnEndereco = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnTelefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnDataNasc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnNomeMae = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnSexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblNome = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.lblSobrenome = new System.Windows.Forms.Label();
@@ -61,6 +51,16 @@
             this.rbFeminino = new System.Windows.Forms.RadioButton();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnDesativar = new System.Windows.Forms.Button();
+            this.ColumnSexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnNomeMae = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnDataNasc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnTelefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnEndereco = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnSobrenome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPessoa)).BeginInit();
             this.SuspendLayout();
             // 
@@ -100,67 +100,6 @@
             this.dgvPessoa.Size = new System.Drawing.Size(953, 217);
             this.dgvPessoa.TabIndex = 1;
             this.dgvPessoa.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPessoa_CellDoubleClick);
-            // 
-            // ColumnId
-            // 
-            this.ColumnId.HeaderText = "Código";
-            this.ColumnId.Name = "ColumnId";
-            this.ColumnId.ReadOnly = true;
-            this.ColumnId.Width = 50;
-            // 
-            // ColumnNome
-            // 
-            this.ColumnNome.HeaderText = "Nome";
-            this.ColumnNome.Name = "ColumnNome";
-            this.ColumnNome.ReadOnly = true;
-            // 
-            // ColumnSobrenome
-            // 
-            this.ColumnSobrenome.HeaderText = "Sobrenome";
-            this.ColumnSobrenome.Name = "ColumnSobrenome";
-            this.ColumnSobrenome.ReadOnly = true;
-            // 
-            // ColumnCpf
-            // 
-            this.ColumnCpf.HeaderText = "CPF";
-            this.ColumnCpf.Name = "ColumnCpf";
-            this.ColumnCpf.ReadOnly = true;
-            // 
-            // ColumnEndereco
-            // 
-            this.ColumnEndereco.HeaderText = "Endereço";
-            this.ColumnEndereco.Name = "ColumnEndereco";
-            this.ColumnEndereco.ReadOnly = true;
-            // 
-            // ColumnTelefone
-            // 
-            this.ColumnTelefone.HeaderText = "Telefone";
-            this.ColumnTelefone.Name = "ColumnTelefone";
-            this.ColumnTelefone.ReadOnly = true;
-            // 
-            // ColumnEmail
-            // 
-            this.ColumnEmail.HeaderText = "E-mail";
-            this.ColumnEmail.Name = "ColumnEmail";
-            this.ColumnEmail.ReadOnly = true;
-            // 
-            // ColumnDataNasc
-            // 
-            this.ColumnDataNasc.HeaderText = "Data Nascimento";
-            this.ColumnDataNasc.Name = "ColumnDataNasc";
-            this.ColumnDataNasc.ReadOnly = true;
-            // 
-            // ColumnNomeMae
-            // 
-            this.ColumnNomeMae.HeaderText = "Nome Mãe";
-            this.ColumnNomeMae.Name = "ColumnNomeMae";
-            this.ColumnNomeMae.ReadOnly = true;
-            // 
-            // ColumnSexo
-            // 
-            this.ColumnSexo.HeaderText = "Sexo";
-            this.ColumnSexo.Name = "ColumnSexo";
-            this.ColumnSexo.ReadOnly = true;
             // 
             // lblNome
             // 
@@ -365,6 +304,67 @@
             this.btnDesativar.UseVisualStyleBackColor = true;
             this.btnDesativar.Click += new System.EventHandler(this.btnDesativar_Click);
             // 
+            // ColumnSexo
+            // 
+            this.ColumnSexo.HeaderText = "Sexo";
+            this.ColumnSexo.Name = "ColumnSexo";
+            this.ColumnSexo.ReadOnly = true;
+            // 
+            // ColumnNomeMae
+            // 
+            this.ColumnNomeMae.HeaderText = "Nome Mãe";
+            this.ColumnNomeMae.Name = "ColumnNomeMae";
+            this.ColumnNomeMae.ReadOnly = true;
+            // 
+            // ColumnDataNasc
+            // 
+            this.ColumnDataNasc.HeaderText = "Data Nascimento";
+            this.ColumnDataNasc.Name = "ColumnDataNasc";
+            this.ColumnDataNasc.ReadOnly = true;
+            // 
+            // ColumnEmail
+            // 
+            this.ColumnEmail.HeaderText = "E-mail";
+            this.ColumnEmail.Name = "ColumnEmail";
+            this.ColumnEmail.ReadOnly = true;
+            // 
+            // ColumnTelefone
+            // 
+            this.ColumnTelefone.HeaderText = "Telefone";
+            this.ColumnTelefone.Name = "ColumnTelefone";
+            this.ColumnTelefone.ReadOnly = true;
+            // 
+            // ColumnEndereco
+            // 
+            this.ColumnEndereco.HeaderText = "Endereço";
+            this.ColumnEndereco.Name = "ColumnEndereco";
+            this.ColumnEndereco.ReadOnly = true;
+            // 
+            // ColumnCpf
+            // 
+            this.ColumnCpf.HeaderText = "CPF";
+            this.ColumnCpf.Name = "ColumnCpf";
+            this.ColumnCpf.ReadOnly = true;
+            // 
+            // ColumnSobrenome
+            // 
+            this.ColumnSobrenome.HeaderText = "Sobrenome";
+            this.ColumnSobrenome.Name = "ColumnSobrenome";
+            this.ColumnSobrenome.ReadOnly = true;
+            // 
+            // ColumnNome
+            // 
+            this.ColumnNome.HeaderText = "Nome";
+            this.ColumnNome.Name = "ColumnNome";
+            this.ColumnNome.ReadOnly = true;
+            // 
+            // ColumnId
+            // 
+            this.ColumnId.HeaderText = "Código";
+            this.ColumnId.Name = "ColumnId";
+            this.ColumnId.ReadOnly = true;
+            this.ColumnId.Width = 50;
+            // 
             // frmPessoa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -409,16 +409,6 @@
 
         private System.Windows.Forms.Label lblId;
         private System.Windows.Forms.DataGridView dgvPessoa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSobrenome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCpf;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnEndereco;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnTelefone;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnEmail;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDataNasc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNomeMae;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSexo;
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label lblSobrenome;
@@ -440,5 +430,15 @@
         private System.Windows.Forms.RadioButton rbFeminino;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnDesativar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSobrenome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCpf;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnEndereco;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnTelefone;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnEmail;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDataNasc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNomeMae;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSexo;
     }
 }

@@ -37,7 +37,8 @@ namespace View
 
         private void tsmConsultaPessoa_Click(object sender, EventArgs e)
         {
-
+            frmConsultaPessoa consultaPessoa = new frmConsultaPessoa();
+            consultaPessoa.Show();
         }
 
         private void tsmConsultaSalaEvento_Click(object sender, EventArgs e)
