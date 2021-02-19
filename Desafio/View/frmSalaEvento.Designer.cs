@@ -127,7 +127,7 @@ namespace View
             this.nudLotacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nudLotacao.Location = new System.Drawing.Point(165, 48);
             this.nudLotacao.Maximum = new decimal(new int[] {
-            1000,
+            75,
             0,
             0,
             0});

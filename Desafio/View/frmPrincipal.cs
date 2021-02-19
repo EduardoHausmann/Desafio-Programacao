@@ -31,7 +31,8 @@ namespace View
 
         private void tsmEspacoCafe_Click(object sender, EventArgs e)
         {
-
+            frmEspacoCafe espacoCafe = new frmEspacoCafe();
+            espacoCafe.Show();
         }
 
         private void tsmConsultaPessoa_Click(object sender, EventArgs e)
