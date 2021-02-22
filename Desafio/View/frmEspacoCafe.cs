@@ -34,7 +34,7 @@ namespace View
 
         public void Inserir()
         {
-            espacoCafe.Nome = txtNome.Text;
+            espacoCafe.NumeroSala = txtNumeroSala.Text;
             espacoCafe.LotacaoMaxima = Convert.ToInt32(nudLotacao.Value);
             repository.Inserir(espacoCafe);
         }
@@ -42,7 +42,7 @@ namespace View
         public void Alterar()
         {
             espacoCafe.Id = Convert.ToInt32(lblId.Text);
-            espacoCafe.Nome = txtNome.Text;
+            espacoCafe.NumeroSala = txtNumeroSala.Text;
             espacoCafe.LotacaoMaxima = Convert.ToInt32(nudLotacao.Value);
             repository.Alterar(espacoCafe);
         }
@@ -50,7 +50,7 @@ namespace View
         public void LimparCampos()
         {
             lblId.Text = "0";
-            txtNome.Clear();
+            txtNumeroSala.Clear();
             nudLotacao.Value = 1;
         }
 
@@ -63,7 +63,7 @@ namespace View
             {
                 espacoCafe = espacoCafes[i];
                 dgvEspacoCafe.Rows.Add(new object[]{
-                    espacoCafe.Id.ToString(), espacoCafe.Nome, espacoCafe.LotacaoMaxima.ToString()
+                    espacoCafe.Id.ToString(), espacoCafe.NumeroSala, espacoCafe.LotacaoMaxima.ToString()
                 });
             }
         }
@@ -80,7 +80,7 @@ namespace View
             if (espacoCafe != null)
             {
                 lblId.Text = espacoCafe.Id.ToString();
-                txtNome.Text = espacoCafe.Nome;
+                txtNumeroSala.Text = espacoCafe.NumeroSala;
                 nudLotacao.Value = Convert.ToInt32(espacoCafe.LotacaoMaxima);
             }
         }

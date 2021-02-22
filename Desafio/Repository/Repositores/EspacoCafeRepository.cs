@@ -15,9 +15,9 @@ namespace Repository.Repositores
         public bool Alterar(EspacoCafe espacoCafe)
         {
             SqlCommand comando = Conexao.Conectar();
-            comando.CommandText = @"UPDATE espaco_cafes SET nome = @NOME, lotacao_maxima = @LOTACA_MAXIMA WHERE id = @ID";
+            comando.CommandText = @"UPDATE espaco_cafes SET numero_sala = @NUMERO_SALA, lotacao_maxima = @LOTACA_MAXIMA WHERE id = @ID";
             comando.Parameters.AddWithValue("@ID", espacoCafe.Id);
-            comando.Parameters.AddWithValue("@NOME", espacoCafe.Nome);
+            comando.Parameters.AddWithValue("@NUMERO_SALA", espacoCafe.NumeroSala);
             comando.Parameters.AddWithValue("@LOTACA_MAXIMA", espacoCafe.LotacaoMaxima);
 
             int quantidadeAfetada = Convert.ToInt32(comando.ExecuteNonQuery());
@@ -42,8 +42,8 @@ namespace Repository.Repositores
         public int Inserir(EspacoCafe espacoCafe)
         {
             SqlCommand comando = Conexao.Conectar();
-            comando.CommandText = @"INSERT INTO espaco_cafes (nome, lotacao_maxima, registro_ativo) OUTPUT INSERTED.ID VALUES (@NOME, @LOTACA_MAXIMA, @REGISTRO_ATIVO)";
-            comando.Parameters.AddWithValue("@NOME", espacoCafe.Nome);
+            comando.CommandText = @"INSERT INTO espaco_cafes (numero_sala, lotacao_maxima, registro_ativo) OUTPUT INSERTED.ID VALUES (@NUMERO_SALA, @LOTACA_MAXIMA, @REGISTRO_ATIVO)";
+            comando.Parameters.AddWithValue("@NUMERO_SALA", espacoCafe.NumeroSala);
             comando.Parameters.AddWithValue("@LOTACA_MAXIMA", espacoCafe.LotacaoMaxima);
             espacoCafe.RegistroAtivo = true;
             comando.Parameters.AddWithValue("@REGISTRO_ATIVO", espacoCafe.RegistroAtivo);
@@ -69,7 +69,7 @@ namespace Repository.Repositores
             DataRow dr = dt.Rows[0];
             EspacoCafe espacoCafe = new EspacoCafe();
             espacoCafe.Id = Convert.ToInt32(dr["id"]);
-            espacoCafe.Nome = dr["nome"].ToString();
+            espacoCafe.NumeroSala = dr["numero_sala"].ToString();
             espacoCafe.LotacaoMaxima = Convert.ToInt32(dr["lotacao_maxima"]);
             return espacoCafe;
         }
@@ -90,7 +90,7 @@ namespace Repository.Repositores
             {
                 EspacoCafe espacoCafe = new EspacoCafe();
                 espacoCafe.Id = Convert.ToInt32(dr["id"]);
-                espacoCafe.Nome = dr["nome"].ToString();
+                espacoCafe.NumeroSala = dr["numero_sala"].ToString();
                 espacoCafe.LotacaoMaxima = Convert.ToInt32(dr["lotacao_maxima"]);
                 espacoCafes.Add(espacoCafe);
             }

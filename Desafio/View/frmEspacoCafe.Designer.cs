@@ -38,8 +38,8 @@ namespace View
             this.btnDesativar = new System.Windows.Forms.Button();
             this.nudLotacao = new System.Windows.Forms.NumericUpDown();
             this.lblLotacao = new System.Windows.Forms.Label();
-            this.txtNome = new System.Windows.Forms.TextBox();
-            this.lblNome = new System.Windows.Forms.Label();
+            this.txtNumeroSala = new System.Windows.Forms.TextBox();
+            this.lblNumeroSala = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEspacoCafe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudLotacao)).BeginInit();
             this.SuspendLayout();
@@ -149,23 +149,23 @@ namespace View
             this.lblLotacao.TabIndex = 12;
             this.lblLotacao.Text = "Lotação Máxima";
             // 
-            // txtNome
+            // txtNumeroSala
             // 
-            this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(6, 49);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(147, 26);
-            this.txtNome.TabIndex = 11;
+            this.txtNumeroSala.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNumeroSala.Location = new System.Drawing.Point(6, 49);
+            this.txtNumeroSala.Name = "txtNumeroSala";
+            this.txtNumeroSala.Size = new System.Drawing.Size(147, 26);
+            this.txtNumeroSala.TabIndex = 11;
             // 
-            // lblNome
+            // lblNumeroSala
             // 
-            this.lblNome.AutoSize = true;
-            this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNome.Location = new System.Drawing.Point(2, 26);
-            this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(51, 20);
-            this.lblNome.TabIndex = 10;
-            this.lblNome.Text = "Nome";
+            this.lblNumeroSala.AutoSize = true;
+            this.lblNumeroSala.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumeroSala.Location = new System.Drawing.Point(2, 26);
+            this.lblNumeroSala.Name = "lblNumeroSala";
+            this.lblNumeroSala.Size = new System.Drawing.Size(123, 20);
+            this.lblNumeroSala.TabIndex = 10;
+            this.lblNumeroSala.Text = "Número da Sala";
             // 
             // frmEspacoCafe
             // 
@@ -179,8 +179,8 @@ namespace View
             this.Controls.Add(this.btnDesativar);
             this.Controls.Add(this.nudLotacao);
             this.Controls.Add(this.lblLotacao);
-            this.Controls.Add(this.txtNome);
-            this.Controls.Add(this.lblNome);
+            this.Controls.Add(this.txtNumeroSala);
+            this.Controls.Add(this.lblNumeroSala);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmEspacoCafe";
@@ -204,7 +204,7 @@ namespace View
         private System.Windows.Forms.Button btnDesativar;
         private System.Windows.Forms.NumericUpDown nudLotacao;
         private System.Windows.Forms.Label lblLotacao;
-        private System.Windows.Forms.TextBox txtNome;
-        private System.Windows.Forms.Label lblNome;
+        private System.Windows.Forms.TextBox txtNumeroSala;
+        private System.Windows.Forms.Label lblNumeroSala;
     }
 }

@@ -14,8 +14,8 @@ namespace Model
         [Key, Column("id")]
         public int Id { get; set; }
 
-        [Column("nome")]
-        public string Nome { get; set; }
+        [Column("numero_sala")]
+        public string NumeroSala { get; set; }
 
         [Column("lotacao_maxima")]
         public int LotacaoMaxima { get; set; }

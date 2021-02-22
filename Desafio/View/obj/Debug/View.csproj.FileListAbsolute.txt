@@ -57,3 +57,5 @@ E:\Desafio-Programacao\Desafio\View\obj\Debug\View.exe
 E:\Desafio-Programacao\Desafio\View\obj\Debug\View.pdb
 C:\Users\Eduardo\Documents\GitHub\Desafio-Programacao\Desafio\View\obj\Debug\View.frmConsultaEspacoCafe.resources
 C:\Users\Eduardo\Documents\GitHub\Desafio-Programacao\Desafio\View\obj\Debug\View.frmConsultaSalaEvento.resources
+C:\Users\Eduardo\Documents\GitHub\Desafio-Programacao\Desafio\View\bin\Debug\App_Data\Database.mdf
+C:\Users\Eduardo\Documents\GitHub\Desafio-Programacao\Desafio\View\bin\Debug\App_Data\Database_log.ldf
