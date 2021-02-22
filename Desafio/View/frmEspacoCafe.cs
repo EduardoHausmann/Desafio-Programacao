@@ -34,7 +34,7 @@ namespace View
 
         public void Inserir()
         {
-            espacoCafe.NumeroSala = txtNumeroSala.Text;
+            espacoCafe.NumeroSala = Convert.ToInt32(txtNumeroSala.Text);
             espacoCafe.LotacaoMaxima = Convert.ToInt32(nudLotacao.Value);
             repository.Inserir(espacoCafe);
         }
@@ -42,7 +42,7 @@ namespace View
         public void Alterar()
         {
             espacoCafe.Id = Convert.ToInt32(lblId.Text);
-            espacoCafe.NumeroSala = txtNumeroSala.Text;
+            espacoCafe.NumeroSala = Convert.ToInt32(txtNumeroSala.Text);
             espacoCafe.LotacaoMaxima = Convert.ToInt32(nudLotacao.Value);
             repository.Alterar(espacoCafe);
         }
@@ -80,7 +80,7 @@ namespace View
             if (espacoCafe != null)
             {
                 lblId.Text = espacoCafe.Id.ToString();
-                txtNumeroSala.Text = espacoCafe.NumeroSala;
+                txtNumeroSala.Text = espacoCafe.NumeroSala.ToString();
                 nudLotacao.Value = Convert.ToInt32(espacoCafe.LotacaoMaxima);
             }
         }

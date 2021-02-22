@@ -15,7 +15,7 @@ namespace Model
         public int Id { get; set; }
 
         [Column("numero_sala")]
-        public string NumeroSala { get; set; }
+        public int NumeroSala { get; set; }
 
         [Column("lotacao_maxima")]
         public int LotacaoMaxima { get; set; }

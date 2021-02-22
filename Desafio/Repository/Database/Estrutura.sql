@@ -15,14 +15,14 @@ registro_ativo BIT
 
 CREATE TABLE sala_eventos(
 id INT PRIMARY KEY IDENTITY(1,1),
-numero_sala VARCHAR(75),
+numero_sala INT,
 lotacao_maxima INT,
 registro_ativo BIT
 );
 
 CREATE TABLE espaco_cafes(
 id INT PRIMARY KEY IDENTITY(1,1),
-numero_sala VARCHAR(75),
+numero_sala INT,
 lotacao_maxima INT,
 registro_ativo BIT
 );

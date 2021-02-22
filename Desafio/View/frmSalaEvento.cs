@@ -34,7 +34,7 @@ namespace View
 
         public void Inserir()
         {
-            salaEvento.NumeroSala = txtNumeroSala.Text;
+            salaEvento.NumeroSala = Convert.ToInt32(txtNumeroSala.Text);
             salaEvento.LotacaoMaxima = Convert.ToInt32(nudLotacao.Value);
             repository.Inserir(salaEvento);
         }
@@ -42,7 +42,7 @@ namespace View
         public void Alterar()
         {
             salaEvento.Id = Convert.ToInt32(lblId.Text);
-            salaEvento.NumeroSala = txtNumeroSala.Text;
+            salaEvento.NumeroSala = Convert.ToInt32(txtNumeroSala.Text);
             salaEvento.LotacaoMaxima = Convert.ToInt32(nudLotacao.Value);
             repository.Alterar(salaEvento);
         }
@@ -80,7 +80,7 @@ namespace View
             if (salaEvento != null)
             {
                 lblId.Text = salaEvento.Id.ToString();
-                txtNumeroSala.Text = salaEvento.NumeroSala;
+                txtNumeroSala.Text = salaEvento.NumeroSala.ToString();
                 nudLotacao.Value = Convert.ToInt32(salaEvento.LotacaoMaxima);
             }
         }

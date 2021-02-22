@@ -70,7 +70,7 @@ namespace Repository.Repositores
             DataRow dr = dt.Rows[0];
             SalaEvento salaEvento = new SalaEvento();
             salaEvento.Id = Convert.ToInt32(dr["id"]);
-            salaEvento.NumeroSala = dr["numero_sala"].ToString();
+            salaEvento.NumeroSala = Convert.ToInt32(dr["numero_sala"]);
             salaEvento.LotacaoMaxima = Convert.ToInt32(dr["lotacao_maxima"]);
             return salaEvento;
         }
@@ -91,7 +91,7 @@ namespace Repository.Repositores
             {
                 SalaEvento salaEvento = new SalaEvento();
                 salaEvento.Id = Convert.ToInt32(dr["id"]);
-                salaEvento.NumeroSala = dr["numero_sala"].ToString();
+                salaEvento.NumeroSala = Convert.ToInt32(dr["numero_sala"]);
                 salaEvento.LotacaoMaxima = Convert.ToInt32(dr["lotacao_maxima"]);
                 salaEventos.Add(salaEvento);
             }

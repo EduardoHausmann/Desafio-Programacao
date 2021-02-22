@@ -42,11 +42,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexao.cs" />
+    <Compile Include="Interface\ICafePessoaRepository.cs" />
     <Compile Include="Interface\IEspacoCafeRepository.cs" />
+    <Compile Include="Interface\IEventoPessoaRepository.cs" />
     <Compile Include="Interface\IPessoaRepository.cs" />
     <Compile Include="Interface\ISalaEventoRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositores\CafePessoaRepository.cs" />
     <Compile Include="Repositores\EspacoCafeRepository.cs" />
+    <Compile Include="Repositores\EventoPessoaRepository.cs" />
     <Compile Include="Repositores\PessoaRepository.cs" />
     <Compile Include="Repositores\SalaEventoRepository.cs" />
   </ItemGroup>

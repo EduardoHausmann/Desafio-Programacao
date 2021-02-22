@@ -69,7 +69,7 @@ namespace Repository.Repositores
             DataRow dr = dt.Rows[0];
             EspacoCafe espacoCafe = new EspacoCafe();
             espacoCafe.Id = Convert.ToInt32(dr["id"]);
-            espacoCafe.NumeroSala = dr["numero_sala"].ToString();
+            espacoCafe.NumeroSala = Convert.ToInt32(dr["numero_sala"]);
             espacoCafe.LotacaoMaxima = Convert.ToInt32(dr["lotacao_maxima"]);
             return espacoCafe;
         }
@@ -90,7 +90,7 @@ namespace Repository.Repositores
             {
                 EspacoCafe espacoCafe = new EspacoCafe();
                 espacoCafe.Id = Convert.ToInt32(dr["id"]);
-                espacoCafe.NumeroSala = dr["numero_sala"].ToString();
+                espacoCafe.NumeroSala = Convert.ToInt32(dr["numero_sala"]);
                 espacoCafe.LotacaoMaxima = Convert.ToInt32(dr["lotacao_maxima"]);
                 espacoCafes.Add(espacoCafe);
             }
