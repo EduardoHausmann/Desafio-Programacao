@@ -93,6 +93,18 @@
     <Compile Include="frmPessoa.Designer.cs">
       <DependentUpon>frmPessoa.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPessoaEspaco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPessoaEspaco.Designer.cs">
+      <DependentUpon>frmPessoaEspaco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPessoaEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPessoaEvento.Designer.cs">
+      <DependentUpon>frmPessoaEvento.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +133,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPessoa.resx">
       <DependentUpon>frmPessoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPessoaEspaco.resx">
+      <DependentUpon>frmPessoaEspaco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPessoaEvento.resx">
+      <DependentUpon>frmPessoaEvento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
