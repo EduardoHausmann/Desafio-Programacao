@@ -26,9 +26,6 @@ namespace Model
         [Column("id_pessoa_evento")]
         public int IdPessoaEvento { get; set; }
 
-        [ForeignKey("IdPessoaEvento")]
-        public PessoaEvento PessoaEvento { get; set; }
-
         [Column("registro_ativo")]
         public Boolean RegistroAtivo { get; set; }
     }

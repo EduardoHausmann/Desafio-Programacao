@@ -29,7 +29,7 @@ registro_ativo BIT
 
 CREATE TABLE evento_pessoas(
 id INT PRIMARY KEY IDENTITY(1,1),
-nome_evento VARCHAR(100),
+descricao VARCHAR(100),
 id_sala_evento INT,
 FOREIGN KEY (id_sala_evento) REFERENCES sala_eventos(id),
 id_pessoa INT,
@@ -40,7 +40,6 @@ registro_ativo BIT
 
 CREATE TABLE cafe_pessoas(
 id INT PRIMARY KEY IDENTITY(1,1),
-nome_espaco VARCHAR(100),
 id_espaco_cafe INT,
 FOREIGN KEY (id_espaco_cafe) REFERENCES espaco_cafes(id),
 id_pessoa INT,

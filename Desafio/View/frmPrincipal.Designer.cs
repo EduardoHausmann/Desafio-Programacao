@@ -33,8 +33,6 @@
             this.tsmPessoa = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmSalaEvento = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmEspacoCafe = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmPessoaEvento = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmPessoaEspaco = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmConsulta = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmConsultaPessoa = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmConsultaSalaEvento = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,7 +49,7 @@
             this.tsmConsulta});
             this.msPrincipal.Location = new System.Drawing.Point(0, 0);
             this.msPrincipal.Name = "msPrincipal";
-            this.msPrincipal.Size = new System.Drawing.Size(524, 27);
+            this.msPrincipal.Size = new System.Drawing.Size(409, 27);
             this.msPrincipal.TabIndex = 0;
             // 
             // tsmCadastro
@@ -59,9 +57,7 @@
             this.tsmCadastro.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmPessoa,
             this.tsmSalaEvento,
-            this.tsmEspacoCafe,
-            this.tsmPessoaEvento,
-            this.tsmPessoaEspaco});
+            this.tsmEspacoCafe});
             this.tsmCadastro.Name = "tsmCadastro";
             this.tsmCadastro.Size = new System.Drawing.Size(77, 23);
             this.tsmCadastro.Text = "Cadastro";
@@ -70,37 +66,23 @@
             // tsmPessoa
             // 
             this.tsmPessoa.Name = "tsmPessoa";
-            this.tsmPessoa.Size = new System.Drawing.Size(186, 24);
+            this.tsmPessoa.Size = new System.Drawing.Size(180, 24);
             this.tsmPessoa.Text = "Pessoa";
             this.tsmPessoa.Click += new System.EventHandler(this.tsmPessoa_Click);
             // 
             // tsmSalaEvento
             // 
             this.tsmSalaEvento.Name = "tsmSalaEvento";
-            this.tsmSalaEvento.Size = new System.Drawing.Size(186, 24);
+            this.tsmSalaEvento.Size = new System.Drawing.Size(180, 24);
             this.tsmSalaEvento.Text = "Sala Evento";
             this.tsmSalaEvento.Click += new System.EventHandler(this.tsmSalaEvento_Click);
             // 
             // tsmEspacoCafe
             // 
             this.tsmEspacoCafe.Name = "tsmEspacoCafe";
-            this.tsmEspacoCafe.Size = new System.Drawing.Size(186, 24);
+            this.tsmEspacoCafe.Size = new System.Drawing.Size(180, 24);
             this.tsmEspacoCafe.Text = "Espaço Café";
             this.tsmEspacoCafe.Click += new System.EventHandler(this.tsmEspacoCafe_Click);
-            // 
-            // tsmPessoaEvento
-            // 
-            this.tsmPessoaEvento.Name = "tsmPessoaEvento";
-            this.tsmPessoaEvento.Size = new System.Drawing.Size(186, 24);
-            this.tsmPessoaEvento.Text = "Pessoa p/ Evento";
-            this.tsmPessoaEvento.Click += new System.EventHandler(this.tsmPessoaEvento_Click);
-            // 
-            // tsmPessoaEspaco
-            // 
-            this.tsmPessoaEspaco.Name = "tsmPessoaEspaco";
-            this.tsmPessoaEspaco.Size = new System.Drawing.Size(186, 24);
-            this.tsmPessoaEspaco.Text = "Pessoa p/ Espaço";
-            this.tsmPessoaEspaco.Click += new System.EventHandler(this.tsmPessoaEspaco_Click);
             // 
             // tsmConsulta
             // 
@@ -115,21 +97,21 @@
             // tsmConsultaPessoa
             // 
             this.tsmConsultaPessoa.Name = "tsmConsultaPessoa";
-            this.tsmConsultaPessoa.Size = new System.Drawing.Size(156, 24);
+            this.tsmConsultaPessoa.Size = new System.Drawing.Size(180, 24);
             this.tsmConsultaPessoa.Text = "Pessoa";
             this.tsmConsultaPessoa.Click += new System.EventHandler(this.tsmConsultaPessoa_Click);
             // 
             // tsmConsultaSalaEvento
             // 
             this.tsmConsultaSalaEvento.Name = "tsmConsultaSalaEvento";
-            this.tsmConsultaSalaEvento.Size = new System.Drawing.Size(156, 24);
+            this.tsmConsultaSalaEvento.Size = new System.Drawing.Size(180, 24);
             this.tsmConsultaSalaEvento.Text = "Sala Evento";
             this.tsmConsultaSalaEvento.Click += new System.EventHandler(this.tsmConsultaSalaEvento_Click);
             // 
             // tsmConsultaEspacoCafe
             // 
             this.tsmConsultaEspacoCafe.Name = "tsmConsultaEspacoCafe";
-            this.tsmConsultaEspacoCafe.Size = new System.Drawing.Size(156, 24);
+            this.tsmConsultaEspacoCafe.Size = new System.Drawing.Size(180, 24);
             this.tsmConsultaEspacoCafe.Text = "Espaço Café";
             this.tsmConsultaEspacoCafe.Click += new System.EventHandler(this.tsmConsultaEspacoCafe_Click);
             // 
@@ -138,7 +120,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(524, 279);
+            this.ClientSize = new System.Drawing.Size(409, 279);
             this.Controls.Add(this.msPrincipal);
             this.MainMenuStrip = this.msPrincipal;
             this.MaximizeBox = false;
@@ -164,8 +146,6 @@
         private System.Windows.Forms.ToolStripMenuItem tsmConsultaPessoa;
         private System.Windows.Forms.ToolStripMenuItem tsmConsultaSalaEvento;
         private System.Windows.Forms.ToolStripMenuItem tsmConsultaEspacoCafe;
-        private System.Windows.Forms.ToolStripMenuItem tsmPessoaEvento;
-        private System.Windows.Forms.ToolStripMenuItem tsmPessoaEspaco;
     }
 }
 

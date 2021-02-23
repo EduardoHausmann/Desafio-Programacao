@@ -59,8 +59,6 @@ C:\Users\Eduardo\Documents\GitHub\Desafio-Programacao\Desafio\View\obj\Debug\Vie
 C:\Users\Eduardo\Documents\GitHub\Desafio-Programacao\Desafio\View\obj\Debug\View.frmConsultaSalaEvento.resources
 C:\Users\Eduardo\Documents\GitHub\Desafio-Programacao\Desafio\View\bin\Debug\App_Data\Database.mdf
 C:\Users\Eduardo\Documents\GitHub\Desafio-Programacao\Desafio\View\bin\Debug\App_Data\Database_log.ldf
-C:\Users\Eduardo\Documents\GitHub\Desafio-Programacao\Desafio\View\obj\Debug\View.frmPessoaEspaco.resources
-C:\Users\Eduardo\Documents\GitHub\Desafio-Programacao\Desafio\View\obj\Debug\View.frmPessoaEvento.resources
 C:\Users\Eduardo\Documents\GitHub\Desafio-Programacao\Desafio\View\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
 C:\Users\Eduardo\Documents\GitHub\Desafio-Programacao\Desafio\View\bin\Debug\CrystalDecisions.ReportSource.dll
 C:\Users\Eduardo\Documents\GitHub\Desafio-Programacao\Desafio\View\bin\Debug\CrystalDecisions.Shared.dll
