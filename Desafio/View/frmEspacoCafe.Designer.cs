@@ -37,7 +37,11 @@ namespace View
             this.lblNome = new System.Windows.Forms.Label();
             this.ColumnID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblLotacao = new System.Windows.Forms.Label();
+            this.nudLotacao = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEspacoCafe)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudLotacao)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvEspacoCafe
@@ -48,13 +52,14 @@ namespace View
             this.dgvEspacoCafe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEspacoCafe.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnID,
-            this.ColumnNome});
+            this.ColumnNome,
+            this.Column1});
             this.dgvEspacoCafe.Location = new System.Drawing.Point(6, 130);
             this.dgvEspacoCafe.Name = "dgvEspacoCafe";
             this.dgvEspacoCafe.ReadOnly = true;
             this.dgvEspacoCafe.RowHeadersVisible = false;
             this.dgvEspacoCafe.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvEspacoCafe.Size = new System.Drawing.Size(255, 150);
+            this.dgvEspacoCafe.Size = new System.Drawing.Size(305, 150);
             this.dgvEspacoCafe.TabIndex = 9;
             this.dgvEspacoCafe.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEspacoCafe_CellDoubleClick);
             // 
@@ -72,7 +77,7 @@ namespace View
             // btnSalvar
             // 
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvar.Location = new System.Drawing.Point(78, 92);
+            this.btnSalvar.Location = new System.Drawing.Point(128, 92);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(75, 32);
             this.btnSalvar.TabIndex = 15;
@@ -83,7 +88,7 @@ namespace View
             // btnDesativar
             // 
             this.btnDesativar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDesativar.Location = new System.Drawing.Point(170, 92);
+            this.btnDesativar.Location = new System.Drawing.Point(220, 92);
             this.btnDesativar.Name = "btnDesativar";
             this.btnDesativar.Size = new System.Drawing.Size(91, 32);
             this.btnDesativar.TabIndex = 14;
@@ -96,7 +101,7 @@ namespace View
             this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNome.Location = new System.Drawing.Point(6, 49);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(255, 26);
+            this.txtNome.Size = new System.Drawing.Size(160, 26);
             this.txtNome.TabIndex = 11;
             // 
             // lblNome
@@ -121,14 +126,45 @@ namespace View
             this.ColumnNome.HeaderText = "Nome";
             this.ColumnNome.Name = "ColumnNome";
             this.ColumnNome.ReadOnly = true;
-            this.ColumnNome.Width = 200;
+            this.ColumnNome.Width = 150;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Lotação Máxima";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // lblLotacao
+            // 
+            this.lblLotacao.AutoSize = true;
+            this.lblLotacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLotacao.Location = new System.Drawing.Point(180, 26);
+            this.lblLotacao.Name = "lblLotacao";
+            this.lblLotacao.Size = new System.Drawing.Size(67, 20);
+            this.lblLotacao.TabIndex = 16;
+            this.lblLotacao.Text = "Lotação";
+            // 
+            // nudLotacao
+            // 
+            this.nudLotacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudLotacao.Location = new System.Drawing.Point(184, 50);
+            this.nudLotacao.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
+            this.nudLotacao.Name = "nudLotacao";
+            this.nudLotacao.Size = new System.Drawing.Size(127, 26);
+            this.nudLotacao.TabIndex = 17;
             // 
             // frmEspacoCafe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(267, 284);
+            this.ClientSize = new System.Drawing.Size(315, 284);
+            this.Controls.Add(this.nudLotacao);
+            this.Controls.Add(this.lblLotacao);
             this.Controls.Add(this.dgvEspacoCafe);
             this.Controls.Add(this.lblId);
             this.Controls.Add(this.btnSalvar);
@@ -141,6 +177,7 @@ namespace View
             this.Text = "Espaço de Cafe";
             this.Load += new System.EventHandler(this.frmEspacoCafe_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEspacoCafe)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudLotacao)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -156,5 +193,8 @@ namespace View
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnID;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.Label lblLotacao;
+        private System.Windows.Forms.NumericUpDown nudLotacao;
     }
 }
