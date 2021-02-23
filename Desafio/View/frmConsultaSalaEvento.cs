@@ -31,7 +31,7 @@ namespace View
                 dgvSalaEvento.Rows.Add(new object[]
                 {
                     salaEvento.Id.ToString(),
-                    salaEvento.NumeroSala,
+                    salaEvento.Nome,
                     salaEvento.LotacaoMaxima.ToString()
                 });
             }

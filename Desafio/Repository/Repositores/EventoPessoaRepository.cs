@@ -15,9 +15,9 @@ namespace Repository.Repositores
         public bool Alterar(EventoPessoa eventoPessoa)
         {
             SqlCommand comando = Conexao.Conectar();
-            comando.CommandText = @"UPDATE evento_pessoas SET nome_evento = @NOME_EVENTO, id_sala_evento = @ID_SALA_EVENTO, id_pessoa = @ID_PESSOA, lotacao_atual = @LOTACAO_ATUAL WHERE id = @ID";
+            comando.CommandText = @"UPDATE evento_pessoas SET descricao = @DESCRICAO, id_sala_evento = @ID_SALA_EVENTO, id_pessoa = @ID_PESSOA, lotacao_atual = @LOTACAO_ATUAL WHERE id = @ID";
             comando.Parameters.AddWithValue("@ID", eventoPessoa.Id);
-            comando.Parameters.AddWithValue("@NOME_EVENTO", eventoPessoa.NomeEvento);
+            comando.Parameters.AddWithValue("@DESCRICAO", eventoPessoa.Descricao);
             comando.Parameters.AddWithValue("@ID_SALA_EVENTO", eventoPessoa.IdSalaEvento);
             comando.Parameters.AddWithValue("@ID_PESSOA", eventoPessoa.IdPessoa);
             comando.Parameters.AddWithValue("@LOTACAO_ATUAL", eventoPessoa.LotacaoAtual);
@@ -44,8 +44,8 @@ namespace Repository.Repositores
         public int Inserir(EventoPessoa eventoPessoa)
         {
             SqlCommand comando = Conexao.Conectar();
-            comando.CommandText = @"INSERT INTO evento_pessoas (nome_evento, id_sala_evento, id_pessoa, lotacao_atual, registro_ativo) OUTPUT INSERTED.ID VALUES (@NOME_EVENTO, @ID_SALA_EVENTO, @ID_PESSOA, @LOTACAO_ATUAL, @REGISTRO_ATIVO)";
-            comando.Parameters.AddWithValue("@NOME_EVENTO", eventoPessoa.NomeEvento);
+            comando.CommandText = @"INSERT INTO evento_pessoas (descricao, id_sala_evento, id_pessoa, lotacao_atual, registro_ativo) OUTPUT INSERTED.ID VALUES (@DESCRICAO, @ID_SALA_EVENTO, @ID_PESSOA, @LOTACAO_ATUAL, @REGISTRO_ATIVO)";
+            comando.Parameters.AddWithValue("@DESCRICAO", eventoPessoa.Descricao);
             comando.Parameters.AddWithValue("@ID_SALA_EVENTO", eventoPessoa.IdSalaEvento);
             comando.Parameters.AddWithValue("@ID_PESSOA", eventoPessoa.IdPessoa);
             comando.Parameters.AddWithValue("@LOTACAO_ATUAL", eventoPessoa.LotacaoAtual);
@@ -74,7 +74,7 @@ namespace Repository.Repositores
             DataRow dr = dt.Rows[0];
             EventoPessoa eventoPessoa = new EventoPessoa();
             eventoPessoa.Id = Convert.ToInt32(dr["id"]);
-            eventoPessoa.NomeEvento = dr["nome_evento"].ToString();
+            eventoPessoa.Descricao = dr["descricao"].ToString();
             eventoPessoa.IdSalaEvento = Convert.ToInt32(dr["id_sala_evento"]);
             eventoPessoa.IdPessoa = Convert.ToInt32(dr["id_pessoa"]);
             return eventoPessoa;
@@ -94,7 +94,7 @@ namespace Repository.Repositores
             {
                 EventoPessoa eventoPessoa = new EventoPessoa();
                 eventoPessoa.Id = Convert.ToInt32(dr["id"]);
-                eventoPessoa.NomeEvento = dr["nome_evento"].ToString();
+                eventoPessoa.Descricao = dr["descricao"].ToString();
                 eventoPessoa.IdSalaEvento = Convert.ToInt32(dr["id_sala_evento"]);
                 eventoPessoa.IdPessoa = Convert.ToInt32(dr["id_pessoa"]);
                 eventoPessoas.Add(eventoPessoa);

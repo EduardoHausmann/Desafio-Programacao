@@ -15,9 +15,9 @@ namespace Repository.Repositores
         public bool Alterar(SalaEvento salaEvento)
         {
             SqlCommand comando = Conexao.Conectar();
-            comando.CommandText = @"UPDATE sala_eventos SET numero_sala = @NUMERO_SALA, lotacao_maxima = @LOTACAO_MAXIMA WHERE id = @ID";
+            comando.CommandText = @"UPDATE sala_eventos SET nome  = @NOME, lotacao_maxima = @LOTACAO_MAXIMA WHERE id = @ID";
             comando.Parameters.AddWithValue("@ID", salaEvento.Id);
-            comando.Parameters.AddWithValue("@NUMERO_SALA", salaEvento.NumeroSala);
+            comando.Parameters.AddWithValue("@NOME", salaEvento.Nome);
             comando.Parameters.AddWithValue("@LOTACAO_MAXIMA", salaEvento.LotacaoMaxima);
 
             int quantidadeAfetada = Convert.ToInt32(comando.ExecuteNonQuery());
@@ -42,8 +42,8 @@ namespace Repository.Repositores
         public int Inserir(SalaEvento salaEvento)
         {
             SqlCommand comando = Conexao.Conectar();
-            comando.CommandText = @"INSERT INTO sala_eventos (numero_sala, lotacao_maxima, registro_ativo) OUTPUT INSERTED.ID VALUES (@NOME, @LOTACAO_MAXIMA, @REGISTRO_ATIVO)";
-            comando.Parameters.AddWithValue("@NUMERO_SALA", salaEvento.NumeroSala);
+            comando.CommandText = @"INSERT INTO sala_eventos (nome, lotacao_maxima, registro_ativo) OUTPUT INSERTED.ID VALUES (@NOME, @LOTACAO_MAXIMA, @REGISTRO_ATIVO)";
+            comando.Parameters.AddWithValue("@NOME", salaEvento.Nome);
             comando.Parameters.AddWithValue("@LOTACAO_MAXIMA", salaEvento.LotacaoMaxima);
             salaEvento.RegistroAtivo = true;
             comando.Parameters.AddWithValue("@REGISTRO_ATIVO", salaEvento.RegistroAtivo);
@@ -70,7 +70,7 @@ namespace Repository.Repositores
             DataRow dr = dt.Rows[0];
             SalaEvento salaEvento = new SalaEvento();
             salaEvento.Id = Convert.ToInt32(dr["id"]);
-            salaEvento.NumeroSala = Convert.ToInt32(dr["numero_sala"]);
+            salaEvento.Nome = dr["nome"].ToString();
             salaEvento.LotacaoMaxima = Convert.ToInt32(dr["lotacao_maxima"]);
             return salaEvento;
         }
@@ -91,7 +91,7 @@ namespace Repository.Repositores
             {
                 SalaEvento salaEvento = new SalaEvento();
                 salaEvento.Id = Convert.ToInt32(dr["id"]);
-                salaEvento.NumeroSala = Convert.ToInt32(dr["numero_sala"]);
+                salaEvento.Nome = dr["nome"].ToString();
                 salaEvento.LotacaoMaxima = Convert.ToInt32(dr["lotacao_maxima"]);
                 salaEventos.Add(salaEvento);
             }

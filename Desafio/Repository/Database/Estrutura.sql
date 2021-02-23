@@ -15,21 +15,20 @@ registro_ativo BIT
 
 CREATE TABLE sala_eventos(
 id INT PRIMARY KEY IDENTITY(1,1),
-numero_sala INT,
+nome VARCHAR(75),
 lotacao_maxima INT,
 registro_ativo BIT
 );
 
 CREATE TABLE espaco_cafes(
 id INT PRIMARY KEY IDENTITY(1,1),
-numero_sala INT,
-lotacao_maxima INT,
+nome VARCHAR(75),
 registro_ativo BIT
 );
 
 CREATE TABLE evento_pessoas(
 id INT PRIMARY KEY IDENTITY(1,1),
-nome_evento VARCHAR(100),
+descricao TEXT,
 id_sala_evento INT,
 FOREIGN KEY (id_sala_evento) REFERENCES sala_eventos(id),
 id_pessoa INT,
@@ -45,6 +44,5 @@ id_espaco_cafe INT,
 FOREIGN KEY (id_espaco_cafe) REFERENCES espaco_cafes(id),
 id_pessoa INT,
 FOREIGN KEY (id_pessoa) REFERENCES pessoas(id),
-lotacao_atual INT,
 registro_ativo BIT
 );

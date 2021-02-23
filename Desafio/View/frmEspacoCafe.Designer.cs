@@ -30,18 +30,14 @@ namespace View
         private void InitializeComponent()
         {
             this.dgvEspacoCafe = new System.Windows.Forms.DataGridView();
-            this.ColumnID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnLotacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblId = new System.Windows.Forms.Label();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnDesativar = new System.Windows.Forms.Button();
-            this.nudLotacao = new System.Windows.Forms.NumericUpDown();
-            this.lblLotacao = new System.Windows.Forms.Label();
-            this.txtNumeroSala = new System.Windows.Forms.TextBox();
-            this.lblNumeroSala = new System.Windows.Forms.Label();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.lblNome = new System.Windows.Forms.Label();
+            this.ColumnID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEspacoCafe)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudLotacao)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvEspacoCafe
@@ -52,36 +48,15 @@ namespace View
             this.dgvEspacoCafe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEspacoCafe.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnID,
-            this.ColumnNome,
-            this.ColumnLotacao});
+            this.ColumnNome});
             this.dgvEspacoCafe.Location = new System.Drawing.Point(6, 130);
             this.dgvEspacoCafe.Name = "dgvEspacoCafe";
             this.dgvEspacoCafe.ReadOnly = true;
             this.dgvEspacoCafe.RowHeadersVisible = false;
             this.dgvEspacoCafe.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvEspacoCafe.Size = new System.Drawing.Size(280, 150);
+            this.dgvEspacoCafe.Size = new System.Drawing.Size(255, 150);
             this.dgvEspacoCafe.TabIndex = 9;
             this.dgvEspacoCafe.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEspacoCafe_CellDoubleClick);
-            // 
-            // ColumnID
-            // 
-            this.ColumnID.HeaderText = "Código";
-            this.ColumnID.Name = "ColumnID";
-            this.ColumnID.ReadOnly = true;
-            this.ColumnID.Width = 50;
-            // 
-            // ColumnNome
-            // 
-            this.ColumnNome.HeaderText = "Nome";
-            this.ColumnNome.Name = "ColumnNome";
-            this.ColumnNome.ReadOnly = true;
-            // 
-            // ColumnLotacao
-            // 
-            this.ColumnLotacao.HeaderText = "Lotação Máxima";
-            this.ColumnLotacao.Name = "ColumnLotacao";
-            this.ColumnLotacao.ReadOnly = true;
-            this.ColumnLotacao.Width = 125;
             // 
             // lblId
             // 
@@ -97,7 +72,7 @@ namespace View
             // btnSalvar
             // 
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvar.Location = new System.Drawing.Point(103, 92);
+            this.btnSalvar.Location = new System.Drawing.Point(78, 92);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(75, 32);
             this.btnSalvar.TabIndex = 15;
@@ -108,7 +83,7 @@ namespace View
             // btnDesativar
             // 
             this.btnDesativar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDesativar.Location = new System.Drawing.Point(195, 92);
+            this.btnDesativar.Location = new System.Drawing.Point(170, 92);
             this.btnDesativar.Name = "btnDesativar";
             this.btnDesativar.Size = new System.Drawing.Size(91, 32);
             this.btnDesativar.TabIndex = 14;
@@ -116,78 +91,56 @@ namespace View
             this.btnDesativar.UseVisualStyleBackColor = true;
             this.btnDesativar.Click += new System.EventHandler(this.btnDesativar_Click);
             // 
-            // nudLotacao
+            // txtNome
             // 
-            this.nudLotacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudLotacao.Location = new System.Drawing.Point(165, 49);
-            this.nudLotacao.Maximum = new decimal(new int[] {
-            9999,
-            0,
-            0,
-            0});
-            this.nudLotacao.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.nudLotacao.Name = "nudLotacao";
-            this.nudLotacao.Size = new System.Drawing.Size(121, 26);
-            this.nudLotacao.TabIndex = 13;
-            this.nudLotacao.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
+            this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNome.Location = new System.Drawing.Point(6, 49);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(255, 26);
+            this.txtNome.TabIndex = 11;
             // 
-            // lblLotacao
+            // lblNome
             // 
-            this.lblLotacao.AutoSize = true;
-            this.lblLotacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLotacao.Location = new System.Drawing.Point(161, 26);
-            this.lblLotacao.Name = "lblLotacao";
-            this.lblLotacao.Size = new System.Drawing.Size(125, 20);
-            this.lblLotacao.TabIndex = 12;
-            this.lblLotacao.Text = "Lotação Máxima";
+            this.lblNome.AutoSize = true;
+            this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNome.Location = new System.Drawing.Point(2, 26);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(51, 20);
+            this.lblNome.TabIndex = 10;
+            this.lblNome.Text = "Nome";
             // 
-            // txtNumeroSala
+            // ColumnID
             // 
-            this.txtNumeroSala.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumeroSala.Location = new System.Drawing.Point(6, 49);
-            this.txtNumeroSala.Name = "txtNumeroSala";
-            this.txtNumeroSala.Size = new System.Drawing.Size(147, 26);
-            this.txtNumeroSala.TabIndex = 11;
+            this.ColumnID.HeaderText = "Código";
+            this.ColumnID.Name = "ColumnID";
+            this.ColumnID.ReadOnly = true;
+            this.ColumnID.Width = 50;
             // 
-            // lblNumeroSala
+            // ColumnNome
             // 
-            this.lblNumeroSala.AutoSize = true;
-            this.lblNumeroSala.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumeroSala.Location = new System.Drawing.Point(2, 26);
-            this.lblNumeroSala.Name = "lblNumeroSala";
-            this.lblNumeroSala.Size = new System.Drawing.Size(123, 20);
-            this.lblNumeroSala.TabIndex = 10;
-            this.lblNumeroSala.Text = "Número da Sala";
+            this.ColumnNome.HeaderText = "Nome";
+            this.ColumnNome.Name = "ColumnNome";
+            this.ColumnNome.ReadOnly = true;
+            this.ColumnNome.Width = 200;
             // 
             // frmEspacoCafe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(292, 284);
+            this.ClientSize = new System.Drawing.Size(267, 284);
             this.Controls.Add(this.dgvEspacoCafe);
             this.Controls.Add(this.lblId);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnDesativar);
-            this.Controls.Add(this.nudLotacao);
-            this.Controls.Add(this.lblLotacao);
-            this.Controls.Add(this.txtNumeroSala);
-            this.Controls.Add(this.lblNumeroSala);
+            this.Controls.Add(this.txtNome);
+            this.Controls.Add(this.lblNome);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmEspacoCafe";
             this.Text = "Espaço de Cafe";
             this.Load += new System.EventHandler(this.frmEspacoCafe_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEspacoCafe)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudLotacao)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -196,15 +149,12 @@ namespace View
         #endregion
 
         private System.Windows.Forms.DataGridView dgvEspacoCafe;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnLotacao;
         private System.Windows.Forms.Label lblId;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnDesativar;
-        private System.Windows.Forms.NumericUpDown nudLotacao;
-        private System.Windows.Forms.Label lblLotacao;
-        private System.Windows.Forms.TextBox txtNumeroSala;
-        private System.Windows.Forms.Label lblNumeroSala;
+        private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.Label lblNome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNome;
     }
 }

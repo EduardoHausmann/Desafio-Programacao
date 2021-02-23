@@ -34,24 +34,21 @@ namespace View
 
         public void Inserir()
         {
-            espacoCafe.NumeroSala = Convert.ToInt32(txtNumeroSala.Text);
-            espacoCafe.LotacaoMaxima = Convert.ToInt32(nudLotacao.Value);
+            espacoCafe.Nome = txtNome.Text;
             repository.Inserir(espacoCafe);
         }
 
         public void Alterar()
         {
             espacoCafe.Id = Convert.ToInt32(lblId.Text);
-            espacoCafe.NumeroSala = Convert.ToInt32(txtNumeroSala.Text);
-            espacoCafe.LotacaoMaxima = Convert.ToInt32(nudLotacao.Value);
+            espacoCafe.Nome = txtNome.Text;
             repository.Alterar(espacoCafe);
         }
 
         public void LimparCampos()
         {
             lblId.Text = "0";
-            txtNumeroSala.Clear();
-            nudLotacao.Value = 1;
+            txtNome.Clear();
         }
 
         public void AtualizarTabela()
@@ -63,7 +60,7 @@ namespace View
             {
                 espacoCafe = espacoCafes[i];
                 dgvEspacoCafe.Rows.Add(new object[]{
-                    espacoCafe.Id.ToString(), espacoCafe.NumeroSala, espacoCafe.LotacaoMaxima.ToString()
+                    espacoCafe.Id.ToString(), espacoCafe.Nome
                 });
             }
         }
@@ -80,8 +77,7 @@ namespace View
             if (espacoCafe != null)
             {
                 lblId.Text = espacoCafe.Id.ToString();
-                txtNumeroSala.Text = espacoCafe.NumeroSala.ToString();
-                nudLotacao.Value = Convert.ToInt32(espacoCafe.LotacaoMaxima);
+                txtNome.Text = espacoCafe.Nome;
             }
         }
 

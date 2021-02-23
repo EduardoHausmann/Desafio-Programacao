@@ -29,9 +29,6 @@ namespace Model
         [ForeignKey("IdPessoa")]
         public Pessoa Pessoa { get; set; }
 
-        [Column("lotacao_atual")]
-        public int LotacaoAtual { get; set; }
-
         [Column("registro_ativo")]
         public Boolean RegistroAtivo { get; set; }
     }

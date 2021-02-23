@@ -31,8 +31,7 @@ namespace View
                 dgvEspacoCafe.Rows.Add(new object[]
                 {
                     espacoCafe.Id.ToString(),
-                    espacoCafe.NumeroSala,
-                    espacoCafe.LotacaoMaxima.ToString()
+                    espacoCafe.Nome
                 });
             }
         }

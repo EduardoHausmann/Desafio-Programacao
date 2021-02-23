@@ -34,8 +34,8 @@ namespace View
             this.ColumnID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnLotacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblNumeroSala = new System.Windows.Forms.Label();
-            this.txtNumeroSala = new System.Windows.Forms.TextBox();
+            this.lblNome = new System.Windows.Forms.Label();
+            this.txtNome = new System.Windows.Forms.TextBox();
             this.lblLotacao = new System.Windows.Forms.Label();
             this.nudLotacao = new System.Windows.Forms.NumericUpDown();
             this.btnDesativar = new System.Windows.Forms.Button();
@@ -94,23 +94,23 @@ namespace View
             this.ColumnLotacao.ReadOnly = true;
             this.ColumnLotacao.Width = 125;
             // 
-            // lblNumeroSala
+            // lblNome
             // 
-            this.lblNumeroSala.AutoSize = true;
-            this.lblNumeroSala.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNumeroSala.Location = new System.Drawing.Point(2, 25);
-            this.lblNumeroSala.Name = "lblNumeroSala";
-            this.lblNumeroSala.Size = new System.Drawing.Size(123, 20);
-            this.lblNumeroSala.TabIndex = 2;
-            this.lblNumeroSala.Text = "Número da Sala";
+            this.lblNome.AutoSize = true;
+            this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNome.Location = new System.Drawing.Point(2, 25);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(51, 20);
+            this.lblNome.TabIndex = 2;
+            this.lblNome.Text = "Nome";
             // 
-            // txtNumeroSala
+            // txtNome
             // 
-            this.txtNumeroSala.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumeroSala.Location = new System.Drawing.Point(6, 48);
-            this.txtNumeroSala.Name = "txtNumeroSala";
-            this.txtNumeroSala.Size = new System.Drawing.Size(147, 26);
-            this.txtNumeroSala.TabIndex = 3;
+            this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNome.Location = new System.Drawing.Point(6, 48);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(147, 26);
+            this.txtNome.TabIndex = 3;
             // 
             // lblLotacao
             // 
@@ -177,8 +177,8 @@ namespace View
             this.Controls.Add(this.btnDesativar);
             this.Controls.Add(this.nudLotacao);
             this.Controls.Add(this.lblLotacao);
-            this.Controls.Add(this.txtNumeroSala);
-            this.Controls.Add(this.lblNumeroSala);
+            this.Controls.Add(this.txtNome);
+            this.Controls.Add(this.lblNome);
             this.Controls.Add(this.dgvSalaEvento);
             this.Controls.Add(this.lblId);
             this.MaximizeBox = false;
@@ -200,8 +200,8 @@ namespace View
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnID;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNome;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnLotacao;
-        private System.Windows.Forms.Label lblNumeroSala;
-        private System.Windows.Forms.TextBox txtNumeroSala;
+        private System.Windows.Forms.Label lblNome;
+        private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label lblLotacao;
         private System.Windows.Forms.NumericUpDown nudLotacao;
         private System.Windows.Forms.Button btnDesativar;

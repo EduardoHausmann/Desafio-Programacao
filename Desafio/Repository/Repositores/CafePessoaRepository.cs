@@ -15,12 +15,11 @@ namespace Repository.Repositores
         public bool Alterar(CafePessoa cafePessoa)
         {
             SqlCommand comando = Conexao.Conectar();
-            comando.CommandText = @"UPDATE cafe_pessoas SET nome_espaco = @NOME_ESPACO, id_espaco_cafe = @ID_ESPACO_CAFE, id_pessoa = @ID_PESSOA, lotacao_atual = @LOTACAO_ATUAL WHERE id = @ID";
+            comando.CommandText = @"UPDATE cafe_pessoas SET nome_espaco = @NOME_ESPACO, id_espaco_cafe = @ID_ESPACO_CAFE, id_pessoa = @ID_PESSOA WHERE id = @ID";
             comando.Parameters.AddWithValue("@ID", cafePessoa.Id);
             comando.Parameters.AddWithValue("@NOME_ESPACO", cafePessoa.NomeEspaco);
             comando.Parameters.AddWithValue("@ID_ESPACO_CAFE", cafePessoa.IdEspacoCafe);
             comando.Parameters.AddWithValue("@ID_PESSOA", cafePessoa.IdPessoa);
-            comando.Parameters.AddWithValue("@LOTACAO_ATUAL", cafePessoa.LotacaoAtual);
 
             int quantidadeAfetada = Convert.ToInt32(comando.ExecuteNonQuery());
             comando.Connection.Close();
@@ -44,11 +43,10 @@ namespace Repository.Repositores
         public int Inserir(CafePessoa cafePessoa)
         {
             SqlCommand comando = Conexao.Conectar();
-            comando.CommandText = @"INSERT INTO cafe_pessoas (nome_espaco, id_espaco_cafe, id_pessoa, lotacao_atual, registro_ativo) OUTPUT INSERTED.ID VALUES (@NOME_ESPACO, @ID_ESPACO_CAFE, @ID_PESSOA, @LOTACAO_ATUAL, @REGISTRO_ATIVO)";
+            comando.CommandText = @"INSERT INTO cafe_pessoas (nome_espaco, id_espaco_cafe, id_pessoa, registro_ativo) OUTPUT INSERTED.ID VALUES (@NOME_ESPACO, @ID_ESPACO_CAFE, @ID_PESSOA, @REGISTRO_ATIVO)";
             comando.Parameters.AddWithValue("@NOME_EVENTO", cafePessoa.NomeEspaco);
             comando.Parameters.AddWithValue("@ID_ESPACO_CAFE", cafePessoa.Id);
             comando.Parameters.AddWithValue("@ID_PESSOA", cafePessoa.IdPessoa);
-            comando.Parameters.AddWithValue("@LOTACAO_ATUAL", cafePessoa.LotacaoAtual);
             cafePessoa.RegistroAtivo = true;
             comando.Parameters.AddWithValue("@REGISTRO_ATIVO", cafePessoa.RegistroAtivo);
 

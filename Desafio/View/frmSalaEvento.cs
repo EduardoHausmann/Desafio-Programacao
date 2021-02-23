@@ -34,7 +34,7 @@ namespace View
 
         public void Inserir()
         {
-            salaEvento.NumeroSala = Convert.ToInt32(txtNumeroSala.Text);
+            salaEvento.Nome = txtNome.Text;
             salaEvento.LotacaoMaxima = Convert.ToInt32(nudLotacao.Value);
             repository.Inserir(salaEvento);
         }
@@ -42,7 +42,7 @@ namespace View
         public void Alterar()
         {
             salaEvento.Id = Convert.ToInt32(lblId.Text);
-            salaEvento.NumeroSala = Convert.ToInt32(txtNumeroSala.Text);
+            salaEvento.Nome = txtNome.Text;
             salaEvento.LotacaoMaxima = Convert.ToInt32(nudLotacao.Value);
             repository.Alterar(salaEvento);
         }
@@ -50,7 +50,7 @@ namespace View
         public void LimparCampos()
         {
             lblId.Text = "0";
-            txtNumeroSala.Clear();
+            txtNome.Clear();
             nudLotacao.Value = 1;
         }
 
@@ -63,7 +63,7 @@ namespace View
             {
                 salaEvento = salaEventos[i];
                 dgvSalaEvento.Rows.Add(new object[]{
-                    salaEvento.Id.ToString(), salaEvento.NumeroSala, salaEvento.LotacaoMaxima.ToString()
+                    salaEvento.Id.ToString(), salaEvento.Nome, salaEvento.LotacaoMaxima.ToString()
                 });
             }
         }
@@ -80,7 +80,7 @@ namespace View
             if (salaEvento != null)
             {
                 lblId.Text = salaEvento.Id.ToString();
-                txtNumeroSala.Text = salaEvento.NumeroSala.ToString();
+                txtNome.Text = salaEvento.Nome;
                 nudLotacao.Value = Convert.ToInt32(salaEvento.LotacaoMaxima);
             }
         }
