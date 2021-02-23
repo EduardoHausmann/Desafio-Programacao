@@ -14,9 +14,6 @@ namespace Model
         [Key, Column("id")]
         public int Id { get; set; }
 
-        [Column("nome_espaco")]
-        public string NomeEspaco { get; set; }
-
         [Column("id_espaco_cafe")]
         public int IdEspacoCafe { get; set; }
 

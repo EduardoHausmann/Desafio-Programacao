@@ -1,4 +1,4 @@
-﻿DROP TABLE IF EXISTS  cafe_pessoas,evento_pessoas, pessoas, sala_eventos, espaco_cafes;
+﻿DROP TABLE IF EXISTS  cafe_pessoas,evento_pessoas, pessoa_eventos, pessoas, sala_eventos, espaco_cafes;
 CREATE TABLE pessoas(
 id INT PRIMARY KEY IDENTITY(1,1),
 nome VARCHAR(50) NOT NULL,
@@ -26,20 +26,25 @@ nome VARCHAR(75),
 registro_ativo BIT
 );
 
+CREATE TABLE pessoa_eventos(
+id INT PRIMARY KEY IDENTITY(1,1),
+id_pessoa INT,
+FOREIGN KEY (id_pessoa) REFERENCES pessoas(id),
+registro_ativo BIT
+);
+
 CREATE TABLE evento_pessoas(
 id INT PRIMARY KEY IDENTITY(1,1),
 descricao TEXT,
 id_sala_evento INT,
 FOREIGN KEY (id_sala_evento) REFERENCES sala_eventos(id),
-id_pessoa INT,
-FOREIGN KEY (id_pessoa) REFERENCES pessoas(id),
-lotacao_atual INT,
+id_pessoa_evento INT,
+FOREIGN KEY (id_pessoa_evento) REFERENCES pessoa_eventos(id),
 registro_ativo BIT
 );
 
 CREATE TABLE cafe_pessoas(
 id INT PRIMARY KEY IDENTITY(1,1),
-nome_espaco VARCHAR(100),
 id_espaco_cafe INT,
 FOREIGN KEY (id_espaco_cafe) REFERENCES espaco_cafes(id),
 id_pessoa INT,

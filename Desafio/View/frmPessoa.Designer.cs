@@ -30,6 +30,16 @@
         {
             this.lblId = new System.Windows.Forms.Label();
             this.dgvPessoa = new System.Windows.Forms.DataGridView();
+            this.ColumnId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnSobrenome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnEndereco = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnTelefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnDataNasc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnNomeMae = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnSexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblNome = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.lblSobrenome = new System.Windows.Forms.Label();
@@ -43,7 +53,6 @@
             this.lblEmail = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblDataNascimento = new System.Windows.Forms.Label();
-            this.dpDataNascimento = new System.Windows.Forms.DateTimePicker();
             this.lblNomeMae = new System.Windows.Forms.Label();
             this.txtNomeMae = new System.Windows.Forms.TextBox();
             this.lblSexo = new System.Windows.Forms.Label();
@@ -51,16 +60,7 @@
             this.rbFeminino = new System.Windows.Forms.RadioButton();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnDesativar = new System.Windows.Forms.Button();
-            this.ColumnSexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnNomeMae = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnDataNasc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnTelefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnEndereco = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnCpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnSobrenome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dpDataNascimento = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPessoa)).BeginInit();
             this.SuspendLayout();
             // 
@@ -100,6 +100,67 @@
             this.dgvPessoa.Size = new System.Drawing.Size(953, 217);
             this.dgvPessoa.TabIndex = 1;
             this.dgvPessoa.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPessoa_CellDoubleClick);
+            // 
+            // ColumnId
+            // 
+            this.ColumnId.HeaderText = "Código";
+            this.ColumnId.Name = "ColumnId";
+            this.ColumnId.ReadOnly = true;
+            this.ColumnId.Width = 50;
+            // 
+            // ColumnNome
+            // 
+            this.ColumnNome.HeaderText = "Nome";
+            this.ColumnNome.Name = "ColumnNome";
+            this.ColumnNome.ReadOnly = true;
+            // 
+            // ColumnSobrenome
+            // 
+            this.ColumnSobrenome.HeaderText = "Sobrenome";
+            this.ColumnSobrenome.Name = "ColumnSobrenome";
+            this.ColumnSobrenome.ReadOnly = true;
+            // 
+            // ColumnCpf
+            // 
+            this.ColumnCpf.HeaderText = "CPF";
+            this.ColumnCpf.Name = "ColumnCpf";
+            this.ColumnCpf.ReadOnly = true;
+            // 
+            // ColumnEndereco
+            // 
+            this.ColumnEndereco.HeaderText = "Endereço";
+            this.ColumnEndereco.Name = "ColumnEndereco";
+            this.ColumnEndereco.ReadOnly = true;
+            // 
+            // ColumnTelefone
+            // 
+            this.ColumnTelefone.HeaderText = "Telefone";
+            this.ColumnTelefone.Name = "ColumnTelefone";
+            this.ColumnTelefone.ReadOnly = true;
+            // 
+            // ColumnEmail
+            // 
+            this.ColumnEmail.HeaderText = "E-mail";
+            this.ColumnEmail.Name = "ColumnEmail";
+            this.ColumnEmail.ReadOnly = true;
+            // 
+            // ColumnDataNasc
+            // 
+            this.ColumnDataNasc.HeaderText = "Data Nascimento";
+            this.ColumnDataNasc.Name = "ColumnDataNasc";
+            this.ColumnDataNasc.ReadOnly = true;
+            // 
+            // ColumnNomeMae
+            // 
+            this.ColumnNomeMae.HeaderText = "Nome Mãe";
+            this.ColumnNomeMae.Name = "ColumnNomeMae";
+            this.ColumnNomeMae.ReadOnly = true;
+            // 
+            // ColumnSexo
+            // 
+            this.ColumnSexo.HeaderText = "Sexo";
+            this.ColumnSexo.Name = "ColumnSexo";
+            this.ColumnSexo.ReadOnly = true;
             // 
             // lblNome
             // 
@@ -221,15 +282,6 @@
             this.lblDataNascimento.TabIndex = 14;
             this.lblDataNascimento.Text = "Data de Nascimento";
             // 
-            // dpDataNascimento
-            // 
-            this.dpDataNascimento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dpDataNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dpDataNascimento.Location = new System.Drawing.Point(295, 95);
-            this.dpDataNascimento.Name = "dpDataNascimento";
-            this.dpDataNascimento.Size = new System.Drawing.Size(164, 26);
-            this.dpDataNascimento.TabIndex = 15;
-            // 
             // lblNomeMae
             // 
             this.lblNomeMae.AutoSize = true;
@@ -304,66 +356,16 @@
             this.btnDesativar.UseVisualStyleBackColor = true;
             this.btnDesativar.Click += new System.EventHandler(this.btnDesativar_Click);
             // 
-            // ColumnSexo
+            // dpDataNascimento
             // 
-            this.ColumnSexo.HeaderText = "Sexo";
-            this.ColumnSexo.Name = "ColumnSexo";
-            this.ColumnSexo.ReadOnly = true;
-            // 
-            // ColumnNomeMae
-            // 
-            this.ColumnNomeMae.HeaderText = "Nome Mãe";
-            this.ColumnNomeMae.Name = "ColumnNomeMae";
-            this.ColumnNomeMae.ReadOnly = true;
-            // 
-            // ColumnDataNasc
-            // 
-            this.ColumnDataNasc.HeaderText = "Data Nascimento";
-            this.ColumnDataNasc.Name = "ColumnDataNasc";
-            this.ColumnDataNasc.ReadOnly = true;
-            // 
-            // ColumnEmail
-            // 
-            this.ColumnEmail.HeaderText = "E-mail";
-            this.ColumnEmail.Name = "ColumnEmail";
-            this.ColumnEmail.ReadOnly = true;
-            // 
-            // ColumnTelefone
-            // 
-            this.ColumnTelefone.HeaderText = "Telefone";
-            this.ColumnTelefone.Name = "ColumnTelefone";
-            this.ColumnTelefone.ReadOnly = true;
-            // 
-            // ColumnEndereco
-            // 
-            this.ColumnEndereco.HeaderText = "Endereço";
-            this.ColumnEndereco.Name = "ColumnEndereco";
-            this.ColumnEndereco.ReadOnly = true;
-            // 
-            // ColumnCpf
-            // 
-            this.ColumnCpf.HeaderText = "CPF";
-            this.ColumnCpf.Name = "ColumnCpf";
-            this.ColumnCpf.ReadOnly = true;
-            // 
-            // ColumnSobrenome
-            // 
-            this.ColumnSobrenome.HeaderText = "Sobrenome";
-            this.ColumnSobrenome.Name = "ColumnSobrenome";
-            this.ColumnSobrenome.ReadOnly = true;
-            // 
-            // ColumnNome
-            // 
-            this.ColumnNome.HeaderText = "Nome";
-            this.ColumnNome.Name = "ColumnNome";
-            this.ColumnNome.ReadOnly = true;
-            // 
-            // ColumnId
-            // 
-            this.ColumnId.HeaderText = "Código";
-            this.ColumnId.Name = "ColumnId";
-            this.ColumnId.ReadOnly = true;
-            this.ColumnId.Width = 50;
+            this.dpDataNascimento.Checked = false;
+            this.dpDataNascimento.CustomFormat = "99/99/9999";
+            this.dpDataNascimento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dpDataNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dpDataNascimento.Location = new System.Drawing.Point(295, 95);
+            this.dpDataNascimento.Name = "dpDataNascimento";
+            this.dpDataNascimento.Size = new System.Drawing.Size(164, 26);
+            this.dpDataNascimento.TabIndex = 15;
             // 
             // frmPessoa
             // 
@@ -422,7 +424,6 @@
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label lblDataNascimento;
-        private System.Windows.Forms.DateTimePicker dpDataNascimento;
         private System.Windows.Forms.Label lblNomeMae;
         private System.Windows.Forms.TextBox txtNomeMae;
         private System.Windows.Forms.Label lblSexo;
@@ -440,5 +441,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDataNasc;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNomeMae;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnSexo;
+        private System.Windows.Forms.DateTimePicker dpDataNascimento;
     }
 }

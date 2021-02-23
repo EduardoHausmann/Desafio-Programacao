@@ -46,6 +46,7 @@
     <Compile Include="EspacoCafe.cs" />
     <Compile Include="EventoPessoa.cs" />
     <Compile Include="Pessoa.cs" />
+    <Compile Include="PessoaEvento.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SalaEvento.cs" />
   </ItemGroup>

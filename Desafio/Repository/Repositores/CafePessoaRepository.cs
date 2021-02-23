@@ -15,9 +15,8 @@ namespace Repository.Repositores
         public bool Alterar(CafePessoa cafePessoa)
         {
             SqlCommand comando = Conexao.Conectar();
-            comando.CommandText = @"UPDATE cafe_pessoas SET nome_espaco = @NOME_ESPACO, id_espaco_cafe = @ID_ESPACO_CAFE, id_pessoa = @ID_PESSOA WHERE id = @ID";
+            comando.CommandText = @"UPDATE cafe_pessoas SET id_espaco_cafe = @ID_ESPACO_CAFE, id_pessoa = @ID_PESSOA WHERE id = @ID";
             comando.Parameters.AddWithValue("@ID", cafePessoa.Id);
-            comando.Parameters.AddWithValue("@NOME_ESPACO", cafePessoa.NomeEspaco);
             comando.Parameters.AddWithValue("@ID_ESPACO_CAFE", cafePessoa.IdEspacoCafe);
             comando.Parameters.AddWithValue("@ID_PESSOA", cafePessoa.IdPessoa);
 
@@ -43,8 +42,7 @@ namespace Repository.Repositores
         public int Inserir(CafePessoa cafePessoa)
         {
             SqlCommand comando = Conexao.Conectar();
-            comando.CommandText = @"INSERT INTO cafe_pessoas (nome_espaco, id_espaco_cafe, id_pessoa, registro_ativo) OUTPUT INSERTED.ID VALUES (@NOME_ESPACO, @ID_ESPACO_CAFE, @ID_PESSOA, @REGISTRO_ATIVO)";
-            comando.Parameters.AddWithValue("@NOME_EVENTO", cafePessoa.NomeEspaco);
+            comando.CommandText = @"INSERT INTO cafe_pessoas (id_espaco_cafe, id_pessoa, registro_ativo) OUTPUT INSERTED.ID VALUES (@ID_ESPACO_CAFE, @ID_PESSOA, @REGISTRO_ATIVO)";
             comando.Parameters.AddWithValue("@ID_ESPACO_CAFE", cafePessoa.Id);
             comando.Parameters.AddWithValue("@ID_PESSOA", cafePessoa.IdPessoa);
             cafePessoa.RegistroAtivo = true;
@@ -58,7 +56,15 @@ namespace Repository.Repositores
         public CafePessoa ObterPeloId(int id)
         {
             SqlCommand comando = Conexao.Conectar();
-            comando.CommandText = @"SELECT * FROM cafe_pessoas WHERE id = @ID";
+            comando.CommandText = @"SELECT cafe_pessoas.id AS 'CafePessoaId',
+            cafe_pessoa.id_espaco_cafe AS 'CafePessoaIdEspacoCafe',
+            espaco_cafes.nome AS 'EspacoCafeNome',
+            cafe_pessoa.id_pessoa AS 'CafePessoaIdPessoa',
+            pessoas.nome AS 'PessoaNome'
+            FROM cafe_pessoas 
+            INNER JOIN espaco_cafes ON (cafe_pessoas.id_espaco_cafe = espaco_cafe.id),
+            INNER JOIN pessoa ON (cafe_pessoas.id_pessoa = pessoas.id)
+            WHERE id = @ID";
             comando.Parameters.AddWithValue("@ID", id);
 
             DataTable dt = new DataTable();
@@ -71,17 +77,28 @@ namespace Repository.Repositores
 
             DataRow dr = dt.Rows[0];
             CafePessoa cafePessoa = new CafePessoa();
-            cafePessoa.Id = Convert.ToInt32(dr["id"]);
-            cafePessoa.NomeEspaco = dr["nome_espaco"].ToString();
-            cafePessoa.IdEspacoCafe = Convert.ToInt32(dr["id_espaco_cafe"]);
-            cafePessoa.IdPessoa = Convert.ToInt32(dr["id_pessoa"]);
+            cafePessoa.Id = Convert.ToInt32(dr["CafePessoaId"]);
+            cafePessoa.IdEspacoCafe = Convert.ToInt32(dr["CafePessoaIdEspacoCafe"]);
+            cafePessoa.EspacoCafe = new EspacoCafe();
+            cafePessoa.EspacoCafe.Nome = dr["EspacoCafeNome"].ToString();
+            cafePessoa.IdPessoa = Convert.ToInt32(dr["CafePessoaIdPessoa"]);
+            cafePessoa.Pessoa = new Pessoa();
+            cafePessoa.Pessoa.Nome = dr["PessoaNome"].ToString();
             return cafePessoa;
         }
 
         public List<CafePessoa> ObterTodos()
         {
             SqlCommand comando = Conexao.Conectar();
-            comando.CommandText = @"SELECT * FROM cafe_pessoas WHERE registro_ativo = 1";
+            comando.CommandText = @"SELECT afe_pessoas.id AS 'CafePessoaId',
+            cafe_pessoa.id_espaco_cafe AS 'CafePessoaIdEspacoCafe',
+            espaco_cafes.nome AS 'EspacoCafeNome',
+            cafe_pessoa.id_pessoa AS 'CafePessoaIdPessoa',
+            pessoas.nome AS 'PessoaNome'
+            FROM cafe_pessoas 
+            INNER JOIN espaco_cafes ON (cafe_pessoas.id_espaco_cafe = espaco_cafe.id),
+            INNER JOIN pessoa ON (cafe_pessoas.id_pessoa = pessoas.id)
+            WHERE registro_ativo = 1";
 
             DataTable dt = new DataTable();
             dt.Load(comando.ExecuteReader());
@@ -92,7 +109,6 @@ namespace Repository.Repositores
             {
                 CafePessoa cafePessoa = new CafePessoa();
                 cafePessoa.Id = Convert.ToInt32(dr["id"]);
-                cafePessoa.NomeEspaco = dr["nome_espaco"].ToString();
                 cafePessoa.IdEspacoCafe = Convert.ToInt32(dr["id_espaco_cafe"]);
                 cafePessoa.IdPessoa = Convert.ToInt32(dr["id_pessoa"]);
                 cafePessoas.Add(cafePessoa);
