@@ -1,8 +1,8 @@
 # Desafio-Programacao
 
-Caso o Projeto aberto no Visual Studio, de um duplo click no Database encontrado na pasta App_Data do View, copiando o **Caminho da Conexão**
+     Caso o Projeto aberto no Visual Studio, de um duplo click no Database encontrado na pasta App_Data do View, copiando o **Caminho da Conexão**
 em propriedade colando na Classe Conexao localizado no Repository.
-Para realizar a execução basta selecionaro arquivo View localizano local a seguir *Desafio-Programacao\Desafio\View\bin\Debug* ou precionando 
+     Para realizar a execução basta selecionaro arquivo View localizano local a seguir *Desafio-Programacao\Desafio\View\bin\Debug* ou precionando 
 o botão F5 no Visual Studio.
 
 ***Tela Principal***
@@ -35,4 +35,6 @@ A tela dispoem também de um botão para *Desativar* um espaço de café, que fa
 estara guardada no banco de dados.
 
 ***Tela de Consulta de Pessoas***
-     
+     A tela possui um compo de texto para que possa ser feita a pesquisa a partir do nome da Pessoa; a tabela com todos os registro se atualiza automaticamente
+conforme o campo de busca é preenchido, caso ao se pesquisar seja deixado o campo com espaço o programa não realiza a busca. Ao se deixar o campo de busca vazio 
+A tabela mostra o registro de todas as pessoas cadastradas no banco que estiverem ativas.
