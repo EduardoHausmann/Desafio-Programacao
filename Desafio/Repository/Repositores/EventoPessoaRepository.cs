@@ -64,7 +64,8 @@ namespace Repository.Repositores
             evento_pessoas.id_sala_evento AS 'EventoPessoaIdSalaEvento',
             sala_eventos.nome AS 'SalaEventoNome',
             evento_pessoas.id_pessoa AS 'EventoPessoIdPessoa',
-            pessoas.nome AS 'PessoaNome' 
+            pessoas.nome AS 'PessoaNome',
+            pessoas.sobrenome AS 'PessoaSobrenome'
             FROM evento_pessoas
             INNER JOIN sala_eventos ON (evento_pessoas.id_sala_evento = sala_eventos.id)
             INNER JOIN pessoas ON (evento_pessoas.id_pessoa = pessoas.id)
@@ -89,6 +90,7 @@ namespace Repository.Repositores
             eventoPessoa.IdPessoa = Convert.ToInt32(dr["EventoPessoIdPessoa"]);
             eventoPessoa.Pessoa = new Pessoa();
             eventoPessoa.Pessoa.Nome = dr["PessoaNome"].ToString();
+            eventoPessoa.Pessoa.Sobrenome = dr["PessoaSobrenome"].ToString();
             return eventoPessoa;
         }
 
@@ -100,7 +102,8 @@ namespace Repository.Repositores
             evento_pessoas.id_sala_evento AS 'EventoPessoaIdSalaEvento',
             sala_eventos.nome AS 'SalaEventoNome',
             evento_pessoas.id_pessoa AS 'EventoPessoaIdPessoa',
-            pessoas.nome AS 'PessoaNome' 
+            pessoas.nome AS 'PessoaNome',
+            pessoas.sobrenome AS 'PessoaSobrenome'
             FROM evento_pessoas
             INNER JOIN sala_eventos ON (evento_pessoas.id_sala_evento = sala_eventos.id)
             INNER JOIN pessoas ON (evento_pessoas.id_pessoa = pessoas.id)
@@ -122,6 +125,7 @@ namespace Repository.Repositores
                 eventoPessoa.IdPessoa = Convert.ToInt32(dr["EventoPessoaIdPessoa"]);
                 eventoPessoa.Pessoa = new Pessoa();
                 eventoPessoa.Pessoa.Nome = dr["PessoaNome"].ToString();
+                eventoPessoa.Pessoa.Sobrenome = dr["PessoaSobrenome"].ToString();
                 eventoPessoas.Add(eventoPessoa);
             }
             comando.Connection.Close();

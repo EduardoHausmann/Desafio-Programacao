@@ -69,7 +69,7 @@ namespace View
                 eventoPessoa = eventoPessoas[i];
                 dgvPessoaEvento.Rows.Add(new object[]
                 {
-                    eventoPessoa.Id.ToString(), eventoPessoa.Descricao, eventoPessoa.SalaEvento.Nome, eventoPessoa.Pessoa.Nome
+                    eventoPessoa.Id.ToString(), eventoPessoa.Descricao, eventoPessoa.SalaEvento.Nome, String.Concat(eventoPessoa.Pessoa.Nome, " " + eventoPessoa.Pessoa.Sobrenome)
                 });
             }
         }
