@@ -36,15 +36,15 @@ estara guardada no banco de dados.
 
 ***Consulta de Pessoas***
    A tela possui um compo de texto para que possa ser feita a pesquisa a partir do nome da Pessoa; a tabela com todos os registro se atualiza automaticamente
-conforme o campo de busca é preenchido, caso ao se pesquisar seja deixado o campo com "   " o programa não realiza a busca. Ao se deixar o campo de busca vazio 
+conforme o campo de busca é preenchido, caso ao se pesquisar seja deixado o campo com "espaço" o programa não realiza a busca. Ao se deixar o campo de busca vazio 
 a tabela mostra o registro de todas as pessoas cadastradas no banco que estiverem ativas.
 
 ***Consulta de Sala de Evento***
    A tela possui um compo de texto para que possa ser feita a pesquisa a partir do nome da Sala de Evento; a tabela com todos os registro se atualiza 
-automaticamente conforme o campo de busca é preenchido, caso ao se pesquisar seja deixado o campo com "   " o programa não realiza a busca. Ao se deixar 
+automaticamente conforme o campo de busca é preenchido, caso ao se pesquisar seja deixado o campo com "espaço" o programa não realiza a busca. Ao se deixar 
 o campo de busca vazio a tabela mostra o registro de todas as salas cadastradas no banco que estiverem ativas.
 
 ***Consulta de Espaço de Café***
    A tela possui um compo de texto para que possa ser feita a pesquisa a partir do nome do Espaço de Café; a tabela com todos os registro se atualiza 
-automaticamente conforme o campo de busca é preenchido, caso ao se pesquisar seja deixado o campo com "   " o programa não realiza a busca. Ao se deixar 
+automaticamente conforme o campo de busca é preenchido, caso ao se pesquisar seja deixado o campo com "espaço" o programa não realiza a busca. Ao se deixar 
 o campo de busca vazio a tabela mostra o registro de todos os espaços cadastrados no banco que estiverem ativos.
