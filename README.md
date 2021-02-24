@@ -54,4 +54,4 @@ a tabela mostra o registro de todas as salas cadastradas no banco que estiverem 
    
    A tela possui um compo de texto para que possa ser feita a pesquisa a partir do nome do Espaço de Café; a tabela com todos os registro se atualiza automaticamente
 conforme o campo de busca é preenchido, caso ao se pesquisar seja deixado o campo com " " o programa não realiza a busca. Ao se deixar o campo de busca vazio 
-a tabela mostra o registro de todos os espaços cadastrados no banco que estiverem ativas.
+a tabela mostra o registro de todos os espaços cadastrados no banco que estiverem ativos.
