@@ -66,7 +66,8 @@ namespace View
 
         private void tsmPessoaEspaco_Click(object sender, EventArgs e)
         {
-
+            frmPessoaCafe pessoaCafe = new frmPessoaCafe();
+            pessoaCafe.Show();
         }
     }
 }

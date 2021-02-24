@@ -67,8 +67,8 @@ namespace Repository.Repositores
             pessoas.nome AS 'PessoaNome' 
             FROM evento_pessoas
             INNER JOIN sala_eventos ON (evento_pessoas.id_sala_evento = sala_eventos.id)
-            INNER JOIN pessoas ON (evento_pessoas.id_pessoato = pessoas.id)
-            WHERE id = @ID";
+            INNER JOIN pessoas ON (evento_pessoas.id_pessoa = pessoas.id)
+            WHERE evento_pessoas.id = @ID";
             comando.Parameters.AddWithValue("@ID", id);
 
             DataTable dt = new DataTable();

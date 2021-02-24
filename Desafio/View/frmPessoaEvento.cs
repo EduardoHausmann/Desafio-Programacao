@@ -37,8 +37,8 @@ namespace View
         public void Inserir()
         {
             eventoPessoa.Descricao = txtDescrição.Text;
-            eventoPessoa.IdSalaEvento = cbEvento.SelectedIndex;
-            eventoPessoa.IdPessoa = cbPessoa.SelectedIndex;
+            eventoPessoa.IdSalaEvento = Convert.ToInt32(cbEvento.SelectedValue.ToString());
+            eventoPessoa.IdPessoa = Convert.ToInt32(cbPessoa.SelectedValue.ToString());
             eventoPessoa.LotacaoAtual++;
             repository.Inserir(eventoPessoa);
         }
@@ -47,8 +47,8 @@ namespace View
         {
             eventoPessoa.Id = Convert.ToInt32(lblId.Text);
             eventoPessoa.Descricao = txtDescrição.Text;
-            eventoPessoa.IdPessoa = cbPessoa.SelectedIndex;
-            eventoPessoa.IdSalaEvento = cbEvento.SelectedIndex;
+            eventoPessoa.IdPessoa = Convert.ToInt32(cbPessoa.SelectedValue.ToString());
+            eventoPessoa.IdSalaEvento = Convert.ToInt32(cbEvento.SelectedValue.ToString());
             repository.Alterar(eventoPessoa);
         }
 
@@ -56,8 +56,8 @@ namespace View
         {
             lblId.Text = "0";
             txtDescrição.Clear();
-            cbPessoa.SelectedIndex = -1;
-            cbEvento.SelectedIndex = -1;
+            cbPessoa.SelectedValue = -1;
+            cbEvento.SelectedValue = -1;
         }
 
         public void AtualizarTabela()
@@ -69,7 +69,7 @@ namespace View
                 eventoPessoa = eventoPessoas[i];
                 dgvPessoaEvento.Rows.Add(new object[]
                 {
-                    eventoPessoa.Id.ToString(), eventoPessoa.Descricao, eventoPessoa.IdSalaEvento.ToString(), eventoPessoa.IdPessoa.ToString()
+                    eventoPessoa.Id.ToString(), eventoPessoa.Descricao, eventoPessoa.SalaEvento.Nome, eventoPessoa.Pessoa.Nome
                 });
             }
         }
@@ -83,7 +83,15 @@ namespace View
 
         private void dgvPessoaEvento_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            int id = Convert.ToInt32(dgvPessoaEvento.CurrentRow.Cells[0].Value);
+            eventoPessoa = repository.ObterPeloId(id);
+            if (eventoPessoa != null)
+            {
+                lblId.Text = eventoPessoa.Id.ToString().ToString();
+                txtDescrição.Text = eventoPessoa.Descricao;
+                cbEvento.SelectedValue = eventoPessoa.IdSalaEvento;
+                cbPessoa.SelectedValue = eventoPessoa.IdPessoa;
+            }
         }
 
         private void btnDesativar_Click(object sender, EventArgs e)
@@ -107,6 +115,7 @@ namespace View
             DataTable dt = new DataTable();
             dt.Load(dr);
             cbEvento.DisplayMember = "nome";
+            cbEvento.ValueMember = "id";
             cbEvento.DataSource = dt;
             comando.Connection.Close();
         }
@@ -119,6 +128,7 @@ namespace View
             DataTable dt = new DataTable();
             dt.Load(dr);
             cbPessoa.DisplayMember = "nome";
+            cbPessoa.ValueMember = "id";
             cbPessoa.DataSource = dt;
             comando.Connection.Close();
         }
