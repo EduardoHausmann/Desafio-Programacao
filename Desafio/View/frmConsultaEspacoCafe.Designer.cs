@@ -34,6 +34,7 @@ namespace View
             this.lblBuscar = new System.Windows.Forms.Label();
             this.ColumnID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEspacoCafe)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,7 +46,8 @@ namespace View
             this.dgvEspacoCafe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEspacoCafe.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnID,
-            this.ColumnNome});
+            this.ColumnNome,
+            this.Column1});
             this.dgvEspacoCafe.Location = new System.Drawing.Point(5, 64);
             this.dgvEspacoCafe.Name = "dgvEspacoCafe";
             this.dgvEspacoCafe.ReadOnly = true;
@@ -85,7 +87,12 @@ namespace View
             this.ColumnNome.HeaderText = "Nome";
             this.ColumnNome.Name = "ColumnNome";
             this.ColumnNome.ReadOnly = true;
-            this.ColumnNome.Width = 200;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Lotação Máxima";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // frmConsultaEspacoCafe
             // 
@@ -113,5 +120,6 @@ namespace View
         private System.Windows.Forms.Label lblBuscar;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnID;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
     }
 }

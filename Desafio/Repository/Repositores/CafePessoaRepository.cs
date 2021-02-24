@@ -42,9 +42,10 @@ namespace Repository.Repositores
         public int Inserir(CafePessoa cafePessoa)
         {
             SqlCommand comando = Conexao.Conectar();
-            comando.CommandText = @"INSERT INTO cafe_pessoas (id_espaco_cafe, id_pessoa, registro_ativo) OUTPUT INSERTED.ID VALUES (@ID_ESPACO_CAFE, @ID_PESSOA, @REGISTRO_ATIVO)";
+            comando.CommandText = @"INSERT INTO cafe_pessoas (id_espaco_cafe, id_pessoa, lotacao_atual registro_ativo) OUTPUT INSERTED.ID VALUES (@ID_ESPACO_CAFE, @ID_PESSOA, @LOTACAO_ATUAL, @REGISTRO_ATIVO)";
             comando.Parameters.AddWithValue("@ID_ESPACO_CAFE", cafePessoa.Id);
             comando.Parameters.AddWithValue("@ID_PESSOA", cafePessoa.IdPessoa);
+            comando.Parameters.AddWithValue("@LOTACAO_ATUAL", cafePessoa.LotacaoAtual);
             cafePessoa.RegistroAtivo = true;
             comando.Parameters.AddWithValue("@REGISTRO_ATIVO", cafePessoa.RegistroAtivo);
 

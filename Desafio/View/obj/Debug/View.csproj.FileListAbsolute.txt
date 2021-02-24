@@ -75,3 +75,4 @@ C:\Users\Eduardo\Documents\GitHub\Desafio-Programacao\Desafio\View\bin\Debug\Cry
 C:\Users\Eduardo\Documents\GitHub\Desafio-Programacao\Desafio\View\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
 C:\Users\Eduardo\Documents\GitHub\Desafio-Programacao\Desafio\View\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 C:\Users\Eduardo\Documents\GitHub\Desafio-Programacao\Desafio\View\bin\Debug\stdole.dll
+C:\Users\Eduardo\Documents\GitHub\Desafio-Programacao\Desafio\View\obj\Debug\View.frmPessoaEvento.resources

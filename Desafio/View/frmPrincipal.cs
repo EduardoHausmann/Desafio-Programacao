@@ -57,5 +57,16 @@ namespace View
         {
             Application.Exit();
         }
+
+        private void tsmPessoaEvento_Click(object sender, EventArgs e)
+        {
+            frmPessoaEvento pessoaEvento = new frmPessoaEvento();
+            pessoaEvento.Show();
+        }
+
+        private void tsmPessoaEspaco_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

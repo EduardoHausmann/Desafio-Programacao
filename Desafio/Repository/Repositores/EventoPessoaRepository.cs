@@ -15,11 +15,11 @@ namespace Repository.Repositores
         public bool Alterar(EventoPessoa eventoPessoa)
         {
             SqlCommand comando = Conexao.Conectar();
-            comando.CommandText = @"UPDATE evento_pessoas SET descricao = @DESCRICAO, id_sala_evento = @ID_SALA_EVENTO, id_pessoa_evento = @ID_PESSOA_EVENTO WHERE id = @ID";
+            comando.CommandText = @"UPDATE evento_pessoas SET descricao = @DESCRICAO, id_sala_evento = @ID_SALA_EVENTO, id_pessoa = @ID_PESSOA WHERE id = @ID";
             comando.Parameters.AddWithValue("@ID", eventoPessoa.Id);
             comando.Parameters.AddWithValue("@DESCRICAO", eventoPessoa.Descricao);
             comando.Parameters.AddWithValue("@ID_SALA_EVENTO", eventoPessoa.IdSalaEvento);
-            comando.Parameters.AddWithValue("@ID_PESSOA_EVENTO", eventoPessoa.IdPessoaEvento);
+            comando.Parameters.AddWithValue("@ID_PESSOA", eventoPessoa.IdPessoa);
 
             int quantidadeAfetada = Convert.ToInt32(comando.ExecuteNonQuery());
             comando.Connection.Close();
@@ -43,10 +43,11 @@ namespace Repository.Repositores
         public int Inserir(EventoPessoa eventoPessoa)
         {
             SqlCommand comando = Conexao.Conectar();
-            comando.CommandText = @"INSERT INTO evento_pessoas (descricao, id_sala_evento, id_pessoa_evento, registro_ativo) OUTPUT INSERTED.ID VALUES (@DESCRICAO, @ID_SALA_EVENTO, @ID_PESSOA_EVENTO, @REGISTRO_ATIVO)";
+            comando.CommandText = @"INSERT INTO evento_pessoas (descricao, id_sala_evento, id_pessoa, lotacao_atual, registro_ativo) OUTPUT INSERTED.ID VALUES (@DESCRICAO, @ID_SALA_EVENTO, @ID_PESSOA, @LOTACAO_ATUAL, @REGISTRO_ATIVO)";
             comando.Parameters.AddWithValue("@DESCRICAO", eventoPessoa.Descricao);
             comando.Parameters.AddWithValue("@ID_SALA_EVENTO", eventoPessoa.IdSalaEvento);
-            comando.Parameters.AddWithValue("@ID_PESSOA_EVENTO", eventoPessoa.IdPessoaEvento);
+            comando.Parameters.AddWithValue("@ID_PESSOA", eventoPessoa.IdPessoa);
+            comando.Parameters.AddWithValue("@LOTACAO_ATUAL", eventoPessoa.LotacaoAtual);
             eventoPessoa.RegistroAtivo = true;
             comando.Parameters.AddWithValue("@REGISTRO_ATIVO", eventoPessoa.RegistroAtivo);
 
@@ -62,9 +63,11 @@ namespace Repository.Repositores
             evento_pessoas.descricao AS 'EventoPessoaDescricao',
             evento_pessoas.id_sala_evento AS 'EventoPessoaIdSalaEvento',
             sala_eventos.nome AS 'SalaEventoNome',
-            evento_pessoas.id_pessoa_evento AS 'EventoPessoIdPessoaEvento',
+            evento_pessoas.id_pessoa AS 'EventoPessoIdPessoa',
+            pessoas.nome AS 'PessoaNome' 
             FROM evento_pessoas
             INNER JOIN sala_eventos ON (evento_pessoas.id_sala_evento = sala_eventos.id)
+            INNER JOIN pessoas ON (evento_pessoas.id_pessoato = pessoas.id)
             WHERE id = @ID";
             comando.Parameters.AddWithValue("@ID", id);
 
@@ -83,7 +86,9 @@ namespace Repository.Repositores
             eventoPessoa.IdSalaEvento = Convert.ToInt32(dr["EventoPessoaIdSalaEvento"]);
             eventoPessoa.SalaEvento = new SalaEvento();
             eventoPessoa.SalaEvento.Nome = dr["SalaEventoNome"].ToString();
-            eventoPessoa.IdPessoaEvento = Convert.ToInt32(dr["EventoPessoIdPessoaEvento"]);
+            eventoPessoa.IdPessoa = Convert.ToInt32(dr["EventoPessoIdPessoa"]);
+            eventoPessoa.Pessoa = new Pessoa();
+            eventoPessoa.Pessoa.Nome = dr["PessoaNome"].ToString();
             return eventoPessoa;
         }
 
@@ -94,10 +99,12 @@ namespace Repository.Repositores
             evento_pessoas.descricao AS 'EventoPessoaDescricao',
             evento_pessoas.id_sala_evento AS 'EventoPessoaIdSalaEvento',
             sala_eventos.nome AS 'SalaEventoNome',
-            evento_pessoas.id_pessoa_evento AS 'EventoPessoIdPessoaEvento',
+            evento_pessoas.id_pessoa AS 'EventoPessoaIdPessoa',
+            pessoas.nome AS 'PessoaNome' 
             FROM evento_pessoas
             INNER JOIN sala_eventos ON (evento_pessoas.id_sala_evento = sala_eventos.id)
-            WHERE registro_ativo = 1";
+            INNER JOIN pessoas ON (evento_pessoas.id_pessoa = pessoas.id)
+            WHERE evento_pessoas.registro_ativo = 1";
 
             DataTable dt = new DataTable();
             dt.Load(comando.ExecuteReader());
@@ -112,7 +119,9 @@ namespace Repository.Repositores
                 eventoPessoa.IdSalaEvento = Convert.ToInt32(dr["EventoPessoaIdSalaEvento"]);
                 eventoPessoa.SalaEvento = new SalaEvento();
                 eventoPessoa.SalaEvento.Nome = dr["SalaEventoNome"].ToString();
-                eventoPessoa.IdPessoaEvento = Convert.ToInt32(dr["EventoPessoIdPessoaEvento"]);
+                eventoPessoa.IdPessoa = Convert.ToInt32(dr["EventoPessoaIdPessoa"]);
+                eventoPessoa.Pessoa = new Pessoa();
+                eventoPessoa.Pessoa.Nome = dr["PessoaNome"].ToString();
                 eventoPessoas.Add(eventoPessoa);
             }
             comando.Connection.Close();
