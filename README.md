@@ -1,8 +1,8 @@
 # Desafio-Programacao
 
-     Caso o Projeto aberto no Visual Studio, de um duplo click no Database encontrado na pasta App_Data do View, copiando o **Caminho da Conexão**
+Caso o Projeto aberto no Visual Studio, de um duplo click no Database encontrado na pasta App_Data do View, copiando o **Caminho da Conexão**
 em propriedade colando na Classe Conexao localizado no Repository.
-     Para realizar a execução basta selecionaro arquivo View localizano local a seguir *Desafio-Programacao\Desafio\View\bin\Debug* ou precionando 
+Para realizar a execução basta selecionaro arquivo View localizano local a seguir *Desafio-Programacao\Desafio\View\bin\Debug* ou precionando 
 o botão F5 no Visual Studio.
 
 ***Tela Principal***
