@@ -40,8 +40,17 @@ namespace View
             eventoPessoa.Descricao = txtDescrição.Text;
             eventoPessoa.IdSalaEvento = Convert.ToInt32(cbEvento.SelectedValue.ToString());
             eventoPessoa.IdPessoa = Convert.ToInt32(cbPessoa.SelectedValue.ToString());
-            eventoPessoa.LotacaoAtual++;
-            repository.Inserir(eventoPessoa);
+            int id_evento = Convert.ToInt32(cbEvento.SelectedValue.ToString());
+            int lotacao = Convert.ToInt32(cbEvento.SelectedValue.ToString());
+            if (repository.ChecaEvento(id_evento) < repository.PegaLotacao(lotacao))
+            {
+                repository.Inserir(eventoPessoa);
+            }
+            else
+            {
+                MessageBox.Show("Lotação Máxima atingida", "Aviso!");
+                return;
+            }
         }
 
         public void Alterar()

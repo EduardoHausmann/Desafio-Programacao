@@ -39,7 +39,6 @@ namespace View
             this.txtDescrição = new System.Windows.Forms.TextBox();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnDesativar = new System.Windows.Forms.Button();
-            this.btnTrocaEvento = new System.Windows.Forms.Button();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,7 +64,7 @@ namespace View
             this.dgvPessoaEvento.ReadOnly = true;
             this.dgvPessoaEvento.RowHeadersVisible = false;
             this.dgvPessoaEvento.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPessoaEvento.Size = new System.Drawing.Size(502, 150);
+            this.dgvPessoaEvento.Size = new System.Drawing.Size(353, 150);
             this.dgvPessoaEvento.TabIndex = 0;
             this.dgvPessoaEvento.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPessoaEvento_CellDoubleClick);
             // 
@@ -160,16 +159,6 @@ namespace View
             this.btnDesativar.UseVisualStyleBackColor = true;
             this.btnDesativar.Click += new System.EventHandler(this.btnDesativar_Click);
             // 
-            // btnTrocaEvento
-            // 
-            this.btnTrocaEvento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTrocaEvento.Location = new System.Drawing.Point(71, 147);
-            this.btnTrocaEvento.Name = "btnTrocaEvento";
-            this.btnTrocaEvento.Size = new System.Drawing.Size(121, 30);
-            this.btnTrocaEvento.TabIndex = 10;
-            this.btnTrocaEvento.Text = "Trocar de Sala";
-            this.btnTrocaEvento.UseVisualStyleBackColor = true;
-            // 
             // Column1
             // 
             this.Column1.HeaderText = "Código";
@@ -200,14 +189,14 @@ namespace View
             this.Column5.HeaderText = "Lotação Atual";
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
+            this.Column5.Visible = false;
             // 
             // frmPessoaEvento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(575, 337);
-            this.Controls.Add(this.btnTrocaEvento);
+            this.ClientSize = new System.Drawing.Size(360, 337);
             this.Controls.Add(this.btnDesativar);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.txtDescrição);
@@ -241,7 +230,6 @@ namespace View
         private System.Windows.Forms.TextBox txtDescrição;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnDesativar;
-        private System.Windows.Forms.Button btnTrocaEvento;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
