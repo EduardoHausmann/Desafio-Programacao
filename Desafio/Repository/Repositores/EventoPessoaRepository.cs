@@ -114,7 +114,7 @@ namespace Repository.Repositores
 
             List<EventoPessoa> eventoPessoas = new List<EventoPessoa>();
 
-            foreach(DataRow dr in dt.Rows)
+            foreach (DataRow dr in dt.Rows)
             {
                 EventoPessoa eventoPessoa = new EventoPessoa();
                 eventoPessoa.Id = Convert.ToInt32(dr["EventoPessoaId"]);
@@ -130,6 +130,28 @@ namespace Repository.Repositores
             }
             comando.Connection.Close();
             return eventoPessoas;
+        }
+
+        public EventoPessoa ChecaEvento(int id_evento)
+        {
+            SqlCommand comando = Conexao.Conectar();
+            comando.CommandText = @"SELECT COUNT(lotacao_atual) AS 'LotacaoAtual'
+            FROM evento_pessoas
+            WHERE registro_ativo = 1 AND id_sala_evento = @ID_SALA_EVENTO";
+            comando.Parameters.AddWithValue("@ID_SALA_EVENTO", id_evento);
+
+            DataTable dt = new DataTable();
+            dt.Load(comando.ExecuteReader());
+
+            comando.Connection.Close();
+
+            if (dt.Rows.Count == 0)
+                return null;
+
+            DataRow dr = dt.Rows[0];
+            EventoPessoa eventoPessoa = new EventoPessoa();
+            eventoPessoa.LotacaoAtual = Convert.ToInt32(dr["LotacaoAtual"]);
+            return eventoPessoa;
         }
     }
 }

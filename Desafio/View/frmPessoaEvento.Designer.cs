@@ -30,10 +30,6 @@ namespace View
         private void InitializeComponent()
         {
             this.dgvPessoaEvento = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblId = new System.Windows.Forms.Label();
             this.lblEvento = new System.Windows.Forms.Label();
             this.cbEvento = new System.Windows.Forms.ComboBox();
@@ -44,6 +40,11 @@ namespace View
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnDesativar = new System.Windows.Forms.Button();
             this.btnTrocaEvento = new System.Windows.Forms.Button();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPessoaEvento)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,40 +58,16 @@ namespace View
             this.Column1,
             this.Column2,
             this.Column3,
-            this.Column4});
+            this.Column4,
+            this.Column5});
             this.dgvPessoaEvento.Location = new System.Drawing.Point(4, 183);
             this.dgvPessoaEvento.Name = "dgvPessoaEvento";
             this.dgvPessoaEvento.ReadOnly = true;
             this.dgvPessoaEvento.RowHeadersVisible = false;
             this.dgvPessoaEvento.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPessoaEvento.Size = new System.Drawing.Size(353, 150);
+            this.dgvPessoaEvento.Size = new System.Drawing.Size(502, 150);
             this.dgvPessoaEvento.TabIndex = 0;
             this.dgvPessoaEvento.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPessoaEvento_CellDoubleClick);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Código";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 50;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Descrição";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Evento";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Pessoa";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
             // 
             // lblId
             // 
@@ -193,12 +170,43 @@ namespace View
             this.btnTrocaEvento.Text = "Trocar de Sala";
             this.btnTrocaEvento.UseVisualStyleBackColor = true;
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Código";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 50;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Descrição";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Evento";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Pessoa";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Lotação Atual";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
             // frmPessoaEvento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(362, 337);
+            this.ClientSize = new System.Drawing.Size(575, 337);
             this.Controls.Add(this.btnTrocaEvento);
             this.Controls.Add(this.btnDesativar);
             this.Controls.Add(this.btnSalvar);
@@ -225,10 +233,6 @@ namespace View
 
         private System.Windows.Forms.DataGridView dgvPessoaEvento;
         private System.Windows.Forms.Label lblId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.Label lblEvento;
         private System.Windows.Forms.ComboBox cbEvento;
         private System.Windows.Forms.Label lblPessoa;
@@ -238,5 +242,10 @@ namespace View
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnDesativar;
         private System.Windows.Forms.Button btnTrocaEvento;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
     }
 }

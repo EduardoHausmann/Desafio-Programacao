@@ -96,3 +96,11 @@ INSERT INTO pessoas (nome, sobrenome, cpf, endereco, telefone, email, data_nasci
 INSERT INTO pessoas (nome, sobrenome, cpf, endereco, telefone, email, data_nascimento, nome_mae, sexo, registro_ativo) OUTPUT INSERTED.ID VALUES ('OSNI',' SACHSE','341.542.269-77','POMERODE, 1483','479255865','osni_S@proway.com','2001-12-07','OSNILDA SACHSE','Masculino',1);
 INSERT INTO pessoas (nome, sobrenome, cpf, endereco, telefone, email, data_nascimento, nome_mae, sexo, registro_ativo) OUTPUT INSERTED.ID VALUES ('OSEIAS',' FABIANO TRAPP','360.331.699-68','NOSSA SR. DAS GRACAS 403','479286548','trapp_os@proway.com','2001-12-09','FABIANA TRAPP','Masculino',1);
 INSERT INTO pessoas (nome, sobrenome, cpf, endereco, telefone, email, data_nascimento, nome_mae, sexo, registro_ativo) OUTPUT INSERTED.ID VALUES ('ROSILENE',' ROSSINI','670.616.179-20','HENRIQUE GESKE 39','479254889','rossini@proway.com','2003-03-30','ROSIMARA ROSSINI','Feminino',1);
+
+INSERT INTO sala_eventos (nome, lotacao_maxima, registro_ativo) 
+VALUES ('Teste 01', 2, 1),
+		('Teste 02', 30, 1);
+
+INSERT INTO espaco_cafes(nome, lotacao_maxima, registro_ativo) 
+VALUES ('Teste 03', 2, 1),
+		('Teste 04', 30, 1);
