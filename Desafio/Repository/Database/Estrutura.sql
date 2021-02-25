@@ -104,8 +104,3 @@ VALUES ('Teste 01', 2, 1),
 INSERT INTO espaco_cafes(nome, lotacao_maxima, registro_ativo) 
 VALUES ('Teste 03', 2, 1),
 		('Teste 04', 30, 1);
-
-		SELECT sala_eventos.lotacao_maxima AS 'SalaEventoLotacao'
-            FROM evento_pessoas
-            INNER JOIN sala_eventos ON (evento_pessoas.id_sala_evento = sala_eventos.id)
-            WHERE evento_pessoas.registro_ativo = 1 AND evento_pessoas.id_sala_evento = 1

@@ -112,7 +112,6 @@ namespace View
             {
                 int id = Convert.ToInt32(dgvPessoaEvento.CurrentRow.Cells[0].Value);
                 repository.Apagar(id);
-                eventoPessoa.LotacaoAtual--;
                 AtualizarTabela();
             }
         }
