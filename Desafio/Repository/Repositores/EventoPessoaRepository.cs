@@ -170,7 +170,7 @@ namespace Repository.Repositores
                 return 0;
 
             DataRow dr = dt.Rows[0];
- SalaEvento salaEvento = new SalaEvento();
+            SalaEvento salaEvento = new SalaEvento();
             salaEvento.LotacaoMaxima = Convert.ToInt32(dr["SalaEventoLotacao"]);
             return salaEvento.LotacaoMaxima;
         }

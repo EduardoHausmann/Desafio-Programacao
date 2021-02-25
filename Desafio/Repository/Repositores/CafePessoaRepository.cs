@@ -125,5 +125,48 @@ namespace Repository.Repositores
             comando.Connection.Close();
             return cafePessoas;
         }
+
+        public int ChecaEspacoCafe(int id_espaco)
+        {
+            SqlCommand comando = Conexao.Conectar();
+            comando.CommandText = @"SELECT id_espaco_cafe, COUNT(lotacao_atual) AS 'LotacaoAtual'
+            FROM cafe_pessoas
+            WHERE registro_ativo = 1 AND id_espaco_cafe = @ID_ESPACO_CAFE
+            GROUP BY id_espaco_cafe";
+            comando.Parameters.AddWithValue("@ID_ESPACO_CAFE", id_espaco);
+
+            DataTable dt = new DataTable();
+            dt.Load(comando.ExecuteReader());
+
+            comando.Connection.Close();
+
+            if (dt.Rows.Count == 0)
+                return 0;
+
+            DataRow dr = dt.Rows[0];
+            EventoPessoa eventoPessoa = new EventoPessoa();
+            eventoPessoa.LotacaoAtual = Convert.ToInt32(dr["LotacaoAtual"]);
+            return eventoPessoa.LotacaoAtual;
+        }
+
+        public int PegaLotacaoCafe(int cafe)
+        {
+            SqlCommand comando = Conexao.Conectar();
+            comando.CommandText = @"SELECT espaco_cafes.lotacao_maxima  AS 'EspacoCafeLotacao' FROM espaco_cafes WHERE espaco_cafes.id = @ID";
+            comando.Parameters.AddWithValue("@ID", cafe);
+
+            DataTable dt = new DataTable();
+            dt.Load(comando.ExecuteReader());
+
+            comando.Connection.Close();
+
+            if (dt.Rows.Count == 0)
+                return 0;
+
+            DataRow dr = dt.Rows[0];
+            EspacoCafe espacoCafe = new EspacoCafe();
+            espacoCafe.LotacaoMaxima = Convert.ToInt32(dr["EspacoCafeLotacao"]);
+            return espacoCafe.LotacaoMaxima;
+        }
     }
 }

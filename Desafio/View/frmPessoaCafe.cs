@@ -38,8 +38,17 @@ namespace View
         {
             cafePessoa.IdEspacoCafe = Convert.ToInt32(cbEspaco.SelectedValue.ToString());
             cafePessoa.IdPessoa = Convert.ToInt32(cbPessoa.SelectedValue.ToString());
-            cafePessoa.LotacaoAtual++;
-            repository.Inserir(cafePessoa);
+            int id_espaco = Convert.ToInt32(cbEspaco.SelectedValue.ToString());
+            int cafe = Convert.ToInt32(cbEspaco.SelectedValue.ToString());
+            if (repository.ChecaEspacoCafe(id_espaco) < repository.PegaLotacaoCafe(cafe))
+            {
+                repository.Inserir(cafePessoa);
+            }
+            else
+            {
+                MessageBox.Show("Lotação máxima atingida!", "Aviso!");
+                return;
+            }
         }
 
         public void Alterar()

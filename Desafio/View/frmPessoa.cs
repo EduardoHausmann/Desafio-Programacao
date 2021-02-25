@@ -34,14 +34,14 @@ namespace View
 
         public void Inserir()
         {
-            pessoa.Nome = txtNome.Text;
-            pessoa.Sobrenome = txtSobrenome.Text;
+            pessoa.Nome = txtNome.Text.ToUpper();
+            pessoa.Sobrenome = txtSobrenome.Text.ToUpper();
             pessoa.CPF = mbCpf.Text;
-            pessoa.Endereco = txtEndereco.Text;
+            pessoa.Endereco = txtEndereco.Text.ToUpper();
             pessoa.Telefone = mbTelefone.Text;
             pessoa.Email = txtEmail.Text;
             pessoa.DataNascimento = Convert.ToDateTime(dpDataNascimento.Value);
-            pessoa.NomeMae = txtNomeMae.Text;
+            pessoa.NomeMae = txtNomeMae.Text.ToUpper();
             if (rbFeminino.Checked)
                 pessoa.Sexo = "Feminino";
             else if (rbMasculino.Checked)
