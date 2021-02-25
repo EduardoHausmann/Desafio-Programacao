@@ -103,4 +103,4 @@ VALUES ('Teste 01', 2, 1),
 
 INSERT INTO espaco_cafes(nome, lotacao_maxima, registro_ativo) 
 VALUES ('Teste 03', 2, 1),
-		('Teste 04', 30, 1);
+		('Teste 04', 30, 1);		

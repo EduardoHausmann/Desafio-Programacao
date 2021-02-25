@@ -158,11 +158,8 @@ namespace Repository.Repositores
         public int PegaLotacao(int sala)
         {
             SqlCommand comando = Conexao.Conectar();
-            comando.CommandText = @"SELECT sala_eventos.lotacao_maxima AS 'SalaEventoLotacao'
-            FROM evento_pessoas
-            INNER JOIN sala_eventos ON (evento_pessoas.id_sala_evento = sala_eventos.id)
-            WHERE evento_pessoas.registro_ativo = 1 AND evento_pessoas.id_sala_evento = @ID_SALA_EVENTO";
-            comando.Parameters.AddWithValue("@ID_SALA_EVENTO", sala);
+            comando.CommandText = @"SELECT sala_eventos.lotacao_maxima  AS 'SalaEventoLotacao' FROM sala_eventos WHERE sala_eventos.id = @ID";
+            comando.Parameters.AddWithValue("@ID", sala);
 
             DataTable dt = new DataTable();
             dt.Load(comando.ExecuteReader());
@@ -173,10 +170,9 @@ namespace Repository.Repositores
                 return 0;
 
             DataRow dr = dt.Rows[0];
-            EventoPessoa eventoPessoa = new EventoPessoa();
-            eventoPessoa.SalaEvento = new SalaEvento();
-            eventoPessoa.SalaEvento.LotacaoMaxima = Convert.ToInt32(dr["SalaEventoLotacao"]);
-            return eventoPessoa.SalaEvento.LotacaoMaxima;
+ SalaEvento salaEvento = new SalaEvento();
+            salaEvento.LotacaoMaxima = Convert.ToInt32(dr["SalaEventoLotacao"]);
+            return salaEvento.LotacaoMaxima;
         }
     }
 }

@@ -41,8 +41,8 @@ namespace View
             eventoPessoa.IdSalaEvento = Convert.ToInt32(cbEvento.SelectedValue.ToString());
             eventoPessoa.IdPessoa = Convert.ToInt32(cbPessoa.SelectedValue.ToString());
             int id_evento = Convert.ToInt32(cbEvento.SelectedValue.ToString());
-            int lotacao = Convert.ToInt32(cbEvento.SelectedValue.ToString());
-            if (repository.ChecaEvento(id_evento) < repository.PegaLotacao(lotacao))
+            int sala = Convert.ToInt32(cbEvento.SelectedValue.ToString());
+            if (repository.ChecaEvento(id_evento) < repository.PegaLotacao(sala))
             {
                 repository.Inserir(eventoPessoa);
             }
@@ -61,15 +61,7 @@ namespace View
             eventoPessoa.IdSalaEvento = Convert.ToInt32(cbEvento.SelectedValue.ToString());
             int id_evento = Convert.ToInt32(cbEvento.SelectedValue.ToString());
             int lotacao = Convert.ToInt32(cbEvento.SelectedValue.ToString());
-            if (repository.ChecaEvento(id_evento) < repository.PegaLotacao(lotacao))
-            {
-                repository.Alterar(eventoPessoa);
-            }
-            else
-            {
-                MessageBox.Show("Lotação Máxima atingida", "Aviso!");
-                return;
-            }
+            repository.Alterar(eventoPessoa);
         }
 
         public void LimparCampos()
