@@ -30,14 +30,14 @@ namespace View
         private void InitializeComponent()
         {
             this.dgvEspacoCafe = new System.Windows.Forms.DataGridView();
+            this.ColumnID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblId = new System.Windows.Forms.Label();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnDesativar = new System.Windows.Forms.Button();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.lblNome = new System.Windows.Forms.Label();
-            this.ColumnID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblLotacao = new System.Windows.Forms.Label();
             this.nudLotacao = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEspacoCafe)).BeginInit();
@@ -63,6 +63,26 @@ namespace View
             this.dgvEspacoCafe.TabIndex = 9;
             this.dgvEspacoCafe.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEspacoCafe_CellDoubleClick);
             // 
+            // ColumnID
+            // 
+            this.ColumnID.HeaderText = "Código";
+            this.ColumnID.Name = "ColumnID";
+            this.ColumnID.ReadOnly = true;
+            this.ColumnID.Width = 50;
+            // 
+            // ColumnNome
+            // 
+            this.ColumnNome.HeaderText = "Nome";
+            this.ColumnNome.Name = "ColumnNome";
+            this.ColumnNome.ReadOnly = true;
+            this.ColumnNome.Width = 150;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Lotação Máxima";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
             // lblId
             // 
             this.lblId.AutoSize = true;
@@ -77,7 +97,7 @@ namespace View
             // btnSalvar
             // 
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvar.Location = new System.Drawing.Point(128, 92);
+            this.btnSalvar.Location = new System.Drawing.Point(139, 92);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(75, 32);
             this.btnSalvar.TabIndex = 15;
@@ -113,26 +133,6 @@ namespace View
             this.lblNome.Size = new System.Drawing.Size(51, 20);
             this.lblNome.TabIndex = 10;
             this.lblNome.Text = "Nome";
-            // 
-            // ColumnID
-            // 
-            this.ColumnID.HeaderText = "Código";
-            this.ColumnID.Name = "ColumnID";
-            this.ColumnID.ReadOnly = true;
-            this.ColumnID.Width = 50;
-            // 
-            // ColumnNome
-            // 
-            this.ColumnNome.HeaderText = "Nome";
-            this.ColumnNome.Name = "ColumnNome";
-            this.ColumnNome.ReadOnly = true;
-            this.ColumnNome.Width = 150;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Lotação Máxima";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
             // 
             // lblLotacao
             // 

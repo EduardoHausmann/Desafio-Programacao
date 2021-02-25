@@ -43,6 +43,7 @@ namespace View
             this.txtDescrição = new System.Windows.Forms.TextBox();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnDesativar = new System.Windows.Forms.Button();
+            this.btnTrocaEvento = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPessoaEvento)).BeginInit();
             this.SuspendLayout();
             // 
@@ -119,14 +120,14 @@ namespace View
             this.cbEvento.FormattingEnabled = true;
             this.cbEvento.Location = new System.Drawing.Point(5, 113);
             this.cbEvento.Name = "cbEvento";
-            this.cbEvento.Size = new System.Drawing.Size(168, 28);
+            this.cbEvento.Size = new System.Drawing.Size(155, 28);
             this.cbEvento.TabIndex = 3;
             // 
             // lblPessoa
             // 
             this.lblPessoa.AutoSize = true;
             this.lblPessoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPessoa.Location = new System.Drawing.Point(188, 90);
+            this.lblPessoa.Location = new System.Drawing.Point(162, 90);
             this.lblPessoa.Name = "lblPessoa";
             this.lblPessoa.Size = new System.Drawing.Size(62, 20);
             this.lblPessoa.TabIndex = 4;
@@ -137,9 +138,9 @@ namespace View
             this.cbPessoa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbPessoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbPessoa.FormattingEnabled = true;
-            this.cbPessoa.Location = new System.Drawing.Point(192, 113);
+            this.cbPessoa.Location = new System.Drawing.Point(166, 113);
             this.cbPessoa.Name = "cbPessoa";
-            this.cbPessoa.Size = new System.Drawing.Size(165, 28);
+            this.cbPessoa.Size = new System.Drawing.Size(191, 28);
             this.cbPessoa.TabIndex = 5;
             // 
             // lblDescricao
@@ -163,7 +164,7 @@ namespace View
             // btnSalvar
             // 
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvar.Location = new System.Drawing.Point(192, 147);
+            this.btnSalvar.Location = new System.Drawing.Point(198, 147);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(63, 30);
             this.btnSalvar.TabIndex = 8;
@@ -182,12 +183,23 @@ namespace View
             this.btnDesativar.UseVisualStyleBackColor = true;
             this.btnDesativar.Click += new System.EventHandler(this.btnDesativar_Click);
             // 
+            // btnTrocaEvento
+            // 
+            this.btnTrocaEvento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTrocaEvento.Location = new System.Drawing.Point(71, 147);
+            this.btnTrocaEvento.Name = "btnTrocaEvento";
+            this.btnTrocaEvento.Size = new System.Drawing.Size(121, 30);
+            this.btnTrocaEvento.TabIndex = 10;
+            this.btnTrocaEvento.Text = "Trocar de Sala";
+            this.btnTrocaEvento.UseVisualStyleBackColor = true;
+            // 
             // frmPessoaEvento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(362, 337);
+            this.Controls.Add(this.btnTrocaEvento);
             this.Controls.Add(this.btnDesativar);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.txtDescrição);
@@ -225,5 +237,6 @@ namespace View
         private System.Windows.Forms.TextBox txtDescrição;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnDesativar;
+        private System.Windows.Forms.Button btnTrocaEvento;
     }
 }

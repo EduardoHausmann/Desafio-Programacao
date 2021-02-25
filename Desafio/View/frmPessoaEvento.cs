@@ -23,6 +23,7 @@ namespace View
 
         EventoPessoaRepository repository = new EventoPessoaRepository();
         EventoPessoa eventoPessoa = new EventoPessoa();
+        SalaEvento salaEvento = new SalaEvento();
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
@@ -123,11 +124,11 @@ namespace View
         public void CarregaPessoa()
         {
             SqlCommand comando = Conexao.Conectar();
-            comando.CommandText = @"SELECT id, nome FROM pessoas WHERE registro_ativo = 1";
+            comando.CommandText = @"SELECT id, CONCAT(nome, ' ', sobrenome) AS 'NomeCompleto' FROM pessoas WHERE registro_ativo = 1";
             SqlDataReader dr = comando.ExecuteReader();
             DataTable dt = new DataTable();
             dt.Load(dr);
-            cbPessoa.DisplayMember = "nome";
+            cbPessoa.DisplayMember = "NomeCompleto";
             cbPessoa.ValueMember = "id";
             cbPessoa.DataSource = dt;
             comando.Connection.Close();

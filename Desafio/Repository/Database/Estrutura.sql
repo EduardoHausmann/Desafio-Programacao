@@ -48,8 +48,8 @@ lotacao_atual INT,
 registro_ativo BIT
 );
 
-INSERT INTO pessoas (nome, sobrenome, cpf, endereco, telefone, email, data_nascimento, nome_mae, sexo, registro_ativo) OUTPUT INSERTED.ID VALUES ('VITALINA','BERTOTTI','249.221.669-00','FELIX ESTEVAO ZUNINO, 554  FUNDOS','479223153','VITALINA@proway.com','2001-11-15','MARIA BERTOTTI','Feminino',1);
-INSERT INTO pessoas (nome, sobrenome, cpf, endereco, telefone, email, data_nascimento, nome_mae, sexo, registro_ativo) OUTPUT INSERTED.ID VALUES ('ROBERT',' STOLL STEINHEUSER','102.777.399-59','NICOLAU LINK, LADO 298 CX 01','47922356','ROBERT@proway.com','2002-12-20','PAULA STEINHEUSER','Masculino',1);
+INSERT INTO pessoas (nome, sobrenome, cpf, endereco, telefone, email, data_nascimento, nome_mae, sexo, registro_ativo) OUTPUT INSERTED.ID VALUES ('VITALINA','BERTOTTI','249.221.669-00','FELIX ESTEVAO ZUNINO, 554  FUNDOS','479223153','vitalina@proway.com','2001-11-15','MARIA BERTOTTI','Feminino',1);
+INSERT INTO pessoas (nome, sobrenome, cpf, endereco, telefone, email, data_nascimento, nome_mae, sexo, registro_ativo) OUTPUT INSERTED.ID VALUES ('ROBERT',' STOLL STEINHEUSER','102.777.399-59','NICOLAU LINK, LADO 298 CX 01','47922356','robert@proway.com','2002-12-20','PAULA STEINHEUSER','Masculino',1);
 INSERT INTO pessoas (nome, sobrenome, cpf, endereco, telefone, email, data_nascimento, nome_mae, sexo, registro_ativo) OUTPUT INSERTED.ID VALUES ('FABRICIO',' KLETTENBERG','091.111.044-74','RUA MIRADOR N 314','479285236','fabricio@proway.com','2000-02-28','JOAQUINA KLETTENBERG','Masculino',1);
 INSERT INTO pessoas (nome, sobrenome, cpf, endereco, telefone, email, data_nascimento, nome_mae, sexo, registro_ativo) OUTPUT INSERTED.ID VALUES ('PEDRINHO',' JOSE COELHO','497.823.639-87','AUGUSTO OTTE, 420','479232642','pedrinho@proway.com','2001-03-25','ELFRIDA JOSE COELHO','Masculino',1);
 INSERT INTO pessoas (nome, sobrenome, cpf, endereco, telefone, email, data_nascimento, nome_mae, sexo, registro_ativo) OUTPUT INSERTED.ID VALUES ('ROSIMEIRE',' CRISTINA BIAZUS','557.933.489-34','CAMPOS NOVOS - 269','47921265','roseimeire@proway.com','2002-03-17','JULIA CRISTINA BIAZUS','Feminino',1);

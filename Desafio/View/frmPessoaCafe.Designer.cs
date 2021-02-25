@@ -36,10 +36,10 @@ namespace View
             this.cbEspaco = new System.Windows.Forms.ComboBox();
             this.lblEspaco = new System.Windows.Forms.Label();
             this.dgvPessoaEspaco = new System.Windows.Forms.DataGridView();
-            this.lblId = new System.Windows.Forms.Label();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblId = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPessoaEspaco)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,7 +57,7 @@ namespace View
             // btnSalvar
             // 
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvar.Location = new System.Drawing.Point(94, 134);
+            this.btnSalvar.Location = new System.Drawing.Point(100, 134);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(63, 30);
             this.btnSalvar.TabIndex = 15;
@@ -124,17 +124,6 @@ namespace View
             this.dgvPessoaEspaco.TabIndex = 10;
             this.dgvPessoaEspaco.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPessoaEspaco_CellDoubleClick);
             // 
-            // lblId
-            // 
-            this.lblId.AutoSize = true;
-            this.lblId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblId.Location = new System.Drawing.Point(-3, -3);
-            this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(18, 20);
-            this.lblId.TabIndex = 17;
-            this.lblId.Text = "0";
-            this.lblId.Visible = false;
-            // 
             // Column1
             // 
             this.Column1.HeaderText = "Código";
@@ -153,6 +142,17 @@ namespace View
             this.Column4.HeaderText = "Pessoa";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
+            // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblId.Location = new System.Drawing.Point(-3, -3);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(18, 20);
+            this.lblId.TabIndex = 17;
+            this.lblId.Text = "0";
+            this.lblId.Visible = false;
             // 
             // frmPessoaCafe
             // 
