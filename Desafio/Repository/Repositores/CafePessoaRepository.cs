@@ -65,7 +65,7 @@ namespace Repository.Repositores
             pessoas.sobrenome AS 'PessoaSobrenome'
             FROM cafe_pessoas 
             INNER JOIN espaco_cafes ON (cafe_pessoas.id_espaco_cafe = espaco_cafes.id)
-            INNER JOIN pessoa ON (cafe_pessoas.id_pessoa = pessoas.id)
+            INNER JOIN pessoas ON (cafe_pessoas.id_pessoa = pessoas.id)
             WHERE cafe_pessoas.id = @ID";
             comando.Parameters.AddWithValue("@ID", id);
 

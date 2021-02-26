@@ -44,7 +44,15 @@ namespace View
             int sala = Convert.ToInt32(cbEvento.SelectedValue.ToString());
             if (repository.ChecaEvento(id_evento) < repository.PegaLotacao(sala))
             {
-                repository.Inserir(eventoPessoa);
+                if (txtDescrição.Text.Trim() == "")
+                {
+                    MessageBox.Show("O campo descrição não pode ser vazio");
+                    return;
+                }
+                else
+                {
+                    repository.Inserir(eventoPessoa);
+                }
             }
             else
             {
@@ -74,8 +82,7 @@ namespace View
 
         public void AtualizarTabela()
         {
-            string busca = "";
-            List<EventoPessoa> eventoPessoas = repository.ObterTodos(busca);
+            List<EventoPessoa> eventoPessoas = repository.ObterTodos();
             dgvPessoaEvento.RowCount = 0;
             for (int i = 0; i < eventoPessoas.Count; i++)
             {

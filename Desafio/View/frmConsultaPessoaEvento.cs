@@ -27,7 +27,7 @@ namespace View
         public void AtualizaTabela()
         {
             string busca = cbPessoa.SelectedValue.ToString();
-            List<EventoPessoa> eventoPessoas = repository.ObterTodos(busca);
+            List<EventoPessoa> eventoPessoas = repository.ObterTodosIdPessoa(busca);
             dgvPessoaEvento.RowCount = 0;
             for (int i = 0; i < eventoPessoas.Count; i++)
             {

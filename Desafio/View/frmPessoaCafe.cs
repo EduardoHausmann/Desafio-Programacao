@@ -56,7 +56,7 @@ namespace View
             cafePessoa.Id = Convert.ToInt32(lblId.Text);
             cafePessoa.IdEspacoCafe = Convert.ToInt32(cbEspaco.SelectedValue.ToString());
             cafePessoa.IdPessoa = Convert.ToInt32(cbPessoa.SelectedValue.ToString());
-            repository.Inserir(cafePessoa);
+            repository.Alterar(cafePessoa);
         }
 
         public void LimparCampos()
@@ -94,7 +94,7 @@ namespace View
             cafePessoa = repository.ObterPeloId(id);
             if (cafePessoa != null)
             {
-                lblId.Text = cafePessoa.Id.ToString().ToString();
+                lblId.Text = cafePessoa.Id.ToString();
                 cbEspaco.SelectedValue = cafePessoa.IdEspacoCafe;
                 cbPessoa.SelectedValue = cafePessoa.IdPessoa;
             }

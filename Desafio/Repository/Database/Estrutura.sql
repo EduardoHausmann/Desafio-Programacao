@@ -34,7 +34,6 @@ id_sala_evento INT,
 FOREIGN KEY (id_sala_evento) REFERENCES sala_eventos(id),
 id_pessoa INT,
 FOREIGN KEY (id_pessoa) REFERENCES pessoas(id),
-lotacao_atual INT,
 registro_ativo BIT
 );
 
@@ -44,7 +43,6 @@ id_espaco_cafe INT,
 FOREIGN KEY (id_espaco_cafe) REFERENCES espaco_cafes(id),
 id_pessoa INT,
 FOREIGN KEY (id_pessoa) REFERENCES pessoas(id),
-lotacao_atual INT,
 registro_ativo BIT
 );
 
