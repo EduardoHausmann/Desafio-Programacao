@@ -34,17 +34,32 @@ Id que, caso seja igual a 0, o botão identifica que deve ser incrementada um no
 A tela dispoem também de um botão para *Desativar* um espaço de café, que fara com que o registro não seja mais mostrado na lista de Salas, pórem ainda 
 estara guardada no banco de dados.
 
+***Tela de Cadastro/Edição de Pessoa por Evento***
+   A tela dispoem de um botão para *Salvar* que possui uma dupla funcionalidade, caso o campo invisivel do Id seja 0 o botão tera a função de Inserir um pessoa 
+no evento caso a lotação máxima do evento não tenha sido atingida; caso o Id seja direfente de 0 o botão tera a função de alterar, que para está ser ativada deve-se 
+dar um duplo click no registro a ser editado. A tela tambem dispoem de um botão *Desativar* que fara com que o registro não seja seja mais mostrado na tela 
+mas continue guardado no banco de dados. 
+
+***Tela de Cadastro/Edição de Pessoa por Evento***
+   A tela dispoem de um botão para *Salvar* que possui uma dupla funcionalidade, caso o campo invisivel do Id seja 0 o botão tera a função de Inserir um pessoa 
+no espaço caso a lotação máxima do espaço ainda não tenha sido atingida; caso o Id seja direfente de 0 o botão tera a função de alterar, que para está ser 
+ativada deve-se dar um duplo click no registro a ser editado. A tela tambem dispoem de um botão *Desativar* que fara com que o registro não seja seja mais 
+mostrado na tela mas continue guardado no banco de dados. 
+
 ***Consulta de Pessoas***
    A tela possui um compo de texto para que possa ser feita a pesquisa a partir do nome da Pessoa; a tabela com todos os registro se atualiza automaticamente
 conforme o campo de busca é preenchido, caso ao se pesquisar seja deixado o campo com "espaço" o programa não realiza a busca. Ao se deixar o campo de busca vazio 
 a tabela mostra o registro de todas as pessoas cadastradas no banco que estiverem ativas.
 
 ***Consulta de Sala de Evento***
-   A tela possui um compo de texto para que possa ser feita a pesquisa a partir do nome da Sala de Evento; a tabela com todos os registro se atualiza 
-automaticamente conforme o campo de busca é preenchido, caso ao se pesquisar seja deixado o campo com "espaço" o programa não realiza a busca. Ao se deixar 
-o campo de busca vazio a tabela mostra o registro de todas as salas cadastradas no banco que estiverem ativas.
+   A tela possui um ComboBox com a lista de todos as Salas para que possa ser feita a pesquisa a partir do nome da Sala de Evento; a tabela com todos os registro 
+se atualiza automaticamente após ser selecionada a sala a ser consultada.
 
 ***Consulta de Espaço de Café***
-   A tela possui um compo de texto para que possa ser feita a pesquisa a partir do nome do Espaço de Café; a tabela com todos os registro se atualiza 
-automaticamente conforme o campo de busca é preenchido, caso ao se pesquisar seja deixado o campo com "espaço" o programa não realiza a busca. Ao se deixar 
-o campo de busca vazio a tabela mostra o registro de todos os espaços cadastrados no banco que estiverem ativos.
+   A tela possui um ComboBox com uma lista de todos os espaços para que possa ser feita a pesquisa a partir do nome do Espaço de Café; a tabela com todos os 
+registro se atualiza automaticamente após a seleção do espaço desejado.
+
+***Consulta de Pessoa por Evento***
+   A tela possui um ComboBox com uma lista de todas as pessoas para que possa ser feita a pesquisa a partir do nome da Pessoa; a tabela com todos os 
+registro se atualiza automaticamente após a seleção da pessoa desejado, que mostrara na tabela a sala em que a pessoa se encontrava na primeira etapa e a sala em 
+que a pessoa se encontra na segunda etapa.
