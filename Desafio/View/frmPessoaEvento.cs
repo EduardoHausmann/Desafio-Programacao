@@ -74,7 +74,8 @@ namespace View
 
         public void AtualizarTabela()
         {
-            List<EventoPessoa> eventoPessoas = repository.ObterTodos();
+            string busca = "";
+            List<EventoPessoa> eventoPessoas = repository.ObterTodos(busca);
             dgvPessoaEvento.RowCount = 0;
             for (int i = 0; i < eventoPessoas.Count; i++)
             {

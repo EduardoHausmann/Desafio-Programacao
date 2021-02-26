@@ -69,5 +69,11 @@ namespace View
             frmPessoaCafe pessoaCafe = new frmPessoaCafe();
             pessoaCafe.Show();
         }
+
+        private void tsmConsultaPessoaEvento_Click(object sender, EventArgs e)
+        {
+            frmConsultaPessoaEvento consultaPessoaEvento = new frmConsultaPessoaEvento();
+            consultaPessoaEvento.Show();
+        }
     }
 }

@@ -94,7 +94,7 @@ namespace Repository.Repositores
             return eventoPessoa;
         }
 
-        public List<EventoPessoa> ObterTodos()
+        public List<EventoPessoa> ObterTodos(string busca)
         {
             SqlCommand comando = Conexao.Conectar();
             comando.CommandText = @"SELECT evento_pessoas.id AS 'EventoPessoaId',
@@ -107,7 +107,9 @@ namespace Repository.Repositores
             FROM evento_pessoas
             INNER JOIN sala_eventos ON (evento_pessoas.id_sala_evento = sala_eventos.id)
             INNER JOIN pessoas ON (evento_pessoas.id_pessoa = pessoas.id)
-            WHERE evento_pessoas.registro_ativo = 1";
+            WHERE evento_pessoas.id_pessoa LIKE @ID_PESSOA AND evento_pessoas.registro_ativo = 1";
+            busca = "%" + busca + "%";
+            comando.Parameters.AddWithValue("@ID_PESSOA", busca);
 
             DataTable dt = new DataTable();
             dt.Load(comando.ExecuteReader());
