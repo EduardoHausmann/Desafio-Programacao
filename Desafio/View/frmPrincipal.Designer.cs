@@ -40,6 +40,7 @@
             this.tsmConsultaSalaEvento = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmConsultaEspacoCafe = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmConsultaPessoaEvento = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmTrocaSala = new System.Windows.Forms.ToolStripMenuItem();
             this.msPrincipal.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,7 +50,8 @@
             this.msPrincipal.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.msPrincipal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmCadastro,
-            this.tsmConsulta});
+            this.tsmConsulta,
+            this.tsmTrocaSala});
             this.msPrincipal.Location = new System.Drawing.Point(0, 0);
             this.msPrincipal.Name = "msPrincipal";
             this.msPrincipal.Size = new System.Drawing.Size(504, 27);
@@ -142,6 +144,13 @@
             this.tsmConsultaPessoaEvento.Text = "Pessoas p/ Evento";
             this.tsmConsultaPessoaEvento.Click += new System.EventHandler(this.tsmConsultaPessoaEvento_Click);
             // 
+            // tsmTrocaSala
+            // 
+            this.tsmTrocaSala.Name = "tsmTrocaSala";
+            this.tsmTrocaSala.Size = new System.Drawing.Size(105, 23);
+            this.tsmTrocaSala.Text = "Troca de Sala";
+            this.tsmTrocaSala.Click += new System.EventHandler(this.tsmTrocaSala_Click);
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -176,6 +185,7 @@
         private System.Windows.Forms.ToolStripMenuItem tsmPessoaEvento;
         private System.Windows.Forms.ToolStripMenuItem tsmPessoaEspaco;
         private System.Windows.Forms.ToolStripMenuItem tsmConsultaPessoaEvento;
+        private System.Windows.Forms.ToolStripMenuItem tsmTrocaSala;
     }
 }
 

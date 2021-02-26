@@ -108,7 +108,6 @@ namespace Repository.Repositores
             INNER JOIN sala_eventos ON (evento_pessoas.id_sala_evento = sala_eventos.id)
             INNER JOIN pessoas ON (evento_pessoas.id_pessoa = pessoas.id)
             WHERE evento_pessoas.id_pessoa LIKE @ID_PESSOA AND evento_pessoas.registro_ativo = 1";
-            busca = "%" + busca + "%";
             comando.Parameters.AddWithValue("@ID_PESSOA", busca);
 
             DataTable dt = new DataTable();

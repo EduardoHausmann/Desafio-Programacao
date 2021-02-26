@@ -40,3 +40,4 @@ C:\Users\Eduardo\Documents\GitHub\Desafio-Programacao\Desafio\View\obj\Debug\Vie
 C:\Users\Eduardo\Documents\GitHub\Desafio-Programacao\Desafio\View\obj\Debug\View.csproj.CopyComplete
 C:\Users\Eduardo\Documents\GitHub\Desafio-Programacao\Desafio\View\obj\Debug\View.exe
 C:\Users\Eduardo\Documents\GitHub\Desafio-Programacao\Desafio\View\obj\Debug\View.pdb
+C:\Users\Eduardo\Documents\GitHub\Desafio-Programacao\Desafio\View\obj\Debug\View.frmTrocaSala.resources

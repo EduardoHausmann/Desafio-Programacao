@@ -135,6 +135,12 @@
     <Compile Include="frmSalaEvento.Designer.cs">
       <DependentUpon>frmSalaEvento.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTrocaSala.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTrocaSala.Designer.cs">
+      <DependentUpon>frmTrocaSala.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmConsultaEspacoCafe.resx">
@@ -166,6 +172,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSalaEvento.resx">
       <DependentUpon>frmSalaEvento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTrocaSala.resx">
+      <DependentUpon>frmTrocaSala.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -75,5 +75,11 @@ namespace View
             frmConsultaPessoaEvento consultaPessoaEvento = new frmConsultaPessoaEvento();
             consultaPessoaEvento.Show();
         }
+
+        private void tsmTrocaSala_Click(object sender, EventArgs e)
+        {
+            frmTrocaSala trocaSala = new frmTrocaSala();
+            trocaSala.Show();
+        }
     }
 }
