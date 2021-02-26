@@ -90,7 +90,7 @@ namespace Repository.Repositores
             return cafePessoa;
         }
 
-        public List<CafePessoa> ObterTodos()
+        public List<CafePessoa> ObterTodos(string busca)
         {
             SqlCommand comando = Conexao.Conectar();
             comando.CommandText = @"SELECT cafe_pessoas.id AS 'CafePessoaId',
@@ -102,7 +102,9 @@ namespace Repository.Repositores
             FROM cafe_pessoas 
             INNER JOIN espaco_cafes ON (cafe_pessoas.id_espaco_cafe = espaco_cafes.id)
             INNER JOIN pessoas ON (cafe_pessoas.id_pessoa = pessoas.id)
-            WHERE cafe_pessoas.registro_ativo = 1";
+            WHERE cafe_pessoas.id_espaco_cafe LIKE @ID_ESPACO_CAFE AND cafe_pessoas.registro_ativo = 1";
+            busca = "%" + busca + "%";
+            comando.Parameters.AddWithValue("@ID_ESPACO_CAFE", busca);
 
             DataTable dt = new DataTable();
             dt.Load(comando.ExecuteReader());

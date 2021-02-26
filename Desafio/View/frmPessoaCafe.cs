@@ -68,7 +68,8 @@ namespace View
 
         public void AtualizarTabela()
         {
-            List<CafePessoa> cafePessoas = repository.ObterTodos();
+            string busca = "";
+            List<CafePessoa> cafePessoas = repository.ObterTodos(busca);
             dgvPessoaEspaco.RowCount = 0;
             for (int i = 0; i < cafePessoas.Count; i++)
             {

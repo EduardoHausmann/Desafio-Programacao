@@ -30,11 +30,10 @@ namespace View
         private void InitializeComponent()
         {
             this.dgvEspacoCafe = new System.Windows.Forms.DataGridView();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lblBuscar = new System.Windows.Forms.Label();
             this.ColumnID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cbEspaco = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEspacoCafe)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,8 +45,7 @@ namespace View
             this.dgvEspacoCafe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEspacoCafe.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ColumnID,
-            this.ColumnNome,
-            this.Column1});
+            this.ColumnNome});
             this.dgvEspacoCafe.Location = new System.Drawing.Point(5, 64);
             this.dgvEspacoCafe.Name = "dgvEspacoCafe";
             this.dgvEspacoCafe.ReadOnly = true;
@@ -55,15 +53,6 @@ namespace View
             this.dgvEspacoCafe.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvEspacoCafe.Size = new System.Drawing.Size(255, 150);
             this.dgvEspacoCafe.TabIndex = 10;
-            // 
-            // txtBuscar
-            // 
-            this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(5, 32);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(255, 26);
-            this.txtBuscar.TabIndex = 12;
-            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // lblBuscar
             // 
@@ -84,22 +73,28 @@ namespace View
             // 
             // ColumnNome
             // 
-            this.ColumnNome.HeaderText = "Nome";
+            this.ColumnNome.HeaderText = "Pessoa";
             this.ColumnNome.Name = "ColumnNome";
             this.ColumnNome.ReadOnly = true;
+            this.ColumnNome.Width = 200;
             // 
-            // Column1
+            // cbEspaco
             // 
-            this.Column1.HeaderText = "Lotação Máxima";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
+            this.cbEspaco.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbEspaco.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbEspaco.FormattingEnabled = true;
+            this.cbEspaco.Location = new System.Drawing.Point(5, 32);
+            this.cbEspaco.Name = "cbEspaco";
+            this.cbEspaco.Size = new System.Drawing.Size(255, 28);
+            this.cbEspaco.TabIndex = 12;
+            this.cbEspaco.SelectedIndexChanged += new System.EventHandler(this.cbEspaco_SelectedIndexChanged);
             // 
             // frmConsultaEspacoCafe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(263, 218);
-            this.Controls.Add(this.txtBuscar);
+            this.Controls.Add(this.cbEspaco);
             this.Controls.Add(this.lblBuscar);
             this.Controls.Add(this.dgvEspacoCafe);
             this.MaximizeBox = false;
@@ -116,10 +111,9 @@ namespace View
         #endregion
 
         private System.Windows.Forms.DataGridView dgvEspacoCafe;
-        private System.Windows.Forms.TextBox txtBuscar;
         private System.Windows.Forms.Label lblBuscar;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnID;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.ComboBox cbEspaco;
     }
 }

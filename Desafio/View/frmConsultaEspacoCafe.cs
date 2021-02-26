@@ -1,9 +1,11 @@
 ﻿using Model;
+using Repository;
 using Repository.Repositores;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -21,30 +23,43 @@ namespace View
 
         public void AtualizarTabela()
         {
-            EspacoCafeRepository repository = new EspacoCafeRepository();
-            string buscar = txtBuscar.Text.Trim();
-            List<EspacoCafe> espacoCafes = repository.ObterTodos(buscar);
+            CafePessoaRepository repository = new CafePessoaRepository();
+            string buscar = cbEspaco.SelectedValue.ToString();
+            List<CafePessoa> cafePessoas = repository.ObterTodos(buscar);
             dgvEspacoCafe.RowCount = 0;
-            for (int i = 0; i < espacoCafes.Count; i++)
+            for (int i = 0; i < cafePessoas.Count; i++)
             {
-                EspacoCafe espacoCafe = espacoCafes[i];
+                CafePessoa cafePessoa = cafePessoas[i];
                 dgvEspacoCafe.Rows.Add(new object[]
                 {
-                    espacoCafe.Id.ToString(),
-                    espacoCafe.Nome,
-                    espacoCafe.LotacaoMaxima
+                    cafePessoa.Id.ToString(),
+                    String.Concat(cafePessoa.Pessoa.Nome, " ", cafePessoa.Pessoa.Sobrenome)
                 });
             }
         }
 
-        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        private void frmConsultaEspacoCafe_Load(object sender, EventArgs e)
+        {
+            CarregaEspaco();
+            AtualizarTabela();
+        }
+
+        private void cbEspaco_SelectedIndexChanged(object sender, EventArgs e)
         {
             AtualizarTabela();
         }
 
-        private void frmConsultaEspacoCafe_Load(object sender, EventArgs e)
+        public void CarregaEspaco()
         {
-            AtualizarTabela();
+            SqlCommand comando = Conexao.Conectar();
+            comando.CommandText = @"SELECT id, nome FROM espaco_cafes WHERE registro_ativo = 1";
+            SqlDataReader dr = comando.ExecuteReader();
+            DataTable dt = new DataTable();
+            dt.Load(dr);
+            cbEspaco.DisplayMember = "nome";
+            cbEspaco.ValueMember = "id";
+            cbEspaco.DataSource = dt;
+            comando.Connection.Close();
         }
     }
 }

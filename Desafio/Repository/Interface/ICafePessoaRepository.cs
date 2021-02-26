@@ -13,7 +13,7 @@ namespace Repository.Interface
 
         bool Alterar(CafePessoa cafePessoa);
 
-        List<CafePessoa> ObterTodos();
+        List<CafePessoa> ObterTodos(string busca);
 
         bool Apagar(int id);
 

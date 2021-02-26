@@ -134,6 +134,46 @@ namespace Repository.Repositores
             return eventoPessoas;
         }
 
+        public List<EventoPessoa> ObterTodosPeloEvento(string busca)
+        {
+            SqlCommand comando = Conexao.Conectar();
+            comando.CommandText = @"SELECT evento_pessoas.id AS 'EventoPessoaId',
+            evento_pessoas.descricao AS 'EventoPessoaDescricao',
+            evento_pessoas.id_sala_evento AS 'EventoPessoaIdSalaEvento',
+            sala_eventos.nome AS 'SalaEventoNome',
+            evento_pessoas.id_pessoa AS 'EventoPessoaIdPessoa',
+            pessoas.nome AS 'PessoaNome',
+            pessoas.sobrenome AS 'PessoaSobrenome'
+            FROM evento_pessoas
+            INNER JOIN sala_eventos ON (evento_pessoas.id_sala_evento = sala_eventos.id)
+            INNER JOIN pessoas ON (evento_pessoas.id_pessoa = pessoas.id)
+            WHERE evento_pessoas.id_sala_evento LIKE @ID_SALA_EVENTO AND evento_pessoas.registro_ativo = 1";
+            busca = "%" + busca + "%";
+            comando.Parameters.AddWithValue("@ID_SALA_EVENTO", busca);
+
+            DataTable dt = new DataTable();
+            dt.Load(comando.ExecuteReader());
+
+            List<EventoPessoa> eventoPessoas = new List<EventoPessoa>();
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                EventoPessoa eventoPessoa = new EventoPessoa();
+                eventoPessoa.Id = Convert.ToInt32(dr["EventoPessoaId"]);
+                eventoPessoa.Descricao = dr["EventoPessoaDescricao"].ToString();
+                eventoPessoa.IdSalaEvento = Convert.ToInt32(dr["EventoPessoaIdSalaEvento"]);
+                eventoPessoa.SalaEvento = new SalaEvento();
+                eventoPessoa.SalaEvento.Nome = dr["SalaEventoNome"].ToString();
+                eventoPessoa.IdPessoa = Convert.ToInt32(dr["EventoPessoaIdPessoa"]);
+                eventoPessoa.Pessoa = new Pessoa();
+                eventoPessoa.Pessoa.Nome = dr["PessoaNome"].ToString();
+                eventoPessoa.Pessoa.Sobrenome = dr["PessoaSobrenome"].ToString();
+                eventoPessoas.Add(eventoPessoa);
+            }
+            comando.Connection.Close();
+            return eventoPessoas;
+        }
+
         public int ChecaEvento(int id_evento)
         {
             SqlCommand comando = Conexao.Conectar();
