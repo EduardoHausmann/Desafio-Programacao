@@ -40,7 +40,7 @@ no evento caso a lotação máxima do evento não tenha sido atingida; caso o Id
 dar um duplo click no registro a ser editado. A tela tambem dispoem de um botão *Desativar* que fara com que o registro não seja seja mais mostrado na tela 
 mas continue guardado no banco de dados. 
 
-***Tela de Cadastro/Edição de Pessoa por Evento***
+***Tela de Cadastro/Edição de Pessoa por Espaço***
    A tela dispoem de um botão para *Salvar* que possui uma dupla funcionalidade, caso o campo invisivel do Id seja 0 o botão tera a função de Inserir um pessoa 
 no espaço caso a lotação máxima do espaço ainda não tenha sido atingida; caso o Id seja direfente de 0 o botão tera a função de alterar, que para está ser 
 ativada deve-se dar um duplo click no registro a ser editado. A tela tambem dispoem de um botão *Desativar* que fara com que o registro não seja seja mais 
