@@ -34,6 +34,48 @@ namespace View
 
         public void Inserir()
         {
+            if (txtNome.Text == "" || txtSobrenome.Text == "")
+            {
+                MessageBox.Show("Os campos Nome e Sobrenome são obrigatórios!");
+            }
+            else if (txtEndereco.Text == "")
+            {
+                MessageBox.Show("O campo Endereço é obrigatório!");
+            } 
+            else if (txtEmail.Text == "")
+            {
+                MessageBox.Show("O campo E-mail é obrigatório!");
+            }
+            else if (txtNomeMae.Text == "")
+            {
+                MessageBox.Show("O campo Nome da Mãe é obrigatório!");
+            }
+            else if (rbFeminino.Checked == false && rbMasculino.Checked == false)
+            {
+                MessageBox.Show("O campo Sexo é obrigatório!");
+            }
+            else
+            {
+                pessoa.Nome = txtNome.Text.ToUpper();
+                pessoa.Sobrenome = txtSobrenome.Text.ToUpper();
+                pessoa.CPF = mbCpf.Text;
+                pessoa.Endereco = txtEndereco.Text.ToUpper();
+                pessoa.Telefone = mbTelefone.Text;
+                pessoa.Email = txtEmail.Text;
+                pessoa.DataNascimento = Convert.ToDateTime(dpDataNascimento.Value);
+                pessoa.NomeMae = txtNomeMae.Text.ToUpper();
+                if (rbFeminino.Checked)
+                    pessoa.Sexo = "Feminino";
+                else if (rbMasculino.Checked)
+                    pessoa.Sexo = "Masculino";
+
+                repository.Inserir(pessoa);
+            }
+        }
+
+        public void Alterar()
+        {
+            pessoa.Id = Convert.ToInt32(lblId.Text);
             pessoa.Nome = txtNome.Text.ToUpper();
             pessoa.Sobrenome = txtSobrenome.Text.ToUpper();
             pessoa.CPF = mbCpf.Text;
@@ -42,25 +84,6 @@ namespace View
             pessoa.Email = txtEmail.Text;
             pessoa.DataNascimento = Convert.ToDateTime(dpDataNascimento.Value);
             pessoa.NomeMae = txtNomeMae.Text.ToUpper();
-            if (rbFeminino.Checked)
-                pessoa.Sexo = "Feminino";
-            else if (rbMasculino.Checked)
-                pessoa.Sexo = "Masculino";
-
-            repository.Inserir(pessoa);
-        }
-
-        public void Alterar()
-        {
-            pessoa.Id = Convert.ToInt32(lblId.Text);
-            pessoa.Nome = txtNome.Text;
-            pessoa.Sobrenome = txtSobrenome.Text;
-            pessoa.CPF = mbCpf.Text;
-            pessoa.Endereco = txtEndereco.Text;
-            pessoa.Telefone = mbTelefone.Text;
-            pessoa.Email = txtEmail.Text;
-            pessoa.DataNascimento = Convert.ToDateTime(dpDataNascimento.Value);
-            pessoa.NomeMae = txtNomeMae.Text;
             if (rbFeminino.Checked)
                 pessoa.Sexo = "Feminino";
             else if (rbMasculino.Checked)

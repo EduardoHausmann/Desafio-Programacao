@@ -131,19 +131,9 @@ namespace View
             0,
             0,
             0});
-            this.nudLotacao.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             this.nudLotacao.Name = "nudLotacao";
             this.nudLotacao.Size = new System.Drawing.Size(121, 26);
             this.nudLotacao.TabIndex = 5;
-            this.nudLotacao.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             // 
             // btnDesativar
             // 

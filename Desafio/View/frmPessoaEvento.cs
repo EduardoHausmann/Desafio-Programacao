@@ -37,27 +37,42 @@ namespace View
 
         public void Inserir()
         {
-            eventoPessoa.Descricao = txtDescrição.Text;
-            eventoPessoa.IdSalaEvento = Convert.ToInt32(cbEvento.SelectedValue.ToString());
-            eventoPessoa.IdPessoa = Convert.ToInt32(cbPessoa.SelectedValue.ToString());
-            int id_evento = Convert.ToInt32(cbEvento.SelectedValue.ToString());
-            int sala = Convert.ToInt32(cbEvento.SelectedValue.ToString());
-            if (repository.ChecaEvento(id_evento) < repository.PegaLotacao(sala))
+            if (txtDescrição.Text == "")
             {
-                if (txtDescrição.Text.Trim() == "")
-                {
-                    MessageBox.Show("O campo descrição não pode ser vazio");
-                    return;
-                }
-                else
-                {
-                    repository.Inserir(eventoPessoa);
-                }
+                MessageBox.Show("O campo Descrição é obrigatório!");
+            }
+            else if (cbEvento.SelectedIndex == -1)
+            {
+                MessageBox.Show("O campo Evento é obrigatório!");
+            }
+            else if (cbPessoa.SelectedIndex == -1)
+            {
+                MessageBox.Show("O campo Pessoa é obrigatório!");
             }
             else
             {
-                MessageBox.Show("Lotação Máxima atingida", "Aviso!");
-                return;
+                eventoPessoa.Descricao = txtDescrição.Text;
+                eventoPessoa.IdSalaEvento = Convert.ToInt32(cbEvento.SelectedValue.ToString());
+                eventoPessoa.IdPessoa = Convert.ToInt32(cbPessoa.SelectedValue.ToString());
+                int id_evento = Convert.ToInt32(cbEvento.SelectedValue.ToString());
+                int sala = Convert.ToInt32(cbEvento.SelectedValue.ToString());
+                if (repository.ChecaEvento(id_evento) < repository.PegaLotacao(sala))
+                {
+                    if (txtDescrição.Text.Trim() == "")
+                    {
+                        MessageBox.Show("O campo descrição não pode ser vazio");
+                        return;
+                    }
+                    else
+                    {
+                        repository.Inserir(eventoPessoa);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Lotação Máxima atingida", "Aviso!");
+                    return;
+                }
             }
         }
 

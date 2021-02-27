@@ -36,18 +36,29 @@ namespace View
 
         public void Inserir()
         {
-            cafePessoa.IdEspacoCafe = Convert.ToInt32(cbEspaco.SelectedValue.ToString());
-            cafePessoa.IdPessoa = Convert.ToInt32(cbPessoa.SelectedValue.ToString());
-            int id_espaco = Convert.ToInt32(cbEspaco.SelectedValue.ToString());
-            int cafe = Convert.ToInt32(cbEspaco.SelectedValue.ToString());
-            if (repository.ChecaEspacoCafe(id_espaco) < repository.PegaLotacaoCafe(cafe))
+            if (cbEspaco.SelectedIndex == -1)
             {
-                repository.Inserir(cafePessoa);
+                MessageBox.Show("O campo Espaço é obrigatório!");
+            }
+            else if (cbPessoa.SelectedIndex == -1)
+            {
+                MessageBox.Show("O campo Pessoa é obrigatório!");
             }
             else
             {
-                MessageBox.Show("Lotação máxima atingida!", "Aviso!");
-                return;
+                cafePessoa.IdEspacoCafe = Convert.ToInt32(cbEspaco.SelectedValue.ToString());
+                cafePessoa.IdPessoa = Convert.ToInt32(cbPessoa.SelectedValue.ToString());
+                int id_espaco = Convert.ToInt32(cbEspaco.SelectedValue.ToString());
+                int cafe = Convert.ToInt32(cbEspaco.SelectedValue.ToString());
+                if (repository.ChecaEspacoCafe(id_espaco) < repository.PegaLotacaoCafe(cafe))
+                {
+                    repository.Inserir(cafePessoa);
+                }
+                else
+                {
+                    MessageBox.Show("Lotação máxima atingida!", "Aviso!");
+                    return;
+                }
             }
         }
 

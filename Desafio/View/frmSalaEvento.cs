@@ -34,9 +34,20 @@ namespace View
 
         public void Inserir()
         {
-            salaEvento.Nome = txtNome.Text;
-            salaEvento.LotacaoMaxima = Convert.ToInt32(nudLotacao.Value);
-            repository.Inserir(salaEvento);
+            if (txtNome.Text == "")
+            {
+                MessageBox.Show("O campo Nome é obrigatório!");
+            }
+            else if (nudLotacao.Value == 0)
+            {
+                MessageBox.Show("O campo Lotação é obrigatório!");
+            }
+            else
+            {
+                salaEvento.Nome = txtNome.Text;
+                salaEvento.LotacaoMaxima = Convert.ToInt32(nudLotacao.Value);
+                repository.Inserir(salaEvento);
+            }
         }
 
         public void Alterar()
@@ -51,7 +62,7 @@ namespace View
         {
             lblId.Text = "0";
             txtNome.Clear();
-            nudLotacao.Value = 1;
+            nudLotacao.Value = 0;
         }
 
         public void AtualizarTabela()

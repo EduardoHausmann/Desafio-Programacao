@@ -149,6 +149,7 @@
             this.tsmTrocaSala.Name = "tsmTrocaSala";
             this.tsmTrocaSala.Size = new System.Drawing.Size(105, 23);
             this.tsmTrocaSala.Text = "Troca de Sala";
+            this.tsmTrocaSala.Visible = false;
             this.tsmTrocaSala.Click += new System.EventHandler(this.tsmTrocaSala_Click);
             // 
             // frmPrincipal

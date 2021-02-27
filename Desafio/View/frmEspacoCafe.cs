@@ -34,9 +34,20 @@ namespace View
 
         public void Inserir()
         {
-            espacoCafe.Nome = txtNome.Text;
-            espacoCafe.LotacaoMaxima = Convert.ToInt32(nudLotacao.Value);
-            repository.Inserir(espacoCafe);
+            if (txtNome.Text == "")
+            {
+                MessageBox.Show("O campo Nome é obrigatório!");
+            }
+            else if (nudLotacao.Value == 0)
+            {
+                MessageBox.Show("O campo Lotação é obrigatório!");
+            }
+            else
+            {
+                espacoCafe.Nome = txtNome.Text;
+                espacoCafe.LotacaoMaxima = Convert.ToInt32(nudLotacao.Value);
+                repository.Inserir(espacoCafe);
+            }
         }
 
         public void Alterar()
