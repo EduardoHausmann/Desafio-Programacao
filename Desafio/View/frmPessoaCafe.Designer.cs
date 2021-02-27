@@ -49,7 +49,7 @@ namespace View
             this.btnDesativar.Location = new System.Drawing.Point(169, 134);
             this.btnDesativar.Name = "btnDesativar";
             this.btnDesativar.Size = new System.Drawing.Size(90, 30);
-            this.btnDesativar.TabIndex = 16;
+            this.btnDesativar.TabIndex = 6;
             this.btnDesativar.Text = "Desativar";
             this.btnDesativar.UseVisualStyleBackColor = true;
             this.btnDesativar.Click += new System.EventHandler(this.btnDesativar_Click);
@@ -60,7 +60,7 @@ namespace View
             this.btnSalvar.Location = new System.Drawing.Point(100, 134);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(63, 30);
-            this.btnSalvar.TabIndex = 15;
+            this.btnSalvar.TabIndex = 5;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
@@ -73,7 +73,7 @@ namespace View
             this.cbPessoa.Location = new System.Drawing.Point(5, 94);
             this.cbPessoa.Name = "cbPessoa";
             this.cbPessoa.Size = new System.Drawing.Size(254, 28);
-            this.cbPessoa.TabIndex = 14;
+            this.cbPessoa.TabIndex = 4;
             // 
             // lblPessoa
             // 
@@ -82,7 +82,7 @@ namespace View
             this.lblPessoa.Location = new System.Drawing.Point(4, 71);
             this.lblPessoa.Name = "lblPessoa";
             this.lblPessoa.Size = new System.Drawing.Size(62, 20);
-            this.lblPessoa.TabIndex = 13;
+            this.lblPessoa.TabIndex = 3;
             this.lblPessoa.Text = "Pessoa";
             // 
             // cbEspaco
@@ -93,7 +93,7 @@ namespace View
             this.cbEspaco.Location = new System.Drawing.Point(5, 40);
             this.cbEspaco.Name = "cbEspaco";
             this.cbEspaco.Size = new System.Drawing.Size(254, 28);
-            this.cbEspaco.TabIndex = 12;
+            this.cbEspaco.TabIndex = 2;
             // 
             // lblEspaco
             // 
@@ -102,7 +102,7 @@ namespace View
             this.lblEspaco.Location = new System.Drawing.Point(1, 17);
             this.lblEspaco.Name = "lblEspaco";
             this.lblEspaco.Size = new System.Drawing.Size(63, 20);
-            this.lblEspaco.TabIndex = 11;
+            this.lblEspaco.TabIndex = 1;
             this.lblEspaco.Text = "Espaço";
             // 
             // dgvPessoaEspaco
@@ -121,7 +121,7 @@ namespace View
             this.dgvPessoaEspaco.RowHeadersVisible = false;
             this.dgvPessoaEspaco.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPessoaEspaco.Size = new System.Drawing.Size(254, 150);
-            this.dgvPessoaEspaco.TabIndex = 10;
+            this.dgvPessoaEspaco.TabIndex = 7;
             this.dgvPessoaEspaco.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPessoaEspaco_CellDoubleClick);
             // 
             // Column1
@@ -150,7 +150,7 @@ namespace View
             this.lblId.Location = new System.Drawing.Point(-3, -3);
             this.lblId.Name = "lblId";
             this.lblId.Size = new System.Drawing.Size(18, 20);
-            this.lblId.TabIndex = 17;
+            this.lblId.TabIndex = 0;
             this.lblId.Text = "0";
             this.lblId.Visible = false;
             // 
@@ -170,6 +170,7 @@ namespace View
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmPessoaCafe";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pessoas por Espaço";
             this.Load += new System.EventHandler(this.frmPessoaCafe_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPessoaEspaco)).EndInit();

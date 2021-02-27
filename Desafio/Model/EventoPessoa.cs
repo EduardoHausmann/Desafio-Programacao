@@ -29,6 +29,9 @@ namespace Model
         [ForeignKey("IdPessoa")]
         public Pessoa Pessoa { get; set; }
 
+        [ForeignKey("IdPessoa")]
+        public Historico Historico { get; set; }
+
         [Column("lotacao_atual")]
         public int LotacaoAtual { get; set; }
 

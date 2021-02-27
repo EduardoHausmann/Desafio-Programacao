@@ -149,7 +149,6 @@
             this.tsmTrocaSala.Name = "tsmTrocaSala";
             this.tsmTrocaSala.Size = new System.Drawing.Size(105, 23);
             this.tsmTrocaSala.Text = "Troca de Sala";
-            this.tsmTrocaSala.Visible = false;
             this.tsmTrocaSala.Click += new System.EventHandler(this.tsmTrocaSala_Click);
             // 
             // frmPrincipal
@@ -163,6 +162,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tela Principal";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmPrincipal_FormClosed);
             this.msPrincipal.ResumeLayout(false);

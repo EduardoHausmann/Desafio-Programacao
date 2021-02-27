@@ -37,7 +37,7 @@ namespace View
 
         public void Inserir()
         {
-            if (txtDescrição.Text == "")
+            if (txtDescricao.Text == "")
             {
                 MessageBox.Show("O campo Descrição é obrigatório!");
             }
@@ -51,14 +51,14 @@ namespace View
             }
             else
             {
-                eventoPessoa.Descricao = txtDescrição.Text;
+                eventoPessoa.Descricao = txtDescricao.Text;
                 eventoPessoa.IdSalaEvento = Convert.ToInt32(cbEvento.SelectedValue.ToString());
                 eventoPessoa.IdPessoa = Convert.ToInt32(cbPessoa.SelectedValue.ToString());
                 int id_evento = Convert.ToInt32(cbEvento.SelectedValue.ToString());
                 int sala = Convert.ToInt32(cbEvento.SelectedValue.ToString());
                 if (repository.ChecaEvento(id_evento) < repository.PegaLotacao(sala))
                 {
-                    if (txtDescrição.Text.Trim() == "")
+                    if (txtDescricao.Text.Trim() == "")
                     {
                         MessageBox.Show("O campo descrição não pode ser vazio");
                         return;
@@ -79,7 +79,7 @@ namespace View
         public void Alterar()
         {
             eventoPessoa.Id = Convert.ToInt32(lblId.Text);
-            eventoPessoa.Descricao = txtDescrição.Text;
+            eventoPessoa.Descricao = txtDescricao.Text;
             eventoPessoa.IdPessoa = Convert.ToInt32(cbPessoa.SelectedValue.ToString());
             eventoPessoa.IdSalaEvento = Convert.ToInt32(cbEvento.SelectedValue.ToString());
             int id_evento = Convert.ToInt32(cbEvento.SelectedValue.ToString());
@@ -90,7 +90,7 @@ namespace View
         public void LimparCampos()
         {
             lblId.Text = "0";
-            txtDescrição.Clear();
+            txtDescricao.Clear();
             cbPessoa.SelectedValue = -1;
             cbEvento.SelectedValue = -1;
         }
@@ -122,8 +122,8 @@ namespace View
             eventoPessoa = repository.ObterPeloId(id);
             if (eventoPessoa != null)
             {
-                lblId.Text = eventoPessoa.Id.ToString().ToString();
-                txtDescrição.Text = eventoPessoa.Descricao;
+                lblId.Text = eventoPessoa.Id.ToString();
+                txtDescricao.Text = eventoPessoa.Descricao;
                 cbEvento.SelectedValue = eventoPessoa.IdSalaEvento;
                 cbPessoa.SelectedValue = eventoPessoa.IdPessoa;
             }

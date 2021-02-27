@@ -98,7 +98,7 @@
             this.dgvPessoa.RowHeadersVisible = false;
             this.dgvPessoa.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPessoa.Size = new System.Drawing.Size(953, 217);
-            this.dgvPessoa.TabIndex = 1;
+            this.dgvPessoa.TabIndex = 22;
             this.dgvPessoa.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPessoa_CellDoubleClick);
             // 
             // ColumnId
@@ -169,7 +169,7 @@
             this.lblNome.Location = new System.Drawing.Point(32, 9);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(51, 20);
-            this.lblNome.TabIndex = 2;
+            this.lblNome.TabIndex = 1;
             this.lblNome.Text = "Nome";
             // 
             // txtNome
@@ -178,7 +178,7 @@
             this.txtNome.Location = new System.Drawing.Point(36, 32);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(165, 26);
-            this.txtNome.TabIndex = 3;
+            this.txtNome.TabIndex = 2;
             // 
             // lblSobrenome
             // 
@@ -187,7 +187,7 @@
             this.lblSobrenome.Location = new System.Drawing.Point(214, 9);
             this.lblSobrenome.Name = "lblSobrenome";
             this.lblSobrenome.Size = new System.Drawing.Size(92, 20);
-            this.lblSobrenome.TabIndex = 4;
+            this.lblSobrenome.TabIndex = 3;
             this.lblSobrenome.Text = "Sobrenome";
             // 
             // txtSobrenome
@@ -196,7 +196,7 @@
             this.txtSobrenome.Location = new System.Drawing.Point(218, 32);
             this.txtSobrenome.Name = "txtSobrenome";
             this.txtSobrenome.Size = new System.Drawing.Size(165, 26);
-            this.txtSobrenome.TabIndex = 5;
+            this.txtSobrenome.TabIndex = 4;
             // 
             // lvlCpf
             // 
@@ -205,7 +205,7 @@
             this.lvlCpf.Location = new System.Drawing.Point(395, 9);
             this.lvlCpf.Name = "lvlCpf";
             this.lvlCpf.Size = new System.Drawing.Size(40, 20);
-            this.lvlCpf.TabIndex = 6;
+            this.lvlCpf.TabIndex = 5;
             this.lvlCpf.Text = "CPF";
             // 
             // mbCpf
@@ -215,7 +215,7 @@
             this.mbCpf.Mask = "999,999,999-99";
             this.mbCpf.Name = "mbCpf";
             this.mbCpf.Size = new System.Drawing.Size(128, 26);
-            this.mbCpf.TabIndex = 7;
+            this.mbCpf.TabIndex = 6;
             // 
             // lblEndereco
             // 
@@ -224,7 +224,7 @@
             this.lblEndereco.Location = new System.Drawing.Point(545, 9);
             this.lblEndereco.Name = "lblEndereco";
             this.lblEndereco.Size = new System.Drawing.Size(78, 20);
-            this.lblEndereco.TabIndex = 8;
+            this.lblEndereco.TabIndex = 7;
             this.lblEndereco.Text = "Endereço";
             // 
             // txtEndereco
@@ -233,7 +233,7 @@
             this.txtEndereco.Location = new System.Drawing.Point(549, 32);
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(198, 26);
-            this.txtEndereco.TabIndex = 9;
+            this.txtEndereco.TabIndex = 8;
             // 
             // lblTelefone
             // 
@@ -242,7 +242,7 @@
             this.lblTelefone.Location = new System.Drawing.Point(761, 9);
             this.lblTelefone.Name = "lblTelefone";
             this.lblTelefone.Size = new System.Drawing.Size(71, 20);
-            this.lblTelefone.TabIndex = 10;
+            this.lblTelefone.TabIndex = 9;
             this.lblTelefone.Text = "Telefone";
             // 
             // mbTelefone
@@ -252,7 +252,7 @@
             this.mbTelefone.Mask = "(99)9999-9999";
             this.mbTelefone.Name = "mbTelefone";
             this.mbTelefone.Size = new System.Drawing.Size(124, 26);
-            this.mbTelefone.TabIndex = 11;
+            this.mbTelefone.TabIndex = 10;
             // 
             // lblEmail
             // 
@@ -261,7 +261,7 @@
             this.lblEmail.Location = new System.Drawing.Point(32, 74);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(53, 20);
-            this.lblEmail.TabIndex = 12;
+            this.lblEmail.TabIndex = 11;
             this.lblEmail.Text = "E-mail";
             // 
             // txtEmail
@@ -270,7 +270,7 @@
             this.txtEmail.Location = new System.Drawing.Point(36, 97);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(234, 26);
-            this.txtEmail.TabIndex = 13;
+            this.txtEmail.TabIndex = 12;
             // 
             // lblDataNascimento
             // 
@@ -279,7 +279,7 @@
             this.lblDataNascimento.Location = new System.Drawing.Point(291, 74);
             this.lblDataNascimento.Name = "lblDataNascimento";
             this.lblDataNascimento.Size = new System.Drawing.Size(154, 20);
-            this.lblDataNascimento.TabIndex = 14;
+            this.lblDataNascimento.TabIndex = 13;
             this.lblDataNascimento.Text = "Data de Nascimento";
             // 
             // lblNomeMae
@@ -289,7 +289,7 @@
             this.lblNomeMae.Location = new System.Drawing.Point(487, 74);
             this.lblNomeMae.Name = "lblNomeMae";
             this.lblNomeMae.Size = new System.Drawing.Size(108, 20);
-            this.lblNomeMae.TabIndex = 16;
+            this.lblNomeMae.TabIndex = 15;
             this.lblNomeMae.Text = "Nome da Mãe";
             // 
             // txtNomeMae
@@ -298,7 +298,7 @@
             this.txtNomeMae.Location = new System.Drawing.Point(491, 95);
             this.txtNomeMae.Name = "txtNomeMae";
             this.txtNomeMae.Size = new System.Drawing.Size(198, 26);
-            this.txtNomeMae.TabIndex = 17;
+            this.txtNomeMae.TabIndex = 16;
             // 
             // lblSexo
             // 
@@ -307,7 +307,7 @@
             this.lblSexo.Location = new System.Drawing.Point(715, 74);
             this.lblSexo.Name = "lblSexo";
             this.lblSexo.Size = new System.Drawing.Size(45, 20);
-            this.lblSexo.TabIndex = 18;
+            this.lblSexo.TabIndex = 17;
             this.lblSexo.Text = "Sexo";
             // 
             // rbMasculino
@@ -317,7 +317,7 @@
             this.rbMasculino.Location = new System.Drawing.Point(719, 97);
             this.rbMasculino.Name = "rbMasculino";
             this.rbMasculino.Size = new System.Drawing.Size(98, 24);
-            this.rbMasculino.TabIndex = 19;
+            this.rbMasculino.TabIndex = 18;
             this.rbMasculino.TabStop = true;
             this.rbMasculino.Text = "Masculino";
             this.rbMasculino.UseVisualStyleBackColor = true;
@@ -329,7 +329,7 @@
             this.rbFeminino.Location = new System.Drawing.Point(833, 99);
             this.rbFeminino.Name = "rbFeminino";
             this.rbFeminino.Size = new System.Drawing.Size(92, 24);
-            this.rbFeminino.TabIndex = 20;
+            this.rbFeminino.TabIndex = 19;
             this.rbFeminino.TabStop = true;
             this.rbFeminino.Text = "Feminino";
             this.rbFeminino.UseVisualStyleBackColor = true;
@@ -340,7 +340,7 @@
             this.btnSalvar.Location = new System.Drawing.Point(768, 141);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(82, 35);
-            this.btnSalvar.TabIndex = 21;
+            this.btnSalvar.TabIndex = 20;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
@@ -351,7 +351,7 @@
             this.btnDesativar.Location = new System.Drawing.Point(856, 141);
             this.btnDesativar.Name = "btnDesativar";
             this.btnDesativar.Size = new System.Drawing.Size(86, 35);
-            this.btnDesativar.TabIndex = 22;
+            this.btnDesativar.TabIndex = 21;
             this.btnDesativar.Text = "Desativar";
             this.btnDesativar.UseVisualStyleBackColor = true;
             this.btnDesativar.Click += new System.EventHandler(this.btnDesativar_Click);
@@ -365,7 +365,7 @@
             this.dpDataNascimento.Location = new System.Drawing.Point(295, 95);
             this.dpDataNascimento.Name = "dpDataNascimento";
             this.dpDataNascimento.Size = new System.Drawing.Size(164, 26);
-            this.dpDataNascimento.TabIndex = 15;
+            this.dpDataNascimento.TabIndex = 14;
             // 
             // frmPessoa
             // 
@@ -399,6 +399,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmPessoa";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pessoa";
             this.Load += new System.EventHandler(this.frmPessoa_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPessoa)).EndInit();

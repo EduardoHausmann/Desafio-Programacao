@@ -46,7 +46,7 @@ namespace View
             this.cbPessoa.Location = new System.Drawing.Point(10, 32);
             this.cbPessoa.Name = "cbPessoa";
             this.cbPessoa.Size = new System.Drawing.Size(325, 28);
-            this.cbPessoa.TabIndex = 0;
+            this.cbPessoa.TabIndex = 1;
             this.cbPessoa.SelectedIndexChanged += new System.EventHandler(this.cbEvento_SelectedIndexChanged);
             // 
             // lblBusca
@@ -56,7 +56,7 @@ namespace View
             this.lblBusca.Location = new System.Drawing.Point(6, 9);
             this.lblBusca.Name = "lblBusca";
             this.lblBusca.Size = new System.Drawing.Size(143, 20);
-            this.lblBusca.TabIndex = 1;
+            this.lblBusca.TabIndex = 0;
             this.lblBusca.Text = "Buscar por Pessoa";
             // 
             // dgvPessoaEvento
@@ -109,6 +109,7 @@ namespace View
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmConsultaPessoaEvento";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta de Pessoas p/ Evento";
             this.Load += new System.EventHandler(this.frmConsultaPessoaEvento_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPessoaEvento)).EndInit();

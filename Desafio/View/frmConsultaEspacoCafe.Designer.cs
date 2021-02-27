@@ -30,9 +30,9 @@ namespace View
         private void InitializeComponent()
         {
             this.dgvEspacoCafe = new System.Windows.Forms.DataGridView();
-            this.lblBuscar = new System.Windows.Forms.Label();
             this.ColumnID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnNome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblBuscar = new System.Windows.Forms.Label();
             this.cbEspaco = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEspacoCafe)).BeginInit();
             this.SuspendLayout();
@@ -52,17 +52,7 @@ namespace View
             this.dgvEspacoCafe.RowHeadersVisible = false;
             this.dgvEspacoCafe.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvEspacoCafe.Size = new System.Drawing.Size(255, 150);
-            this.dgvEspacoCafe.TabIndex = 10;
-            // 
-            // lblBuscar
-            // 
-            this.lblBuscar.AutoSize = true;
-            this.lblBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBuscar.Location = new System.Drawing.Point(1, 9);
-            this.lblBuscar.Name = "lblBuscar";
-            this.lblBuscar.Size = new System.Drawing.Size(139, 20);
-            this.lblBuscar.TabIndex = 11;
-            this.lblBuscar.Text = "Buscar pelo Nome";
+            this.dgvEspacoCafe.TabIndex = 2;
             // 
             // ColumnID
             // 
@@ -78,6 +68,16 @@ namespace View
             this.ColumnNome.ReadOnly = true;
             this.ColumnNome.Width = 200;
             // 
+            // lblBuscar
+            // 
+            this.lblBuscar.AutoSize = true;
+            this.lblBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBuscar.Location = new System.Drawing.Point(1, 9);
+            this.lblBuscar.Name = "lblBuscar";
+            this.lblBuscar.Size = new System.Drawing.Size(139, 20);
+            this.lblBuscar.TabIndex = 0;
+            this.lblBuscar.Text = "Buscar pelo Nome";
+            // 
             // cbEspaco
             // 
             this.cbEspaco.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -86,7 +86,7 @@ namespace View
             this.cbEspaco.Location = new System.Drawing.Point(5, 32);
             this.cbEspaco.Name = "cbEspaco";
             this.cbEspaco.Size = new System.Drawing.Size(255, 28);
-            this.cbEspaco.TabIndex = 12;
+            this.cbEspaco.TabIndex = 1;
             this.cbEspaco.SelectedIndexChanged += new System.EventHandler(this.cbEspaco_SelectedIndexChanged);
             // 
             // frmConsultaEspacoCafe
@@ -100,6 +100,7 @@ namespace View
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmConsultaEspacoCafe";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consultar Espaço de Cafe";
             this.Load += new System.EventHandler(this.frmConsultaEspacoCafe_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEspacoCafe)).EndInit();

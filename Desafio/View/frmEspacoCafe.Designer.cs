@@ -60,7 +60,7 @@ namespace View
             this.dgvEspacoCafe.RowHeadersVisible = false;
             this.dgvEspacoCafe.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvEspacoCafe.Size = new System.Drawing.Size(305, 150);
-            this.dgvEspacoCafe.TabIndex = 9;
+            this.dgvEspacoCafe.TabIndex = 7;
             this.dgvEspacoCafe.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEspacoCafe_CellDoubleClick);
             // 
             // ColumnID
@@ -90,7 +90,7 @@ namespace View
             this.lblId.Location = new System.Drawing.Point(-3, -2);
             this.lblId.Name = "lblId";
             this.lblId.Size = new System.Drawing.Size(18, 20);
-            this.lblId.TabIndex = 8;
+            this.lblId.TabIndex = 0;
             this.lblId.Text = "0";
             this.lblId.Visible = false;
             // 
@@ -100,7 +100,7 @@ namespace View
             this.btnSalvar.Location = new System.Drawing.Point(139, 92);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(75, 32);
-            this.btnSalvar.TabIndex = 15;
+            this.btnSalvar.TabIndex = 5;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
@@ -111,7 +111,7 @@ namespace View
             this.btnDesativar.Location = new System.Drawing.Point(220, 92);
             this.btnDesativar.Name = "btnDesativar";
             this.btnDesativar.Size = new System.Drawing.Size(91, 32);
-            this.btnDesativar.TabIndex = 14;
+            this.btnDesativar.TabIndex = 6;
             this.btnDesativar.Text = "Desativar";
             this.btnDesativar.UseVisualStyleBackColor = true;
             this.btnDesativar.Click += new System.EventHandler(this.btnDesativar_Click);
@@ -122,7 +122,7 @@ namespace View
             this.txtNome.Location = new System.Drawing.Point(6, 49);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(160, 26);
-            this.txtNome.TabIndex = 11;
+            this.txtNome.TabIndex = 2;
             // 
             // lblNome
             // 
@@ -131,7 +131,7 @@ namespace View
             this.lblNome.Location = new System.Drawing.Point(2, 26);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(51, 20);
-            this.lblNome.TabIndex = 10;
+            this.lblNome.TabIndex = 1;
             this.lblNome.Text = "Nome";
             // 
             // lblLotacao
@@ -141,7 +141,7 @@ namespace View
             this.lblLotacao.Location = new System.Drawing.Point(180, 26);
             this.lblLotacao.Name = "lblLotacao";
             this.lblLotacao.Size = new System.Drawing.Size(67, 20);
-            this.lblLotacao.TabIndex = 16;
+            this.lblLotacao.TabIndex = 3;
             this.lblLotacao.Text = "Lotação";
             // 
             // nudLotacao
@@ -155,7 +155,7 @@ namespace View
             0});
             this.nudLotacao.Name = "nudLotacao";
             this.nudLotacao.Size = new System.Drawing.Size(127, 26);
-            this.nudLotacao.TabIndex = 17;
+            this.nudLotacao.TabIndex = 4;
             // 
             // frmEspacoCafe
             // 
@@ -174,6 +174,7 @@ namespace View
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmEspacoCafe";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Espaço de Cafe";
             this.Load += new System.EventHandler(this.frmEspacoCafe_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEspacoCafe)).EndInit();

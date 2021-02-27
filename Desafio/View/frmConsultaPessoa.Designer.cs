@@ -155,6 +155,7 @@ namespace View
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmConsultaPessoa";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consultar Pessoa";
             this.Load += new System.EventHandler(this.frmConsultaPessoa_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPessoa)).EndInit();

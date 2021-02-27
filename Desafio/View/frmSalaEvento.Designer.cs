@@ -71,7 +71,7 @@ namespace View
             this.dgvSalaEvento.RowHeadersVisible = false;
             this.dgvSalaEvento.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSalaEvento.Size = new System.Drawing.Size(280, 150);
-            this.dgvSalaEvento.TabIndex = 1;
+            this.dgvSalaEvento.TabIndex = 7;
             this.dgvSalaEvento.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSalaEvento_CellDoubleClick);
             // 
             // ColumnID
@@ -101,7 +101,7 @@ namespace View
             this.lblNome.Location = new System.Drawing.Point(2, 25);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(51, 20);
-            this.lblNome.TabIndex = 2;
+            this.lblNome.TabIndex = 1;
             this.lblNome.Text = "Nome";
             // 
             // txtNome
@@ -110,7 +110,7 @@ namespace View
             this.txtNome.Location = new System.Drawing.Point(6, 48);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(147, 26);
-            this.txtNome.TabIndex = 3;
+            this.txtNome.TabIndex = 2;
             // 
             // lblLotacao
             // 
@@ -119,7 +119,7 @@ namespace View
             this.lblLotacao.Location = new System.Drawing.Point(161, 25);
             this.lblLotacao.Name = "lblLotacao";
             this.lblLotacao.Size = new System.Drawing.Size(125, 20);
-            this.lblLotacao.TabIndex = 4;
+            this.lblLotacao.TabIndex = 3;
             this.lblLotacao.Text = "Lotação Máxima";
             // 
             // nudLotacao
@@ -133,7 +133,7 @@ namespace View
             0});
             this.nudLotacao.Name = "nudLotacao";
             this.nudLotacao.Size = new System.Drawing.Size(121, 26);
-            this.nudLotacao.TabIndex = 5;
+            this.nudLotacao.TabIndex = 4;
             // 
             // btnDesativar
             // 
@@ -152,7 +152,7 @@ namespace View
             this.btnSalvar.Location = new System.Drawing.Point(114, 91);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(75, 32);
-            this.btnSalvar.TabIndex = 7;
+            this.btnSalvar.TabIndex = 5;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
@@ -174,6 +174,7 @@ namespace View
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmSalaEvento";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sala de Eventos";
             this.Load += new System.EventHandler(this.frmSalaEvento_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSalaEvento)).EndInit();
