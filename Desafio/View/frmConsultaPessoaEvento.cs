@@ -34,7 +34,7 @@ namespace View
                 eventoPessoa = eventoPessoas[i];
                 dgvPessoaEvento.Rows.Add(new object[]
                 {
-                    eventoPessoa.Id.ToString(), String.Concat(eventoPessoa.Pessoa.Nome, " ", eventoPessoa.Pessoa.Sobrenome), eventoPessoa.SalaEvento.Nome, eventoPessoa.SalaEvento.Nome
+                    eventoPessoa.Id.ToString(), String.Concat(eventoPessoa.Pessoa.Nome, " ", eventoPessoa.Pessoa.Sobrenome), eventoPessoa.SalaEvento.Nome
                 });
             }
         }

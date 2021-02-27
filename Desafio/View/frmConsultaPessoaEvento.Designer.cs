@@ -35,7 +35,6 @@ namespace View
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPessoaEvento)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,13 +68,12 @@ namespace View
             this.dgvPessoaEvento.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
-            this.Column3,
-            this.Column4});
+            this.Column3});
             this.dgvPessoaEvento.Location = new System.Drawing.Point(10, 66);
             this.dgvPessoaEvento.Name = "dgvPessoaEvento";
             this.dgvPessoaEvento.ReadOnly = true;
             this.dgvPessoaEvento.RowHeadersVisible = false;
-            this.dgvPessoaEvento.Size = new System.Drawing.Size(480, 150);
+            this.dgvPessoaEvento.Size = new System.Drawing.Size(454, 150);
             this.dgvPessoaEvento.TabIndex = 2;
             // 
             // Column1
@@ -90,28 +88,21 @@ namespace View
             this.Column2.HeaderText = "Pessoa";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
-            this.Column2.Width = 150;
+            this.Column2.Width = 250;
             // 
             // Column3
             // 
-            this.Column3.HeaderText = "1° Etapa";
+            this.Column3.HeaderText = "Evento";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             this.Column3.Width = 125;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "2° Etapa";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 125;
             // 
             // frmConsultaPessoaEvento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(494, 221);
+            this.ClientSize = new System.Drawing.Size(470, 221);
             this.Controls.Add(this.dgvPessoaEvento);
             this.Controls.Add(this.lblBusca);
             this.Controls.Add(this.cbPessoa);
@@ -134,6 +125,5 @@ namespace View
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
     }
 }
