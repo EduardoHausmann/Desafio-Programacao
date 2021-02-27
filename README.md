@@ -66,7 +66,6 @@ que a pessoa se encontra na segunda etapa.
 
 ***Troca de Sala***
     A tela de troca de sala possui dois ComboBox que possuem todos os eventos cadastrados, ao selecionar um evento diferente para ambos, sera carrega as 
-pessoas que estão em cada evento;
-Ao precionar o botão *Trocar*, o mesmo ira checar qual dos dois evento possui o menor numero de pessoas cadastradas e o dividira pela metada para que então 
-seja realizada a troca. Antes de ser realizada a troca também é checado se existe alguma pessoa cadastrada no evento, caso não tenha nenhum cadastrado é 
-mostrada uma mensagem de aviso para que se selecione um evento com pessoas cadastradas.
+pessoas que estão em cada evento; Ao precionar o botão *Trocar*, o mesmo ira checar qual dos dois evento possui o menor numero de pessoas cadastradas e o 
+dividira pela metada para que então seja realizada a troca. Antes de ser realizada a troca também é checado se existe alguma pessoa cadastrada no evento, 
+caso não tenha nenhum cadastrado é mostrada uma mensagem de aviso para que se selecione um evento com pessoas cadastradas.
